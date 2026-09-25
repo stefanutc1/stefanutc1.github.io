@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0c0e11"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#262c37" stroke-width="2"/>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#f3f4f6" font-family="Georgia, serif" font-weight="600" font-size="24" letter-spacing="-0.5">MȘ</text>
+</svg>
