@@ -1,0 +1,28 @@
+{
+  "name": "stefanutc1-personal-blog-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal Engineering Blog, Cybersecurity DFIR Dossiers & Portfolio — Moană Ștefănuț-Cornel (@stefanutc1)",
+  "author": "Moană Ștefănuț-Cornel <moana.stefanut.f8p@student.ucv.ro>",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^1.48.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}
