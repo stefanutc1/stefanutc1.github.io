@@ -2,33 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Inter Display optical faces from Framer CDN (matching drivepoint.ro) with Inter fallback */
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/MaMAn5Jp5gJg1z3VaLH65QwWPLc.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Display';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/fWaKVy64384382220.woff2') format('woff2'),
+       local('Inter Light Italic'), local('Inter-LightItalic');
+}
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/2uIBiALfCHVpWbHqRMZutfT7giU.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/ePuN3mCjzajIHnyCdvKBFiZkyY0.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/gazZKZuUEtvr9ULhdA4SprP0AZ0.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://framerusercontent.com/assets/I11LrmuBDQZweplJ62KkVsklU5Y.woff2') format('woff2');
+}
+
+/* ============================================================================
+   DRIVEPOINT.RO DESIGN TOKENS & PALETTE
+   --token-3605dacf: #0c0c0c (Primary Carbon Void)
+   --token-7128d3bf: #52212e (Primary Burgundy / Wine Accent)
+   --token-771061bf: #401823 (Deep Bordeaux Surface)
+   --token-607feaa3: #24181e (Structural Plum Border / Glass)
+   --token-7c30b5b9: #efebe5 (Warm Ivory Primary Ink)
+   --token-52d0970f: #d9d1ca (Warm Sand Secondary Ink)
+   --token-43df2464: #827470 (Warm Taupe Muted Ink)
+   ============================================================================ */
 :root,
 html[data-theme="dark"] {
-  --bg: #070709;
-  --bg-elevated: #0d0d11;
-  --surface: rgba(18, 18, 24, 0.72);
-  --surface-hover: rgba(28, 28, 38, 0.88);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
-  --ink: #f4f4f6;
-  --ink-secondary: #a1a1aa;
-  --ink-muted: #71717a;
-  --accent: #e4e4e7;
-  --grid-line: rgba(255, 255, 255, 0.028);
+  --bg: #0c0c0c;
+  --bg-elevated: #140b0f;
+  --bg-bordeaux: #17090d;
+  --surface: rgba(36, 24, 30, 0.28);
+  --surface-hover: rgba(64, 24, 35, 0.42);
+  --surface-glass: linear-gradient(180deg, rgba(217, 209, 202, 0.10) 0%, rgba(217, 209, 202, 0.02) 100%);
+  --surface-wine-banner: linear-gradient(90deg, rgba(64, 24, 35, 0.35) 0%, rgba(64, 24, 35, 0.90) 100%);
+  --border: #24181e;
+  --border-subtle: rgba(217, 209, 202, 0.10);
+  --border-strong: #52212e;
+  --wine-primary: #52212e;
+  --wine-deep: #401823;
+  --ink: #efebe5;
+  --ink-secondary: #d9d1ca;
+  --ink-muted: #827470;
+  --accent: #52212e;
 }
 
 html[data-theme="light"] {
-  --bg: #fafafa;
-  --bg-elevated: #ffffff;
-  --surface: rgba(255, 255, 255, 0.88);
-  --surface-hover: rgba(244, 244, 245, 0.96);
-  --border: rgba(24, 24, 27, 0.09);
-  --border-strong: rgba(24, 24, 27, 0.2);
-  --ink: #09090b;
-  --ink-secondary: #3f3f46;
-  --ink-muted: #71717a;
-  --accent: #18181b;
-  --grid-line: rgba(0, 0, 0, 0.032);
+  --bg: #efebe5;
+  --bg-elevated: #e6dfd7;
+  --bg-bordeaux: #dfd6cc;
+  --surface: rgba(255, 252, 248, 0.78);
+  --surface-hover: rgba(82, 33, 46, 0.08);
+  --surface-glass: linear-gradient(180deg, rgba(82, 33, 46, 0.06) 0%, rgba(82, 33, 46, 0.02) 100%);
+  --surface-wine-banner: linear-gradient(90deg, rgba(82, 33, 46, 0.08) 0%, rgba(82, 33, 46, 0.18) 100%);
+  --border: rgba(82, 33, 46, 0.18);
+  --border-subtle: rgba(82, 33, 46, 0.12);
+  --border-strong: #52212e;
+  --wine-primary: #52212e;
+  --wine-deep: #401823;
+  --ink: #17090d;
+  --ink-secondary: #401823;
+  --ink-muted: #796c65;
+  --accent: #52212e;
 }
 
 * {
@@ -50,11 +115,107 @@ body {
   overflow-x: hidden;
 }
 
-.bg-architectural-grid {
-  background-size: 48px 48px;
-  background-image: 
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+/* ============================================================================
+   DRIVEPOINT.RO SIGNATURE COMPONENT UTILITIES
+   ============================================================================ */
+
+/* Asymmetric chamfered button geometry from drivepoint.ro (.framer-CvySP) */
+.dp-btn-primary {
+  background-color: var(--wine-deep);
+  border: 1px solid var(--wine-primary);
+  color: #efebe5;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dp-btn-primary:hover {
+  background-color: var(--wine-primary);
+  border-color: #d9d1ca;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px -8px rgba(82, 33, 46, 0.65);
+}
+
+.dp-btn-cream {
+  background-color: #d9d1ca;
+  border: 1px solid #efebe5;
+  color: #401823;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dp-btn-cream:hover {
+  background-color: #efebe5;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -8px rgba(239, 235, 229, 0.25);
+}
+
+.dp-btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--wine-primary);
+  color: var(--ink);
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dp-btn-outline:hover {
+  background-color: rgba(82, 33, 46, 0.28);
+  border-color: var(--ink-secondary);
+}
+
+/* Signature Sand-Glass Pillar Card (.framer-3jt767 / .framer-1p9x93v) */
+.dp-glass-card {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dp-glass-card:hover {
+  border-color: var(--wine-primary);
+  background: linear-gradient(180deg, rgba(217, 209, 202, 0.14) 0%, rgba(82, 33, 46, 0.14) 100%);
+}
+
+/* Signature Showroom Spec Card (.framer-1ncbgsb) */
+.dp-showroom-card {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dp-showroom-card:hover {
+  border-color: var(--wine-primary);
+  background-color: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+/* Signature 4px Left-Border Burgundy Banner (.framer-1fspcz5) */
+.dp-wine-banner {
+  border-left: 4px solid var(--wine-primary);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: var(--surface-wine-banner);
+}
+
+/* Signature 4px Left-Border Heading Accent (.framer-1k4ln5q / .framer-11evqsy) */
+.dp-heading-accent {
+  border-left: 4px solid var(--wine-primary);
+  padding-left: 16px;
+}
+
+/* Ambient Blurred Burgundy Glow Orb (.framer-1o64wbf) */
+.dp-ambient-orb {
+  width: 420px;
+  height: 420px;
+  border-radius: 75%;
+  background-color: var(--wine-primary);
+  filter: blur(112px);
+  opacity: 0.16;
+  pointer-events: none;
 }
 
 /* Custom Editorial Scrollbar */
@@ -68,7 +229,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
+  background: var(--wine-primary);
   border-radius: 3px;
 }
 

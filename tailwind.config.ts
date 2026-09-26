@@ -10,19 +10,21 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Geist', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['Newsreader', 'Georgia', 'Cambria', 'serif'],
-        mono: ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['var(--font-sans)', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['"Inter Display"', 'var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Inter Display"', 'var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', '"Fragment Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
-        obsidian: {
-          950: '#080a0c',
-          900: '#0c0e11',
-          850: '#11141a',
-          800: '#13171d',
-          750: '#191f27',
-          700: '#222934',
-          600: '#2e3746',
+        dp: {
+          void: '#0c0c0c',
+          bordeaux: '#17090d',
+          plum: '#24181e',
+          wineDeep: '#401823',
+          wine: '#52212e',
+          cream: '#efebe5',
+          sand: '#d9d1ca',
+          taupe: '#827470',
         },
       },
     },

@@ -62,16 +62,16 @@ export default function CommandPalette({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/75 backdrop-blur-sm pt-16 px-4"
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-md pt-16 px-4"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-2xl rounded-xl border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-2xl overflow-hidden"
+        className="w-full max-w-2xl border border-[#52212e] bg-[#140b0f] shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input */}
-        <div className="flex items-center gap-3 border-b border-[var(--border)] px-4 py-3.5">
-          <Search className="w-4 h-4 text-[var(--ink-muted)] shrink-0" />
+        <div className="flex items-center gap-3 border-b border-[#24181e] bg-[#17090d] px-4 py-3.5">
+          <Search className="w-4 h-4 text-[#827470] shrink-0" />
           <input
             type="text"
             autoFocus
@@ -82,11 +82,11 @@ export default function CommandPalette({
                 ? 'Caută în articole de blog, investigații DFIR, proiecte sau tehnologii...'
                 : 'Search blog articles, DFIR investigations, projects, or stack...'
             }
-            className="w-full bg-transparent text-sm text-[var(--ink)] placeholder:text-[var(--ink-muted)] focus:outline-none"
+            className="w-full bg-transparent text-sm text-[#efebe5] placeholder:text-[#827470] focus:outline-none"
           />
           <button
             onClick={onClose}
-            className="rounded border border-[var(--border)] px-1.5 py-0.5 text-[10px] font-mono text-[var(--ink-muted)] hover:text-[var(--ink)]"
+            className="rounded-tl-[8px] rounded-br-[8px] border border-[#52212e] bg-[#401823] px-2 py-0.5 text-[10px] font-mono text-[#efebe5]"
           >
             ESC
           </button>
@@ -96,7 +96,7 @@ export default function CommandPalette({
         <div className="max-h-[65vh] overflow-y-auto p-3 space-y-5">
           {/* Blog Posts */}
           <div>
-            <div className="px-2 pb-1.5 text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)] flex items-center justify-between">
+            <div className="px-2 pb-1.5 text-[11px] font-mono uppercase tracking-wider text-[#827470] flex items-center justify-between">
               <span>
                 {lang === 'ro'
                   ? 'Jurnal & Articole Blog'
@@ -112,15 +112,15 @@ export default function CommandPalette({
                     onSelectPost(post);
                     onClose();
                   }}
-                  className="w-full flex items-start justify-between gap-3 rounded-lg px-3 py-2.5 text-left hover:bg-[var(--surface-hover)] transition group"
+                  className="w-full flex items-start justify-between gap-3 px-3 py-2.5 text-left hover:bg-[#401823]/50 border border-transparent hover:border-[#52212e] transition group"
                 >
                   <div className="flex items-start gap-2.5 min-w-0">
-                    <BookOpen className="w-4 h-4 text-[var(--ink-muted)] shrink-0 mt-0.5" />
+                    <BookOpen className="w-4 h-4 text-[#827470] shrink-0 mt-0.5" />
                     <div className="min-w-0">
-                      <div className="text-sm font-medium text-[var(--ink)] truncate">
+                      <div className="font-display text-sm font-medium text-[#efebe5] truncate">
                         {lang === 'ro' ? post.titleRo : post.titleEn}
                       </div>
-                      <div className="text-xs text-[var(--ink-muted)] truncate">
+                      <div className="text-xs font-mono text-[#827470] truncate">
                         {post.id} ·{' '}
                         {lang === 'ro'
                           ? post.categoryLabelRo
@@ -129,7 +129,7 @@ export default function CommandPalette({
                       </div>
                     </div>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-[var(--ink-muted)] opacity-0 group-hover:opacity-100 transition shrink-0" />
+                  <ArrowUpRight className="w-4 h-4 text-[#d9d1ca] opacity-0 group-hover:opacity-100 transition shrink-0" />
                 </button>
               ))}
             </div>
@@ -137,7 +137,7 @@ export default function CommandPalette({
 
           {/* Portfolio Items */}
           <div>
-            <div className="px-2 pb-1.5 text-[11px] font-mono uppercase tracking-wider text-[var(--ink-muted)] flex items-center justify-between">
+            <div className="px-2 pb-1.5 text-[11px] font-mono uppercase tracking-wider text-[#827470] flex items-center justify-between">
               <span>
                 {lang === 'ro'
                   ? 'Sisteme & Proiecte Universitare'
@@ -153,21 +153,21 @@ export default function CommandPalette({
                     onSelectPortfolio(item);
                     onClose();
                   }}
-                  className="w-full flex items-start justify-between gap-3 rounded-lg px-3 py-2.5 text-left hover:bg-[var(--surface-hover)] transition group"
+                  className="w-full flex items-start justify-between gap-3 px-3 py-2.5 text-left hover:bg-[#401823]/50 border border-transparent hover:border-[#52212e] transition group"
                 >
                   <div className="flex items-start gap-2.5 min-w-0">
-                    <FolderGit2 className="w-4 h-4 text-[var(--ink-muted)] shrink-0 mt-0.5" />
+                    <FolderGit2 className="w-4 h-4 text-[#827470] shrink-0 mt-0.5" />
                     <div className="min-w-0">
-                      <div className="text-sm font-medium text-[var(--ink)] truncate">
+                      <div className="font-display text-sm font-medium text-[#efebe5] truncate">
                         {lang === 'ro' ? item.titleRo : item.titleEn}
                       </div>
-                      <div className="text-xs text-[var(--ink-muted)] truncate">
+                      <div className="text-xs font-mono text-[#827470] truncate">
                         {item.code} · {item.badge} ·{' '}
                         {item.tags.slice(0, 3).join(', ')}
                       </div>
                     </div>
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-[var(--ink-muted)] opacity-0 group-hover:opacity-100 transition shrink-0" />
+                  <ArrowUpRight className="w-4 h-4 text-[#d9d1ca] opacity-0 group-hover:opacity-100 transition shrink-0" />
                 </button>
               ))}
             </div>

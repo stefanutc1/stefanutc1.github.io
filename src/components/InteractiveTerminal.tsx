@@ -152,15 +152,15 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
   const quickCommands = ['whoami', 'old', 'blog', 'fleet', 'dfir', 'projects', 'stack', 'clear'];
 
   return (
-    <div className="rounded-xl border border-[var(--border-strong)] bg-[#07070a] text-zinc-200 shadow-xl overflow-hidden">
+    <div className="border border-[#52212e] bg-[#0c0c0c] text-[#efebe5] shadow-xl overflow-hidden">
       {/* Terminal Titlebar */}
-      <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.03] px-4 py-2.5">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#24181e] bg-[#17090d] px-4 py-2.5">
         <div className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-700" />
-          <span className="h-2.5 w-2.5 rounded-full bg-zinc-800" />
-          <span className="ml-2 text-xs font-mono text-zinc-400 flex items-center gap-1.5">
-            <TerminalIcon className="w-3.5 h-3.5 text-zinc-500" />
+          <span className="h-2.5 w-2.5 rounded-[2px] bg-[#52212e]" />
+          <span className="h-2.5 w-2.5 rounded-[2px] bg-[#401823]" />
+          <span className="h-2.5 w-2.5 rounded-[2px] bg-[#24181e]" />
+          <span className="ml-1.5 text-xs font-mono text-[#d9d1ca] flex items-center gap-1.5">
+            <TerminalIcon className="w-3.5 h-3.5 text-[#827470]" />
             stefanut@datacenter: ~ (zsh)
           </span>
         </div>
@@ -170,7 +170,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
               key={c}
               type="button"
               onClick={() => executeCommand(c)}
-              className="rounded border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] font-mono text-zinc-400 hover:text-white hover:border-white/25 transition"
+              className="rounded-tl-[6px] rounded-br-[6px] border border-[#52212e] bg-[#401823]/60 px-2 py-0.5 text-[11px] font-mono text-[#d9d1ca] hover:bg-[#52212e] hover:text-[#efebe5] transition"
             >
               {c}
             </button>
@@ -181,18 +181,20 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
       {/* Terminal Output */}
       <div
         ref={containerRef}
-        className="h-56 overflow-y-auto p-4 font-mono text-xs leading-relaxed space-y-2"
+        className="h-52 overflow-y-auto p-4 font-mono text-xs leading-relaxed space-y-2"
       >
         {history.map((item, idx) =>
           item.type === 'input' ? (
-            <div key={idx} className="flex items-center gap-2 text-zinc-100">
-              <span className="text-emerald-400">stefanut@datacenter:~$</span>
+            <div key={idx} className="flex items-center gap-2 text-[#efebe5]">
+              <span className="text-[#d9d1ca] font-semibold">
+                stefanut@datacenter:~$
+              </span>
               <span>{item.text}</span>
             </div>
           ) : (
             <pre
               key={idx}
-              className="whitespace-pre-wrap text-zinc-400 pl-2 border-l border-white/10"
+              className="whitespace-pre-wrap text-[#d9d1ca] pl-2.5 border-l-2 border-[#52212e]"
             >
               {item.text}
             </pre>
@@ -206,23 +208,23 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           e.preventDefault();
           executeCommand(input);
         }}
-        className="flex items-center gap-2 border-t border-white/10 bg-white/[0.02] px-4 py-2.5 font-mono text-xs"
+        className="flex items-center gap-2 border-t border-[#24181e] bg-[#17090d]/70 px-4 py-2.5 font-mono text-xs"
       >
-        <span className="text-emerald-400 shrink-0">stefanut@datacenter:~$</span>
+        <span className="text-[#d9d1ca] shrink-0">stefanut@datacenter:~$</span>
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={
             lang === 'ro'
-              ? 'Tastează o comandă (whoami, old, blog, fleet, dfir, projects, stack)...'
-              : 'Type a command (whoami, old, blog, fleet, dfir, projects, stack)...'
+              ? 'Comandă (whoami, old, blog, fleet, dfir, projects, stack)...'
+              : 'Command (whoami, old, blog, fleet, dfir, projects, stack)...'
           }
-          className="w-full bg-transparent text-zinc-100 placeholder:text-zinc-600 focus:outline-none"
+          className="w-full bg-transparent text-[#efebe5] placeholder:text-[#827470] focus:outline-none"
         />
         <button
           type="submit"
-          className="inline-flex items-center gap-1 text-zinc-500 hover:text-zinc-200 transition"
+          className="inline-flex items-center gap-1 text-[#827470] hover:text-[#efebe5] transition"
           aria-label="Run command"
         >
           <CornerDownLeft className="w-3.5 h-3.5" />

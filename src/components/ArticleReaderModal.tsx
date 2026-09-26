@@ -66,24 +66,33 @@ export default function ArticleReaderModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-2 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-2 sm:p-6 overflow-y-auto"
       onClick={onClose}
     >
       <article
-        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-xl border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-2xl"
+        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Sticky Reader Bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-[var(--border)] bg-[var(--bg-elevated)]/95 backdrop-blur-md px-5 py-3.5">
-          <div className="flex items-center gap-2.5 text-xs font-mono text-[var(--ink-muted)]">
-            <BookOpen className="w-3.5 h-3.5 text-[var(--ink-secondary)]" />
-            <span className="uppercase tracking-wider text-[var(--ink)] font-semibold">
+        <div
+          className="sticky top-0 z-20 flex items-center justify-between border-b border-[var(--border)] px-5 py-3.5"
+          style={{
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            backgroundColor: 'rgba(20, 11, 15, 0.92)',
+          }}
+        >
+          <div className="flex items-center gap-2.5 text-xs font-mono text-[#d9d1ca]">
+            <BookOpen className="w-3.5 h-3.5 text-[#52212e]" />
+            <span className="uppercase tracking-wider text-[#efebe5] font-semibold">
               {post.id}
             </span>
             <span>·</span>
             <span>{categoryLabel}</span>
             <span>·</span>
-            <span className="hidden sm:inline">{post.readTime}</span>
+            <span className="hidden sm:inline text-[#827470]">
+              {post.readTime}
+            </span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -92,7 +101,7 @@ export default function ArticleReaderModal({
                 href={post.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+                className="dp-btn-outline inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono"
               >
                 <span>GitHub Repo</span>
                 <ExternalLink className="w-3 h-3" />
@@ -103,7 +112,7 @@ export default function ArticleReaderModal({
                 href={post.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-md border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+                className="hidden sm:inline-flex items-center gap-1.5 dp-btn-outline px-3 py-1 text-xs font-mono"
               >
                 <span>Live Portal</span>
                 <ExternalLink className="w-3 h-3" />
@@ -111,7 +120,7 @@ export default function ArticleReaderModal({
             )}
             <button
               onClick={onClose}
-              className="inline-flex items-center justify-center rounded-md border border-[var(--border)] bg-[var(--surface)] p-1.5 text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+              className="dp-btn-primary inline-flex items-center justify-center p-1.5"
               aria-label="Close article"
             >
               <X className="w-4 h-4" />
@@ -120,35 +129,44 @@ export default function ArticleReaderModal({
         </div>
 
         {/* Editorial Header */}
-        <div className="px-6 sm:px-12 pt-8 pb-6 border-b border-[var(--border)]">
+        <div
+          className="px-6 sm:px-12 pt-8 pb-7 border-b border-[var(--border)]"
+          style={{
+            background:
+              'linear-gradient(270deg, rgba(12, 12, 12, 0.6) 0%, rgb(23, 9, 13) 100%)',
+          }}
+        >
           <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[var(--ink-muted)] mb-4">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-strong)] bg-[var(--surface)] px-3 py-0.5 text-[var(--ink)]">
+            <span className="inline-flex items-center gap-2 rounded-[30px] bg-[#52212e] px-3.5 py-1 text-[#efebe5]">
+              <span className="h-1.5 w-1.5 rounded-[2px] bg-[#efebe5]" />
               {categoryLabel}
             </span>
-            <span className="inline-flex items-center gap-1">
-              <Calendar className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1 text-[var(--ink-secondary)]">
+              <Calendar className="w-3.5 h-3.5 text-[#827470]" />
               {date}
             </span>
-            <span className="inline-flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1 text-[var(--ink-secondary)]">
+              <Clock className="w-3.5 h-3.5 text-[#827470]" />
               {post.readTime}
             </span>
             <span>·</span>
-            <span>Moană Ștefănuț-Cornel (@stefanutc1)</span>
+            <span className="text-[var(--ink-secondary)]">
+              Moană Ștefănuț-Cornel (@stefanutc1)
+            </span>
           </div>
 
-          <h1 className="font-serif text-2xl sm:text-4xl font-normal tracking-tight text-[var(--ink)] leading-tight mb-3">
+          <h1 className="font-display text-2xl sm:text-4xl font-medium tracking-tight text-[var(--ink)] leading-tight mb-3">
             {title}
           </h1>
-          <p className="text-base sm:text-lg text-[var(--ink-secondary)] leading-relaxed">
+          <p className="font-display font-light italic text-base sm:text-xl text-[var(--ink-secondary)] leading-relaxed">
             {subtitle}
           </p>
         </div>
 
         {/* Article Body Sections */}
         <div className="px-6 sm:px-12 py-8 space-y-8">
-          {/* Executive Lead */}
-          <div className="rounded-lg border-l-2 border-[var(--ink)] bg-[var(--surface)] px-5 py-4 text-sm sm:text-base text-[var(--ink-secondary)] leading-relaxed">
+          {/* Executive Lead in drivepoint.ro Burgundy Callout Banner */}
+          <div className="dp-wine-banner px-5 py-4 text-sm sm:text-base text-[#efebe5] leading-relaxed">
             {excerpt}
           </div>
 
@@ -162,11 +180,11 @@ export default function ArticleReaderModal({
 
             return (
               <section key={idx} className="space-y-4">
-                <div className="flex items-center gap-2.5">
-                  <span className="text-xs font-mono text-[var(--ink-muted)]">
-                    0{idx + 1}.
+                <div className="dp-heading-accent flex items-center gap-2.5">
+                  <span className="text-xs font-mono text-[#827470]">
+                    [0{idx + 1}]
                   </span>
-                  <h2 className="font-serif text-xl sm:text-2xl font-normal text-[var(--ink)]">
+                  <h2 className="font-display text-xl sm:text-2xl font-medium text-[var(--ink)]">
                     {heading}
                   </h2>
                 </div>
@@ -178,29 +196,29 @@ export default function ArticleReaderModal({
                 </div>
 
                 {callout && (
-                  <div className="flex items-start gap-3 rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] p-4 text-xs sm:text-sm text-[var(--ink)]">
-                    <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5 text-[var(--ink-secondary)]" />
+                  <div className="dp-wine-banner flex items-start gap-3 p-4 text-xs sm:text-sm text-[#efebe5]">
+                    <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5 text-[#d9d1ca]" />
                     <div className="leading-relaxed">{callout}</div>
                   </div>
                 )}
 
                 {section.codeBlock && (
-                  <div className="rounded-lg border border-[var(--border-strong)] bg-[#050507] overflow-hidden">
-                    <div className="flex items-center justify-between border-b border-white/10 px-4 py-2 bg-white/[0.03]">
-                      <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-                        <Terminal className="w-3.5 h-3.5 text-zinc-500" />
+                  <div className="border border-[var(--border-strong)] bg-[#0c0c0c] overflow-hidden">
+                    <div className="flex items-center justify-between border-b border-[#24181e] px-4 py-2.5 bg-[#17090d]">
+                      <div className="flex items-center gap-2 text-xs font-mono text-[#d9d1ca]">
+                        <Terminal className="w-3.5 h-3.5 text-[#52212e]" />
                         <span>{section.codeBlock.caption}</span>
                       </div>
                       <button
                         onClick={() =>
                           handleCopyCode(section.codeBlock!.code, idx)
                         }
-                        className="inline-flex items-center gap-1 text-xs font-mono text-zinc-400 hover:text-white transition"
+                        className="inline-flex items-center gap-1 text-xs font-mono text-[#d9d1ca] hover:text-[#efebe5] transition"
                       >
                         {copiedIdx === idx ? (
                           <>
-                            <Check className="w-3.5 h-3.5 text-emerald-400" />
-                            <span className="text-emerald-400">Copied</span>
+                            <Check className="w-3.5 h-3.5 text-[#efebe5]" />
+                            <span>Copied</span>
                           </>
                         ) : (
                           <>
@@ -210,7 +228,7 @@ export default function ArticleReaderModal({
                         )}
                       </button>
                     </div>
-                    <pre className="p-4 text-xs sm:text-[13px] font-mono text-zinc-200 overflow-x-auto leading-relaxed">
+                    <pre className="p-4 text-xs sm:text-[13px] font-mono text-[#efebe5] overflow-x-auto leading-relaxed">
                       <code>{section.codeBlock.code}</code>
                     </pre>
                   </div>
@@ -224,7 +242,7 @@ export default function ArticleReaderModal({
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs font-mono text-[var(--ink-muted)]"
+                className="rounded-[4px] border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs font-mono text-[var(--ink-secondary)]"
               >
                 #{tag}
               </span>
@@ -236,13 +254,13 @@ export default function ArticleReaderModal({
             {prevPost ? (
               <button
                 onClick={() => onSelectPost(prevPost)}
-                className="flex flex-col items-start rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4 text-left hover:border-[var(--border-strong)] transition group"
+                className="dp-showroom-card flex flex-col items-start p-4 text-left group"
               >
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-[var(--ink-muted)] mb-1">
                   <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
                   {lang === 'ro' ? 'Articolul Anterior' : 'Previous Article'}
                 </span>
-                <span className="text-sm font-medium text-[var(--ink)] line-clamp-1">
+                <span className="font-display text-sm font-medium text-[var(--ink)] line-clamp-1">
                   {lang === 'ro' ? prevPost.titleRo : prevPost.titleEn}
                 </span>
               </button>
@@ -253,13 +271,13 @@ export default function ArticleReaderModal({
             {nextPost && (
               <button
                 onClick={() => onSelectPost(nextPost)}
-                className="flex flex-col items-end rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4 text-right hover:border-[var(--border-strong)] transition group"
+                className="dp-showroom-card flex flex-col items-end p-4 text-right group"
               >
                 <span className="inline-flex items-center gap-1 text-xs font-mono text-[var(--ink-muted)] mb-1">
                   {lang === 'ro' ? 'Articolul Următor' : 'Next Article'}
                   <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </span>
-                <span className="text-sm font-medium text-[var(--ink)] line-clamp-1">
+                <span className="font-display text-sm font-medium text-[var(--ink)] line-clamp-1">
                   {lang === 'ro' ? nextPost.titleRo : nextPost.titleEn}
                 </span>
               </button>
