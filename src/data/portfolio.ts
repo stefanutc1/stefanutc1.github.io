@@ -46,42 +46,32 @@ export interface StackPillar {
 export const PERSONAL_BIO = {
   name: 'Moană Ștefănuț-Cornel',
   handle: '@stefanutc1',
+  codingSince: '2015',
+  universityYears: '2024 – 2027',
   locationRo: 'Craiova, România',
   locationEn: 'Craiova, Romania',
   email: 'moana.stefanut.f8p@student.ucv.ro',
   github: 'https://github.com/stefanutc1',
   infraLive: 'https://stefanutc1.github.io/infrastructure/',
   bankingLive: 'https://stefanutc1.github.io/proiecte/',
+  oldRepo: 'https://github.com/stefanutc1/old',
   headlineRo:
-    'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR)',
+    'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR) · Codez din 2015',
   headlineEn:
-    'Information Systems Engineer, Infrastructure Architect & Cybersecurity (DFIR) Researcher',
+    'Information Systems Engineer, Infrastructure Architect & Cybersecurity (DFIR) Researcher · Coding Since 2015',
   storyParagraphsRo: [
-    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), absolvent al programului de studii Informatică Economică din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova (Promoția 2026). Pasiunea mea se află la intersecția dintre infrastructura fizică/virtualizată, securitatea cibernetică ofensivă și defensivă (Blue Team / DFIR) și ingineria software de înaltă fiabilitate.',
+    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), student la programul de studii Informatică Economică (2024 – 2027) din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova. Scriu cod din anul 2015 (11+ ani de pasiune și practică continuă), începând cu dezvoltarea de gamemode-uri multiplayer în PAWN și MySQL (RedZone SA-MP în 2015, NQGaming RPG în 2016–2018), sisteme anti-cheat server-side, portaluri comunitare în Vue 3 (Crowland Wiki), platforme web PHP/MySQL/Nginx (Kronick) și boți în Python & Docker (Roadman Bot) — arhivate cu tot istoricul de commit-uri în repository-ul stefanutc1/old.',
     'În ultimii ani am construit de la zero un datacenter homelab hibrid multi-nod (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64 și Kubernetes k3s) guvernat integral prin Infrastructure-as-Code (57 module Terraform și 18 playbook-uri Ansible) și protejat de OPNsense 24.7, Suricata DPI și Wazuh SIEM pe 5 VLAN-uri 802.1Q.',
-    'În paralel, desfășor investigații independente de criminalistică digitală (DFIR) și Threat Intelligence asupra campaniilor reale de phishing, vishing bancar și fraudă e-commerce — investigații care au condus la blocări oficiale la nivel național prin DNSC (PNRISC) — și dezvolt arhitecturi software reziliente în Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular) și C++.'
+    'În paralel, desfășor investigații independente de criminalistică digitală (DFIR) și Threat Intelligence asupra campaniilor reale de phishing, vishing bancar și fraudă e-commerce — investigații care au condus la blocări oficiale la nivel național prin DNSC (PNRISC #178465) — și dezvolt arhitecturi software reziliente în Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular) și C++.'
   ],
   storyParagraphsEn: [
-    'I am Moană Ștefănuț-Cornel (@stefanutc1), a Business Informatics graduate from the Faculty of Economics and Business Administration (FEAA), University of Craiova (Class of 2026). My work sits at the intersection of bare-metal & virtualized infrastructure, offensive/defensive cybersecurity (Blue Team / DFIR), and high-reliability software engineering.',
+    'I am Moană Ștefănuț-Cornel (@stefanutc1), pursuing my B.Sc. in Business Informatics (2024 – 2027) at the Faculty of Economics and Business Administration (FEAA), University of Craiova. I have been coding since 2015 (11+ years of continuous hands-on building), starting with multiplayer game server engineering in PAWN and MySQL (RedZone SA-MP in 2015, NQGaming RPG in 2016–2018), server-side anti-cheat systems, Vue 3 community portals (Crowland Wiki), PHP/MySQL/Nginx web platforms (Kronick), and Python/Docker bots (Roadman Bot)—all preserved with full commit history in stefanutc1/old.',
     'Over the past years, I engineered a multi-node hybrid homelab datacenter from the ground up (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64, and Kubernetes k3s), managed 100% as Infrastructure-as-Code (57 Terraform files and 18 Ansible playbooks) and defended by OPNsense 24.7, Suricata DPI, and Wazuh SIEM across 5 isolated 802.1Q VLANs.',
-    'Alongside infrastructure engineering, I conduct independent Digital Forensics & Incident Response (DFIR) investigations into real-world phishing syndicates, FinTech vishing, and payment fraud—leading to official national takedowns via the Romanian National CSIRT (DNSC)—while building full-stack software systems in Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular), and C++.'
+    'Alongside infrastructure engineering, I conduct independent Digital Forensics & Incident Response (DFIR) investigations into real-world phishing syndicates, FinTech vishing, and payment fraud—leading to official national takedowns via the Romanian National CSIRT (DNSC #178465)—while building full-stack software systems in Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular), and C++.'
   ]
 };
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
-  {
-    periodRo: '2025 – 2026',
-    periodEn: '2025 – 2026',
-    roleRo: 'Lucrare de Licență: Arhitectura și Securitatea Sistemelor Informatice Bancare',
-    roleEn: 'Bachelor’s Thesis: Architecture & Security of Banking Information Systems',
-    orgRo: 'Universitatea din Craiova · FEAA (Informatică Economică)',
-    orgEn: 'University of Craiova · FEAA (Business Informatics)',
-    descRo:
-      'Proiectarea și implementarea unei platforme complete de core-banking (Spring Boot 3.2 + Python 3.11 + SQLite WAL / PostgreSQL), gateway de plăți PCI-DSS v4.0, monitor criptografic SHA-256 și simulator automatizat cu 5 scenarii MITRE ATT&CK pe clusterul Proxmox (VM 310–313).',
-    descEn:
-      'Engineered a full-stack core-banking platform (Spring Boot 3.2 + Python 3.11 + SQLite WAL / PostgreSQL), PCI-DSS v4.0 payment gateway, SHA-256 tamper-evident audit monitor, and a 5-scenario MITRE ATT&CK cyber simulator across Proxmox VMs 310–313.',
-    tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'LaTeX']
-  },
   {
     periodRo: '2025 – Prezent',
     periodEn: '2025 – Present',
@@ -96,30 +86,56 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     tags: ['Proxmox VE 9.2', 'Terraform', 'Ansible', 'OPNsense 24.7', 'Wazuh SIEM', 'DFIR']
   },
   {
-    periodRo: '2024 – 2025',
-    periodEn: '2024 – 2025',
-    roleRo: 'Stagii de Practică de Specialitate & Dezvoltare Full-Stack (PS2 & PELL3)',
-    roleEn: 'Specialty Practice Internships & Full-Stack Engineering (PS2 & PELL3)',
-    orgRo: 'Informatică Economică · Anul 2 & Anul 3',
-    orgEn: 'Business Informatics · Year 2 & Year 3',
-    descRo:
-      'Dezvoltarea aplicației web de telemetrie meteo (ucv-ps2-vremea) în Next.js 15, React 19, TypeScript 5.7 și Tailwind CSS, proiectarea bazelor de date relaționale MySQL 8.0, topologii enterprise Cisco Packet Tracer și aplicații desktop C++/MFC.',
-    descEn:
-      'Developed the Next.js 15 / React 19 / TypeScript weather telemetry web application (ucv-ps2-vremea), relational MySQL 8.0 database architectures, Cisco enterprise VLAN topologies, and C++/MFC desktop systems.',
-    tags: ['Next.js 15', 'React 19', 'TypeScript', 'C++ / MFC', 'MySQL 8.0', 'Cisco IOS']
-  },
-  {
-    periodRo: '2023 – 2026',
-    periodEn: '2023 – 2026',
-    roleRo: 'Licență în Informatică Economică (B.Sc. in Business Informatics)',
-    roleEn: 'Bachelor of Science in Business Informatics (Informatică Economică)',
+    periodRo: '2024 – 2027',
+    periodEn: '2024 – 2027',
+    roleRo: 'Licență în Informatică Economică (B.Sc. in Business Informatics · 2024 – 2027)',
+    roleEn: 'Bachelor of Science in Business Informatics (Informatică Economică · 2024 – 2027)',
     orgRo: 'Facultatea de Economie și Administrarea Afacerilor (FEAA) · Universitatea din Craiova',
     orgEn: 'Faculty of Economics and Business Administration (FEAA) · University of Craiova',
     descRo:
-      'Studii universitare de licență axate pe arhitectura sistemelor informatice, programare orientată pe obiecte (C++/Java/C#), structuri de date și algoritmi, baze de date relaționale, rețele de calculatoare și securitate cibernetică.',
+      'Studii universitare de licență (2024 – 2027) axate pe arhitectura sistemelor informatice, programare orientată pe obiecte (C++/Java/C#), baze de date relaționale (MySQL 8.0 / PostgreSQL), rețele enterprise Cisco, stagii de practică (PS2 & PELL3) și proiectul de diplomă Core-Banking (Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 scenarii MITRE ATT&CK).',
     descEn:
-      'Undergraduate degree focused on information systems architecture, object-oriented programming (C++/Java/C#), data structures and algorithms, relational databases, computer networks, and cybersecurity.',
-    tags: ['Software Engineering', 'Database Systems', 'Computer Networks', 'Economic Informatics']
+      'Undergraduate degree (2024 – 2027) focused on information systems architecture, object-oriented programming (C++/Java/C#), relational databases (MySQL 8.0 / PostgreSQL), Cisco enterprise networking, specialty internships (PS2 & PELL3), and the Core-Banking thesis platform (Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 MITRE ATT&CK scenarios).',
+    tags: ['Informatică Economică (2024–2027)', 'Java 17 & Spring Boot', 'Python 3.11', 'C++ / C#', 'MySQL 8.0', 'PCI-DSS v4.0']
+  },
+  {
+    periodRo: '2021 – 2023',
+    periodEn: '2021 – 2023',
+    roleRo: 'Arhitectură Web Comunitară, Portaluri PHP/MySQL/Nginx & Bot Engineering (Kronick & Roadman)',
+    roleEn: 'Community Web Architecture, PHP/MySQL/Nginx Portals & Bot Engineering (Kronick & Roadman)',
+    orgRo: 'stefanutc1/old · kronick/ & 2022/',
+    orgEn: 'stefanutc1/old · kronick/ & 2022/',
+    descRo:
+      'Proiectarea și administrarea platformei web comunitare Kronick (PHP, MySQL cu patch-uri de indexare a performanței, reverse proxy Nginx SSL cu HSTS/CSP și scripturi Bash automatizate backup.sh / restore.sh) și dezvoltarea botului modular de moderare Roadman în Python 3 (discord.py v2.0, Slash Commands, Docker).',
+    descEn:
+      'Engineered and administered the Kronick community web platform (PHP, MySQL performance indexing patches, Nginx SSL reverse proxy with HSTS/CSP headers, automated Bash backup/restore scripts) and built the modular Roadman moderation bot in Python 3 (discord.py v2.0, Slash Commands, Docker).',
+    tags: ['PHP', 'MySQL', 'Nginx SSL', 'Python 3', 'discord.py v2.0', 'Docker']
+  },
+  {
+    periodRo: '2019 – 2020',
+    periodEn: '2019 – 2020',
+    roleRo: 'Dezvoltare Frontend & Portal de Documentație Tehnică (Crowland Wiki)',
+    roleEn: 'Frontend Engineering & Technical Knowledge Base Portal (Crowland Wiki)',
+    orgRo: 'stefanutc1/old · wiki-crowland/ (phoenix.crowland.ro & rage.crowland.ro)',
+    orgEn: 'stefanutc1/old · wiki-crowland/ (phoenix.crowland.ro & rage.crowland.ro)',
+    descRo:
+      'Construirea aplicației web de documentație și knowledge base pentru serverele comunității Crowland (SA:MP & GTA V RAGE:MP) utilizând Vue 3 (Composition API), Vite și un design system dark mode personalizat, documentând peste 60 de comenzi, sisteme economice și mecanici de joc.',
+    descEn:
+      'Built the interactive documentation and knowledge base web application for the Crowland gaming community (SA:MP & GTA V RAGE:MP) using Vue 3 (Composition API), Vite, and a custom dark-mode design system.',
+    tags: ['Vue 3', 'Composition API', 'Vite', 'JavaScript', 'Custom Design System']
+  },
+  {
+    periodRo: '2015 – 2018',
+    periodEn: '2015 – 2018',
+    roleRo: 'Începuturile în Programare: Game Server Engineering, PAWN, MySQL & Anti-Cheat (RedZone & NQGaming)',
+    roleEn: 'Coding Beginnings: Game Server Engineering, PAWN, MySQL & Anti-Cheat (RedZone & NQGaming)',
+    orgRo: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
+    orgEn: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
+    descRo:
+      'Primele linii de cod scrise în septembrie 2015: dezvoltarea de la zero a gamemode-urilor multiplayer Roleplay/RPG în PAWN și MySQL/DINI (RedZone și NQGaming SA-MP 0.3.7). Implementarea a 10 facțiuni, 8 joburi cu skill 1–5, sisteme dinamice de case/afaceri/dealership, HUD-uri TextDraw și filtre anti-cheat server-side (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
+    descEn:
+      'Started coding in September 2015 by developing multiplayer Roleplay/RPG server gamemodes from scratch in PAWN and MySQL/DINI (RedZone and NQGaming SA-MP 0.3.7). Engineered 10 factions, 8 skill-based jobs, dynamic house/business/dealership economies, TextDraw HUDs, and server-side anti-cheat systems (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
+    tags: ['Coding Since 2015', 'PAWN', 'SA-MP 0.3.7', 'MySQL', 'Anti-Cheat Engineering', 'Game Server Dev']
   }
 ];
 
@@ -153,17 +169,17 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     id: 'sys-licenta',
     code: 'LL3-LucrareLicenta',
     category: 'flagship',
-    badge: 'BACHELOR THESIS · FEAA UCV 2026',
+    badge: 'BACHELOR THESIS · FEAA UCV (2024–2027)',
     titleRo: 'Arhitectura și Securitatea Sistemelor Informatice Bancare',
     titleEn: 'Architecture & Security of Banking Information Systems',
     descRo:
-      'Proiectul de diplomă (Informatică Economică, 2026): backend Core-Banking în Java 17 (Spring Boot 3.2) și Python 3.11 cu registru contabil în partidă dublă, gateway PCI-DSS v4.0, monitor criptografic SHA-256, simulator cu 5 scenarii MITRE ATT&CK și terminal Web Kiosk.',
+      'Proiectul de licență (Informatică Economică, FEAA UCV): backend Core-Banking în Java 17 (Spring Boot 3.2) și Python 3.11 cu registru contabil în partidă dublă, gateway PCI-DSS v4.0, monitor criptografic SHA-256, simulator cu 5 scenarii MITRE ATT&CK și terminal Web Kiosk.',
     descEn:
-      'Bachelor’s thesis platform (Business Informatics, 2026): Java 17 (Spring Boot 3.2) and Python 3.11 double-entry core-banking engine, PCI-DSS v4.0 payment gateway, SHA-256 hash-chained audit monitor, 5-scenario MITRE ATT&CK simulator, and interactive Web Kiosk.',
+      'Bachelor’s thesis platform (Business Informatics, FEAA UCV): Java 17 (Spring Boot 3.2) and Python 3.11 double-entry core-banking engine, PCI-DSS v4.0 payment gateway, SHA-256 hash-chained audit monitor, 5-scenario MITRE ATT&CK simulator, and interactive Web Kiosk.',
     highlightsRo: [
       'Înregistrare contabilă în partidă dublă (ACID), validare matematică IBAN (ISO 13616 MOD-97) și carduri Luhn (ISO/IEC 7812).',
       '5 scenarii de atac și apărare bancară validate automat în CI: Brute-Force, SQLi, Race Condition Double-Spend, Fraud Detection și DDoS.',
-      ' Infrastructură virtualizată Proxmox (VM 310–313) și compilare automată a tezei PDF din LaTeX.'
+      'Infrastructură virtualizată Proxmox (VM 310–313) și compilare automată a tezei PDF din LaTeX.'
     ],
     highlightsEn: [
       'ACID double-entry bookkeeping, mathematical ISO 13616 MOD-97 IBAN validation, and ISO/IEC 7812 Luhn card verification.',
@@ -173,6 +189,30 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX'],
     repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/LL3-LucrareLicenta',
     liveUrl: 'https://stefanutc1.github.io/proiecte/'
+  },
+  {
+    id: 'sys-old-archive',
+    code: 'stefanutc1/old',
+    category: 'flagship',
+    badge: 'ARCHIVE · 2015 – 2023 · 5 CODEBASES',
+    titleRo: 'Arhiva Istorică de Proiecte (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
+    titleEn: 'Historical Projects Archive (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
+    descRo:
+      'Monorepo ce conservă 100% din istoricul de commit-uri al primelor mele proiecte dezvoltate începând cu septembrie 2015: serverele SA-MP Roleplay/RPG RedZone (2015) și NQGaming (2016–2018), portalul Vue 3 Crowland Wiki (2019–2020), platforma web PHP/MySQL/Nginx Kronick (2021–2023) și botul Python/Docker Roadman (2022).',
+    descEn:
+      'Monorepo preserving 100% of the commit history of my early codebases built since September 2015: the RedZone (2015) and NQGaming (2016–2018) SA-MP Roleplay/RPG servers, the Vue 3 Crowland Wiki (2019–2020), the Kronick PHP/MySQL/Nginx web platform (2021–2023), and the Python/Docker Roadman bot (2022).',
+    highlightsRo: [
+      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Gamemode-uri complete SA-MP în PAWN & MySQL/DINI, 10 facțiuni, 8 joburi, Dealership și filtre Anti-Cheat server-side (anti_cbug.pwn, anti-teleport, anti-dialog spoofing).',
+      'wiki-crowland/ (2019–2020): Portal interactiv de documentație construit cu Vue 3 (Composition API) și Vite pentru phoenix.crowland.ro și rage.crowland.ro.',
+      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Platformă web comunitară PHP/MySQL/Nginx SSL cu scripturi Bash de backup/restore + bot de moderare Discord în Python 3 (discord.py v2.0) și Docker.'
+    ],
+    highlightsEn: [
+      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Full SA-MP Roleplay/RPG gamemodes in PAWN & MySQL/DINI, 10 factions, 8 jobs, Dealership, and server-side Anti-Cheat filterscripts (anti_cbug.pwn, anti-teleport, anti-dialog spoofing).',
+      'wiki-crowland/ (2019–2020): Interactive documentation portal built with Vue 3 (Composition API) and Vite for phoenix.crowland.ro and rage.crowland.ro.',
+      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Community web stack (PHP/MySQL/Nginx SSL + Bash backup automation) and a Dockerized Python 3 (discord.py v2.0) moderation bot.'
+    ],
+    tags: ['Coding Since 2015', 'PAWN & SA-MP', 'Vue 3 & Vite', 'PHP & Nginx', 'MySQL', 'Python 3 & Docker'],
+    repoUrl: 'https://github.com/stefanutc1/old'
   },
   {
     id: 'dfir-mediagalaxy',

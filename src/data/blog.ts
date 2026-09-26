@@ -450,5 +450,68 @@ resp = session.post(TARGET_URL, data={"username": payload, "password": "x"})`
         ]
       }
     ]
+  },
+  {
+    slug: 'coding-since-2015-retrospective-pawn-samp-web-python-old-repo',
+    id: 'POST-07 · ARCHIVE-2015-2023',
+    dateRo: '25 Septembrie 2026',
+    dateEn: 'September 25, 2026',
+    readTime: '11 min read',
+    category: 'infra',
+    categoryLabelRo: 'Retrospectivă Inginerească (2015 – Prezent)',
+    categoryLabelEn: 'Engineering Retrospective (2015 – Present)',
+    titleRo:
+      'De la Scripturi PAWN și Servere SA-MP în 2015 la Infrastructură Enterprise și Securitate Cibernetică: 11+ Ani de Cod prin Arhiva stefanutc1/old',
+    titleEn:
+      'From PAWN Scripts & SA-MP Servers in 2015 to Enterprise Infrastructure & Cybersecurity: 11+ Years of Code Through the stefanutc1/old Archive',
+    subtitleRo:
+      'Cum mi-am început parcursul în programare în septembrie 2015 construind gamemode-uri multiplayer (RedZone, NQGaming), portaluri comunitare (Crowland Wiki, Kronick) și boți Python/Docker (Roadman).',
+    subtitleEn:
+      'How my programming journey began in September 2015 building multiplayer game servers (RedZone, NQGaming), community web portals (Crowland Wiki, Kronick), and Python/Docker bots (Roadman).',
+    excerptRo:
+      'O retrospectivă tehnică asupra primilor mei ani de cod păstrați în monorepo-ul arhivă stefanutc1/old: de la primele commit-uri din septembrie 2015 pe serverele SA-MP RedZone și NQGaming (PAWN, MySQL, detecție anti-cheat server-side), la portalul Vue 3 Crowland Wiki, arhitectura PHP/Nginx/MySQL Kronick și botul modular Roadman în Python 3 & Docker.',
+    excerptEn:
+      'A technical retrospective of my early coding years preserved in the stefanutc1/old archive monorepo: from my first September 2015 commits on the RedZone and NQGaming SA-MP servers (PAWN, MySQL, server-side anti-cheat detection), to the Vue 3 Crowland Wiki, the Kronick PHP/Nginx/MySQL web stack, and the modular Python 3 & Docker Roadman bot.',
+    tags: ['Coding Since 2015', 'PAWN / SA-MP', 'MySQL', 'Vue 3 & Vite', 'PHP & Nginx', 'Python & Docker'],
+    repoUrl: 'https://github.com/stefanutc1/old',
+    sections: [
+      {
+        headingRo: '1. Septembrie 2015 – 2018: Începuturile în PAWN, MySQL și Anti-Cheat Server-Side (RedZone & NQGaming)',
+        headingEn: '1. September 2015 – 2018: Starting Out with PAWN, MySQL & Server-Side Anti-Cheat (RedZone & NQGaming)',
+        paragraphsRo: [
+          'Pasiunea mea pentru programare a început în anul 2015 (primul commit arhivat datând din 5 septembrie 2015 pe proiectul RedZone SA:MP Roleplay), când am început să dezvolt și să optimizez de la zero gamemode-uri multiplayer în limbajul PAWN conectate la baze de date MySQL și sisteme flat-file DINI.',
+          'În proiectele RedZone (2015–2016) și NQGaming RPG (2016–2018), am implementat economii virtuale complete (case dinamice, afaceri cu stocuri, dealership auto, 10 facțiuni, 8 joburi cu niveluri de skill 1–5, arene GunGame și Paintball), dar mai ales primele mele mecanisme de securitate: filtre anti-cheat server-side împotriva C-Bug (anti_cbug.pwn), teleport-hack, airbreak, speedhack și dialog spoofing.'
+        ],
+        paragraphsEn: [
+          'My programming journey started in 2015 (with the earliest archived commit dated September 5, 2015 on the RedZone SA:MP Roleplay codebase), building multiplayer server gamemodes from scratch in PAWN backed by MySQL schemas and DINI flat-file persistence.',
+          'Across RedZone (2015–2016) and NQGaming RPG (2016–2018), I engineered full virtual economies (dynamic houses, stock-driven businesses, vehicle dealerships, 10 factions, 8 skill-tiered jobs, GunGame and Paintball arenas) alongside my very first security systems: server-side anti-cheat filterscripts against C-Bug macros (anti_cbug.pwn), teleportation, airbreak, speedhacks, and dialog ID spoofing.'
+        ],
+        codeBlock: {
+          language: 'c',
+          caption: 'Istoric din arhiva stefanutc1/old (redzone & nqgaming — 2015–2018)',
+          code: `// [2015-09-05] feat(core): initialize RedZone SA:MP Roleplay server codebase and MySQL schemas
+// [2015-09-16] feat(anticheat): implement server-side weapon, speed, and teleportation detection
+// [2017-04-17] Adaugat protectie anti-dialog spoofing & verificare distanta anti-teleport
+// [2017-06-11] Integrat filterscript anti_cbug.pwn impotriva macro-urilor si verificare pLogged`
+        },
+        calloutRo:
+          'Dezvoltarea serverelor multiplayer în 2015–2018 a fost școala practică în care am înțeles că orice input venit de la client este potențial malițios — același principiu pe care îl aplic astăzi în arhitecturi Core-Banking și DFIR.',
+        calloutEn:
+          'Building multiplayer game servers between 2015 and 2018 was the hands-on proving ground where I learned that all client input is untrusted—the exact principle I apply today in Core-Banking and DFIR.'
+      },
+      {
+        headingRo: '2. 2019 – 2023: Tranziția către Web Modern, Administrare Linux/Nginx și Python (Crowland Wiki, Kronick & Roadman)',
+        headingEn: '2. 2019 – 2023: Transitioning to Modern Web, Linux/Nginx Administration & Python (Crowland Wiki, Kronick & Roadman)',
+        paragraphsRo: [
+          'Pe măsură ce comunitățile online au crescut, am extins stiva tehnică către dezvoltare web full-stack și administrare de servere Linux. Pentru comunitatea Crowland (phoenix.crowland.ro / rage.crowland.ro), am construit portalul wiki-crowland folosind Vue 3 (Composition API) și Vite, documentând peste 60 de comenzi, sisteme economice și ghiduri interactive.',
+          'În paralel, proiectul Kronick (2021–2023) a presupus operarea unei platforme web comunitare complete (PHP, MySQL cu patch-uri de indexare și optimizare a interogărilor, configurații Nginx cu HSTS/CSP și scripturi Bash automatizate pentru backup.sh, restore.sh și cache_clear.sh). În 2022, am dezvoltat Roadman Bot în Python 3 (discord.py v2.0) containerizat cu Docker, oferind comenzi hibride Slash (/) și moderare automată.'
+        ],
+        paragraphsEn: [
+          'As online communities scaled, I expanded into full-stack web development and Linux server administration. For the Crowland community (phoenix.crowland.ro / rage.crowland.ro), I built the wiki-crowland knowledge base portal using Vue 3 (Composition API) and Vite.',
+          'Simultaneously, the Kronick project (2021–2023) involved running a full community web stack (PHP, MySQL with indexing optimization patches, Nginx SSL with HSTS/CSP headers, and automated Bash backup/restore scripts). In 2022, I built the Roadman Discord Bot in Python 3 (discord.py v2.0) containerized with Docker, featuring modular cogs and native Slash Commands.'
+        ]
+      }
+    ]
   }
 ];
+

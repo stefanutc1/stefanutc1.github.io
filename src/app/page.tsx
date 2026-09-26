@@ -132,7 +132,7 @@ export default function HomePage() {
     },
     {
       id: 'blog',
-      label: { ro: 'Blog Tehnic (6)', en: 'Tech Blog (6)' },
+      label: { ro: 'Blog Tehnic (7)', en: 'Tech Blog (7)' },
       icon: <BookOpen className="w-3.5 h-3.5" />,
     },
     {
@@ -186,8 +186,8 @@ export default function HomePage() {
                   </div>
                   <div className="text-[11px] font-mono text-[var(--ink-muted)] truncate">
                     {lang === 'ro'
-                      ? 'Prezentare Personală & Jurnal de Inginerie'
-                      : 'Personal Presentation & Engineering Blog'}
+                      ? 'Codez din 2015 · Jurnal de Inginerie & Portofoliu'
+                      : 'Coding Since 2015 · Engineering Blog & Portfolio'}
                   </div>
                 </div>
               </button>
@@ -291,8 +291,8 @@ export default function HomePage() {
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
                   <span>
                     {lang === 'ro'
-                      ? 'PREZENTARE PERSONALĂ & BLOG DE INGINERIE'
-                      : 'PERSONAL PRESENTATION & ENGINEERING BLOG'}
+                      ? 'CODEZ DIN 2015 (11+ ANI) · FEAA UCV (2024 – 2027)'
+                      : 'CODING SINCE 2015 (11+ YEARS) · FEAA UCV (2024 – 2027)'}
                   </span>
                 </div>
 
@@ -311,8 +311,8 @@ export default function HomePage() {
                   <span className="inline-flex items-center gap-1.5">
                     <GraduationCap className="w-4 h-4 text-[var(--ink-secondary)]" />
                     {lang === 'ro'
-                      ? 'Universitatea din Craiova · FEAA (Informatică Economică)'
-                      : 'University of Craiova · FEAA (Business Informatics)'}
+                      ? 'Universitatea din Craiova · FEAA — Informatică Economică (2024 – 2027)'
+                      : 'University of Craiova · FEAA — Business Informatics (2024 – 2027)'}
                   </span>
                   <span className="inline-flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-[var(--ink-secondary)]" />
@@ -354,14 +354,14 @@ export default function HomePage() {
                   </button>
 
                   <button
-                    onClick={() => setActivePost(BLOG_POSTS[1])}
+                    onClick={() => setActivePost(BLOG_POSTS[6])}
                     className="inline-flex items-center gap-2 rounded-lg border border-[var(--border-strong)] bg-[var(--surface)] px-4 py-2.5 text-xs sm:text-sm font-medium text-[var(--ink)] hover:bg-[var(--surface-hover)] transition"
                   >
                     <FileText className="w-4 h-4" />
                     <span>
                       {lang === 'ro'
-                        ? 'Lucrarea de Licență Core-Banking'
-                        : 'Core-Banking Bachelor Thesis'}
+                        ? 'Retrospectivă: Codez din 2015 (stefanutc1/old)'
+                        : 'Retrospective: Coding Since 2015 (stefanutc1/old)'}
                     </span>
                   </button>
                 </div>
@@ -382,7 +382,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <span className="rounded-md border border-[var(--border)] bg-[var(--bg-elevated)] px-2.5 py-1 text-[11px] font-mono text-[var(--ink-secondary)]">
-                      Promoția 2026
+                      FEAA 2024 – 2027
                     </span>
                   </div>
 
@@ -390,22 +390,22 @@ export default function HomePage() {
                   <div className="grid grid-cols-2 gap-2.5">
                     <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
                       <div className="text-xl font-serif text-[var(--ink)]">
-                        6 Articole
+                        Din 2015
+                      </div>
+                      <div className="text-[11px] font-mono text-[var(--ink-muted)]">
+                        {lang === 'ro'
+                          ? '11+ Ani de Cod (PAWN, Web, Infra)'
+                          : '11+ Years Coding (PAWN, Web, Infra)'}
+                      </div>
+                    </div>
+                    <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
+                      <div className="text-xl font-serif text-[var(--ink)]">
+                        7 Articole
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)]">
                         {lang === 'ro'
                           ? 'Jurnal Tehnic & Analize DFIR'
                           : 'Long-Form Engineering Posts'}
-                      </div>
-                    </div>
-                    <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
-                      <div className="text-xl font-serif text-[var(--ink)]">
-                        43+ Proiecte
-                      </div>
-                      <div className="text-[11px] font-mono text-[var(--ink-muted)]">
-                        {lang === 'ro'
-                          ? 'Arhivă Universitară & Licență'
-                          : 'University Archive & Thesis'}
                       </div>
                     </div>
                     <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
@@ -431,24 +431,33 @@ export default function HomePage() {
                   </div>
 
                   {/* Direct Repository Links */}
-                  <div className="pt-1 flex flex-wrap gap-2">
+                  <div className="pt-1 grid grid-cols-1 sm:grid-cols-3 gap-2">
                     <a
                       href="https://github.com/stefanutc1/infrastructure"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] px-3 py-2 text-xs font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+                      className="inline-flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] px-2.5 py-2 text-[11px] font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
                     >
-                      <span>stefanutc1/infrastructure</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span className="truncate">infrastructure</span>
+                      <ExternalLink className="w-3 h-3 shrink-0" />
                     </a>
                     <a
                       href="https://github.com/stefanutc1/proiecte"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] px-3 py-2 text-xs font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+                      className="inline-flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] px-2.5 py-2 text-[11px] font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
                     >
-                      <span>stefanutc1/proiecte</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span className="truncate">proiecte (2024–27)</span>
+                      <ExternalLink className="w-3 h-3 shrink-0" />
+                    </a>
+                    <a
+                      href="https://github.com/stefanutc1/old"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] px-2.5 py-2 text-[11px] font-mono text-[var(--ink-secondary)] hover:text-[var(--ink)] hover:border-[var(--border-strong)] transition"
+                    >
+                      <span className="truncate">old (2015–2023)</span>
+                      <ExternalLink className="w-3 h-3 shrink-0" />
                     </a>
                   </div>
                 </div>
@@ -549,7 +558,7 @@ export default function HomePage() {
                 {[
                   {
                     id: 'all',
-                    label: { ro: 'Toate Articolele (6)', en: 'All Posts (6)' },
+                    label: { ro: 'Toate Articolele (7)', en: 'All Posts (7)' },
                   },
                   {
                     id: 'dfir',
@@ -561,7 +570,7 @@ export default function HomePage() {
                   },
                   {
                     id: 'infra',
-                    label: { ro: 'Homelab & GitOps', en: 'Homelab & GitOps' },
+                    label: { ro: 'Homelab & Retrospectivă', en: 'Homelab & Retrospective' },
                   },
                   {
                     id: 'ctf',
@@ -665,13 +674,13 @@ export default function HomePage() {
             <div className="border-b border-[var(--border)] pb-4">
               <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                 {lang === 'ro'
-                  ? 'DESPRE MINE · CRONOLOGIE & EXPERIENȚĂ'
-                  : 'ABOUT ME · CHRONOLOGY & EXPERIENCE'}
+                  ? 'DESPRE MINE · CRONOLOGIE & EXPERIENȚĂ (CODEZ DIN 2015)'
+                  : 'ABOUT ME · CHRONOLOGY & EXPERIENCE (CODING SINCE 2015)'}
               </div>
               <h2 className="font-serif text-3xl text-[var(--ink)]">
                 {lang === 'ro'
-                  ? 'Parcurs Academic și Ingineresc (2023 – 2026)'
-                  : 'Academic & Engineering Journey (2023 – 2026)'}
+                  ? 'Parcurs Ingineresc și Academic (2015 – 2027)'
+                  : 'Engineering & Academic Journey (2015 – 2027)'}
               </h2>
             </div>
 
@@ -720,8 +729,8 @@ export default function HomePage() {
               <div>
                 <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                   {lang === 'ro'
-                    ? 'ARHIVA DE PROIECTE & LICENȚĂ'
-                    : 'PROJECTS ARCHIVE & BACHELOR THESIS'}
+                    ? 'ARHIVA DE PROIECTE (2015 – 2027)'
+                    : 'PROJECTS ARCHIVE (2015 – 2027)'}
                 </div>
                 <h2 className="font-serif text-3xl sm:text-4xl text-[var(--ink)]">
                   {lang === 'ro'
@@ -735,7 +744,7 @@ export default function HomePage() {
                   { id: 'all', label: { ro: 'Toate', en: 'All' } },
                   {
                     id: 'flagship',
-                    label: { ro: 'Flagship & Licență', en: 'Flagship & Thesis' },
+                    label: { ro: 'Flagship & Arhivă', en: 'Flagship & Archive' },
                   },
                   { id: 'cyber', label: { ro: 'DFIR & Cyber', en: 'DFIR & Cyber' } },
                   { id: 'web', label: { ro: 'Web & Cloud', en: 'Web & Cloud' } },
@@ -888,7 +897,7 @@ export default function HomePage() {
                       : 'ACADEMIC REFERENCE / BIBTEX CITATION'}
                   </div>
                   <h3 className="font-serif text-xl text-[var(--ink)]">
-                    Moană, Ștefănuț-Cornel (2026) — Universitatea din Craiova
+                    Moană, Ștefănuț-Cornel — Universitatea din Craiova (FEAA 2024 – 2027)
                   </h3>
                 </div>
                 <button
@@ -921,12 +930,12 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-1">
             <div className="font-serif text-lg text-[var(--ink)]">
-              {PERSONAL_BIO.name} ({PERSONAL_BIO.handle})
+              {PERSONAL_BIO.name} ({PERSONAL_BIO.handle}) · Codez din 2015
             </div>
             <div className="text-xs font-mono text-[var(--ink-muted)]">
               {lang === 'ro'
-                ? 'Universitatea din Craiova · FEAA · Informatică Economică'
-                : 'University of Craiova · FEAA · Business Informatics'}
+                ? 'Universitatea din Craiova · FEAA · Informatică Economică (2024 – 2027)'
+                : 'University of Craiova · FEAA · Business Informatics (2024 – 2027)'}
             </div>
           </div>
 
@@ -946,7 +955,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="hover:text-[var(--ink)] transition inline-flex items-center gap-1"
             >
-              Infrastructure Repo
+              Infrastructure
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
@@ -955,7 +964,16 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="hover:text-[var(--ink)] transition inline-flex items-center gap-1"
             >
-              Proiecte & Licență
+              Proiecte (2024–2027)
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://github.com/stefanutc1/old"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--ink)] transition inline-flex items-center gap-1"
+            >
+              Old Archive (2015–2023)
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>

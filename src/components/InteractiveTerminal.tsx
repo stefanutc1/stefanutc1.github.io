@@ -13,12 +13,13 @@ interface InteractiveTerminalProps {
 }
 
 const COMMAND_HELP = [
-  'whoami   — Despre Moană Ștefănuț-Cornel & profil ingineresc',
-  'blog     — Listează cele 6 articole tehnice din jurnal',
+  'whoami   — Despre Moană Ștefănuț-Cornel (Codez din 2015 · FEAA UCV 2024–2027)',
+  'old      — Arhiva proiectelor istorice 2015–2023 (stefanutc1/old)',
+  'blog     — Listează cele 7 articole tehnice din jurnal',
   'fleet    — Topologia clusterului Proxmox VE (Nodes 1-4 & 5 VLANs)',
   'dfir     — Rapoarte DFIR & DNSC Takedown #178465',
   'projects — Arhiva universitară (43+ proiecte + Licență Core-Banking)',
-  'stack    — Tehnologiile principale utilizate în producție',
+  'stack    — Tehnologiile principale utilizate (2015 – Prezent)',
   'clear    — Curăță consola interactivă',
 ];
 
@@ -38,7 +39,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
     },
     {
       type: 'output',
-      text: 'Moană Ștefănuț-Cornel (@stefanutc1) | B.Sc. Informatică @ Univ. din Craiova | Systems, FinTech & DFIR Engineer',
+      text: 'Moană Ștefănuț-Cornel (@stefanutc1) | Codez din 2015 (11+ ani) | Informatică Economică @ FEAA UCV (2024–2027)',
     },
   ]);
 
@@ -69,17 +70,29 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
         response =
           lang === 'ro'
             ? [
-                'Nume:      Moană Ștefănuț-Cornel (@stefanutc1)',
-                'Studii:    Universitatea din Craiova — Facultatea de Științe, Specializarea Informatică (2023–2026)',
-                'Licență:   Arhitectură Core-Banking, Registru Dublă Partidă ACID, PCI-DSS v4.0 & 5 Scenarii MITRE ATT&CK',
-                'Rol:       Inginer Sisteme Distribuite, DevSecOps, Infrastructură Hibridă & Analist DFIR',
+                'Nume:       Moană Ștefănuț-Cornel (@stefanutc1)',
+                'Experiență: Codez din septembrie 2015 (11+ ani de programare continuă — stefanutc1/old)',
+                'Studii:     Universitatea din Craiova — FEAA, Informatică Economică (2024 – 2027)',
+                'Licență:    Arhitectură Core-Banking, Registru Dublă Partidă ACID, PCI-DSS v4.0 & 5 Scenarii MITRE ATT&CK',
+                'Rol:        Inginer Sisteme Informatice, Infrastructură Hibridă & Cercetător DFIR',
               ].join('\n')
             : [
-                'Name:      Moană Ștefănuț-Cornel (@stefanutc1)',
-                'Education: University of Craiova — Faculty of Sciences, B.Sc. Computer Science (2023–2026)',
-                'Thesis:    Core-Banking Architecture, ACID Double-Entry Ledger, PCI-DSS v4.0 & 5 MITRE ATT&CK Scenarios',
-                'Role:      Distributed Systems, DevSecOps, Hybrid Infrastructure & DFIR Analyst',
+                'Name:       Moană Ștefănuț-Cornel (@stefanutc1)',
+                'Experience: Coding since September 2015 (11+ years hands-on — stefanutc1/old)',
+                'Education:  University of Craiova — FEAA, B.Sc. Business Informatics (2024 – 2027)',
+                'Thesis:     Core-Banking Architecture, ACID Double-Entry Ledger, PCI-DSS v4.0 & 5 MITRE ATT&CK Scenarios',
+                'Role:       Information Systems Engineer, Hybrid Infrastructure Architect & DFIR Researcher',
               ].join('\n');
+        break;
+      case 'old':
+        response = [
+          'Arhiva stefanutc1/old (2015 – 2023):',
+          '• [2015–2016] redzone/       — RedZone SA:MP Roleplay Gamemode (PAWN, MySQL, Anti-Cheat server-side)',
+          '• [2016–2018] nqgaming/      — NQGaming SA-MP 0.3.7 RPG (10 facțiuni, 8 joburi, anti_cbug.pwn)',
+          '• [2019–2020] wiki-crowland/ — Portal Documentație Crowland (Vue 3 Composition API, Vite)',
+          '• [2021–2023] kronick/       — Platformă Web Comunitară (PHP, MySQL, Nginx SSL, Bash Backup)',
+          '• [2022–2023] 2022/          — Roadman Discord Moderation Bot (Python 3, discord.py v2.0, Docker)',
+        ].join('\n');
         break;
       case 'blog':
         response = [
@@ -89,15 +102,16 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           '[POST-04] Anatomia Bypass-ului 2FA: Steam OpenID BitM vs. Revolut Real-Time OTP Relay',
           '[POST-05] Decompilarea unei Platforme de Task Scam: Manipularea /api/v1/site/config & SQLi',
           '[POST-06] InvataCyber.ro 100% CTF Writeup: Reflected XSS, Blind SQLi & Jinja2 SSTI',
+          '[POST-07] De la Scripturi PAWN în 2015 la Infrastructură Enterprise: 11+ Ani de Cod (stefanutc1/old)',
         ].join('\n');
         break;
       case 'fleet':
         response = [
-          'NODE-1 (thinkcentre-m920q)  | i5-8500T 6C | 32GB RAM | 1.25TB NVMe+SSD | OPNsense + 10 LXC + HA',
-          'NODE-2 (apple-macbook-m1)   | Apple M1 8C | 8GB RAM  | macOS Sequoia   | Dev & AI Edge Workstation',
-          'NODE-3 (gaming-workstation) | i5-9400F 6C | 32GB RAM | GTX 1650 4GB    | CUDA / Ollama LLM / Security Lab',
-          'NODE-4 (oracle-cloud-vps)   | Ampere 4C   | 24GB RAM | Frankfurt OCI   | WireGuard Ingress & Pangolin',
-          'VLANs: VLAN 10 (MGMT) | VLAN 20 (DMZ) | VLAN 30 (INTERNAL) | VLAN 40 (GUEST) | VLAN 99 (QUARANTINE)',
+          'NODE-1 (pve)        | 192.168.1.240 | Proxmox VE 9.2 x86_64 · 12GB DDR4 + ZRAM · 20+ VM/LXC',
+          'NODE-2 (omv-nas)    | 192.168.1.181 | OpenMediaVault 7 NAS · NFSv4 / SMB3 / ZFS Backup',
+          'NODE-3 (pve2)       | 192.168.1.196 | Apple Silicon ARM64 · Proxmox VE / Asahi · Multi-Arch CI',
+          'NODE-4 (kubernetes) | 192.168.1.150 | Bare-Metal k3s / k0s Edge Worker · Cilium CNI · ESP32',
+          'VLANs: VLAN 10 (MGMT) | VLAN 20 (PROD) | VLAN 30 (CYBERLAB) | VLAN 40 (STORAGE) | VLAN 50 (IOT)',
         ].join('\n');
         break;
       case 'dfir':
@@ -111,16 +125,16 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
         break;
       case 'projects':
         response = [
-          '• Licență Core-Banking (2026): Next.js 16 + FastAPI + PostgreSQL 16 + Wazuh SIEM + 225 pagini documentație',
-          '• Homelab Datacenter (57 .tf): Proxmox VE 9.2, OPNsense 24.7, Ansible, Prometheus, Grafana, Authentik',
-          '• 43+ Proiecte Universitare:   Assembly x86, C/C++ OOP, Java, Python AI/ML, C# .NET 9, Flutter, OpenGL, Prolog',
+          '• stefanutc1/old (2015–2023):          RedZone SA-MP, NQGaming RPG, Crowland Wiki, Kronick, Roadman Bot',
+          '• stefanutc1/proiecte (2024–2027):     43+ Proiecte Universitare + Licență Core-Banking (Java/Python/C++/C#)',
+          '• stefanutc1/infrastructure (2025+):   4-Node Homelab Datacenter (57 Terraform, 18 Ansible, Wazuh SIEM)',
         ].join('\n');
         break;
       case 'stack':
         response = [
-          'Languages:  TypeScript, Python, C/C++, C# (.NET 9), Java, SQL, x86 Assembly, Bash',
-          'Web & API:  Next.js 15/16, React 19, Angular, FastAPI, ASP.NET Core, Tailwind CSS',
-          'Infra/Sec:  Proxmox VE 9.2, OPNsense, Terraform (57 files), Ansible, Docker, Wazuh SIEM, Suricata',
+          '2015–2023:  PAWN (SA-MP), MySQL, PHP, Nginx, Vue 3, Vite, Python (discord.py), Bash, Docker',
+          '2024–2027:  Java 17 (Spring Boot 3.2), TypeScript (Next.js 15 / Angular 20), C/C++, C#, SQL',
+          'Infra/Sec:  Proxmox VE 9.2, OPNsense 24.7, Terraform (57 files), Ansible, Wazuh SIEM, Suricata',
         ].join('\n');
         break;
       default:
@@ -135,7 +149,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
     setInput('');
   };
 
-  const quickCommands = ['whoami', 'blog', 'fleet', 'dfir', 'projects', 'stack', 'clear'];
+  const quickCommands = ['whoami', 'old', 'blog', 'fleet', 'dfir', 'projects', 'stack', 'clear'];
 
   return (
     <div className="rounded-xl border border-[var(--border-strong)] bg-[#07070a] text-zinc-200 shadow-xl overflow-hidden">
@@ -201,8 +215,8 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           onChange={(e) => setInput(e.target.value)}
           placeholder={
             lang === 'ro'
-              ? 'Tastează o comandă (whoami, blog, fleet, dfir, projects, stack)...'
-              : 'Type a command (whoami, blog, fleet, dfir, projects, stack)...'
+              ? 'Tastează o comandă (whoami, old, blog, fleet, dfir, projects, stack)...'
+              : 'Type a command (whoami, old, blog, fleet, dfir, projects, stack)...'
           }
           className="w-full bg-transparent text-zinc-100 placeholder:text-zinc-600 focus:outline-none"
         />

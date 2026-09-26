@@ -1,8 +1,10 @@
-name: Build & Deploy Next.js 15 Personal Blog to GitHub Pages
+name: CI/CD — Build & Deploy Next.js 15 to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -15,7 +17,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  ci-build:
+    name: "CI — TypeScript, Quality Gates & Static Export"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -27,29 +30,41 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js 15 static export
+      - name: Run TypeScript Strict Typecheck
+        run: npx tsc --noEmit
+
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Build Next.js 15 Static Export (./out)
         run: npm run build
 
-      - name: Ensure .nojekyll in static export
-        run: touch out/.nojekyll
+      - name: Verify Static Export Integrity
+        run: |
+          touch out/.nojekyll
+          test -f out/index.html || { echo "Error: out/index.html missing"; exit 1; }
+          test -f out/404.html || { echo "Error: out/404.html missing"; exit 1; }
+          test -d out/_next || { echo "Error: out/_next directory missing"; exit 1; }
+          echo "Static export verified successfully."
 
-      - name: Upload Pages artifact
+      - name: Upload Pages Artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
-  deploy:
+  cd-deploy:
+    name: "CD — Deploy to GitHub Pages (stefanutc1.github.io)"
+    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: ci-build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
