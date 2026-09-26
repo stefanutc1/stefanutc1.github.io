@@ -186,8 +186,8 @@ export default function HomePage() {
                   </div>
                   <div className="text-[11px] font-mono text-[var(--ink-muted)] truncate">
                     {lang === 'ro'
-                      ? 'Codez din 2015 · Jurnal de Inginerie & Portofoliu'
-                      : 'Coding Since 2015 · Engineering Blog & Portfolio'}
+                      ? 'Jurnal de Inginerie, Infrastructură & Securitate Cibernetică'
+                      : 'Engineering Journal, Infrastructure & Cybersecurity'}
                   </div>
                 </div>
               </button>
@@ -291,8 +291,8 @@ export default function HomePage() {
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
                   <span>
                     {lang === 'ro'
-                      ? 'CODEZ DIN 2015 (11+ ANI) · FEAA UCV (2024 – 2027)'
-                      : 'CODING SINCE 2015 (11+ YEARS) · FEAA UCV (2024 – 2027)'}
+                      ? 'EXPERIENȚĂ TEHNICĂ DIN 2015 · FEAA UCV (2024 – 2027)'
+                      : 'ENGINEERING EXPERIENCE SINCE 2015 · FEAA UCV (2024 – 2027)'}
                   </span>
                 </div>
 
@@ -360,8 +360,8 @@ export default function HomePage() {
                     <FileText className="w-4 h-4" />
                     <span>
                       {lang === 'ro'
-                        ? 'Retrospectivă: Codez din 2015 (stefanutc1/old)'
-                        : 'Retrospective: Coding Since 2015 (stefanutc1/old)'}
+                        ? 'Retrospectivă Tehnică (2015 – Prezent)'
+                        : 'Engineering Retrospective (2015 – Present)'}
                     </span>
                   </button>
                 </div>
@@ -390,12 +390,12 @@ export default function HomePage() {
                   <div className="grid grid-cols-2 gap-2.5">
                     <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
                       <div className="text-xl font-serif text-[var(--ink)]">
-                        Din 2015
+                        2015 – Prezent
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)]">
                         {lang === 'ro'
-                          ? '11+ Ani de Cod (PAWN, Web, Infra)'
-                          : '11+ Years Coding (PAWN, Web, Infra)'}
+                          ? 'Experiență în Dezvoltare Software'
+                          : 'Hands-On Software Engineering'}
                       </div>
                     </div>
                     <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
@@ -674,8 +674,8 @@ export default function HomePage() {
             <div className="border-b border-[var(--border)] pb-4">
               <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                 {lang === 'ro'
-                  ? 'DESPRE MINE · CRONOLOGIE & EXPERIENȚĂ (CODEZ DIN 2015)'
-                  : 'ABOUT ME · CHRONOLOGY & EXPERIENCE (CODING SINCE 2015)'}
+                  ? 'DESPRE MINE · CRONOLOGIE & EVOLUȚIE TEHNICĂ'
+                  : 'ABOUT ME · CHRONOLOGY & TECHNICAL EVOLUTION'}
               </div>
               <h2 className="font-serif text-3xl text-[var(--ink)]">
                 {lang === 'ro'
@@ -930,7 +930,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div className="space-y-1">
             <div className="font-serif text-lg text-[var(--ink)]">
-              {PERSONAL_BIO.name} ({PERSONAL_BIO.handle}) · Codez din 2015
+              {PERSONAL_BIO.name} ({PERSONAL_BIO.handle})
             </div>
             <div className="text-xs font-mono text-[var(--ink-muted)]">
               {lang === 'ro'

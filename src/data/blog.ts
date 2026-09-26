@@ -472,7 +472,7 @@ resp = session.post(TARGET_URL, data={"username": payload, "password": "x"})`
       'O retrospectivă tehnică asupra primilor mei ani de cod păstrați în monorepo-ul arhivă stefanutc1/old: de la primele commit-uri din septembrie 2015 pe serverele SA-MP RedZone și NQGaming (PAWN, MySQL, detecție anti-cheat server-side), la portalul Vue 3 Crowland Wiki, arhitectura PHP/Nginx/MySQL Kronick și botul modular Roadman în Python 3 & Docker.',
     excerptEn:
       'A technical retrospective of my early coding years preserved in the stefanutc1/old archive monorepo: from my first September 2015 commits on the RedZone and NQGaming SA-MP servers (PAWN, MySQL, server-side anti-cheat detection), to the Vue 3 Crowland Wiki, the Kronick PHP/Nginx/MySQL web stack, and the modular Python 3 & Docker Roadman bot.',
-    tags: ['Coding Since 2015', 'PAWN / SA-MP', 'MySQL', 'Vue 3 & Vite', 'PHP & Nginx', 'Python & Docker'],
+    tags: ['2015 – 2023 Archive', 'PAWN / SA-MP', 'MySQL', 'Vue 3 & Vite', 'PHP & Nginx', 'Python & Docker'],
     repoUrl: 'https://github.com/stefanutc1/old',
     sections: [
       {

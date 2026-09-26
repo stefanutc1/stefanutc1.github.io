@@ -13,7 +13,7 @@ interface InteractiveTerminalProps {
 }
 
 const COMMAND_HELP = [
-  'whoami   — Despre Moană Ștefănuț-Cornel (Codez din 2015 · FEAA UCV 2024–2027)',
+  'whoami   — Profil ingineresc Moană Ștefănuț-Cornel (Experiență 2015–Prezent · FEAA UCV 2024–2027)',
   'old      — Arhiva proiectelor istorice 2015–2023 (stefanutc1/old)',
   'blog     — Listează cele 7 articole tehnice din jurnal',
   'fleet    — Topologia clusterului Proxmox VE (Nodes 1-4 & 5 VLANs)',
@@ -39,7 +39,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
     },
     {
       type: 'output',
-      text: 'Moană Ștefănuț-Cornel (@stefanutc1) | Codez din 2015 (11+ ani) | Informatică Economică @ FEAA UCV (2024–2027)',
+      text: 'Moană Ștefănuț-Cornel (@stefanutc1) | Experiență Software & Sisteme (2015–Prezent) | Informatică Economică @ FEAA UCV (2024–2027)',
     },
   ]);
 
@@ -71,14 +71,14 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           lang === 'ro'
             ? [
                 'Nume:       Moană Ștefănuț-Cornel (@stefanutc1)',
-                'Experiență: Codez din septembrie 2015 (11+ ani de programare continuă — stefanutc1/old)',
+                'Experiență: Peste un deceniu de practică în dezvoltare software și sisteme (2015 – Prezent · stefanutc1/old)',
                 'Studii:     Universitatea din Craiova — FEAA, Informatică Economică (2024 – 2027)',
                 'Licență:    Arhitectură Core-Banking, Registru Dublă Partidă ACID, PCI-DSS v4.0 & 5 Scenarii MITRE ATT&CK',
                 'Rol:        Inginer Sisteme Informatice, Infrastructură Hibridă & Cercetător DFIR',
               ].join('\n')
             : [
                 'Name:       Moană Ștefănuț-Cornel (@stefanutc1)',
-                'Experience: Coding since September 2015 (11+ years hands-on — stefanutc1/old)',
+                'Experience: Over a decade of hands-on software & systems engineering (2015 – Present · stefanutc1/old)',
                 'Education:  University of Craiova — FEAA, B.Sc. Business Informatics (2024 – 2027)',
                 'Thesis:     Core-Banking Architecture, ACID Double-Entry Ledger, PCI-DSS v4.0 & 5 MITRE ATT&CK Scenarios',
                 'Role:       Information Systems Engineer, Hybrid Infrastructure Architect & DFIR Researcher',

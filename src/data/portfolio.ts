@@ -56,16 +56,16 @@ export const PERSONAL_BIO = {
   bankingLive: 'https://stefanutc1.github.io/proiecte/',
   oldRepo: 'https://github.com/stefanutc1/old',
   headlineRo:
-    'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR) · Codez din 2015',
+    'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR)',
   headlineEn:
-    'Information Systems Engineer, Infrastructure Architect & Cybersecurity (DFIR) Researcher · Coding Since 2015',
+    'Information Systems Engineer, Infrastructure Architect & Cybersecurity (DFIR) Researcher',
   storyParagraphsRo: [
-    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), student la programul de studii Informatică Economică (2024 – 2027) din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova. Scriu cod din anul 2015 (11+ ani de pasiune și practică continuă), începând cu dezvoltarea de gamemode-uri multiplayer în PAWN și MySQL (RedZone SA-MP în 2015, NQGaming RPG în 2016–2018), sisteme anti-cheat server-side, portaluri comunitare în Vue 3 (Crowland Wiki), platforme web PHP/MySQL/Nginx (Kronick) și boți în Python & Docker (Roadman Bot) — arhivate cu tot istoricul de commit-uri în repository-ul stefanutc1/old.',
+    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), student la programul de studii Informatică Economică (2024 – 2027) din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova. Cu o experiență practică în dezvoltare software începută în 2015, mi-am format fundația tehnică proiectând arhitecturi de servere multiplayer în PAWN și MySQL (RedZone în 2015, NQGaming RPG în 2016–2018), sisteme anti-cheat server-side, portaluri web în Vue 3 (Crowland Wiki), platforme comunitare PHP/MySQL/Nginx (Kronick) și automatizări în Python & Docker (Roadman) — proiecte conservate integral în arhiva stefanutc1/old.',
     'În ultimii ani am construit de la zero un datacenter homelab hibrid multi-nod (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64 și Kubernetes k3s) guvernat integral prin Infrastructure-as-Code (57 module Terraform și 18 playbook-uri Ansible) și protejat de OPNsense 24.7, Suricata DPI și Wazuh SIEM pe 5 VLAN-uri 802.1Q.',
     'În paralel, desfășor investigații independente de criminalistică digitală (DFIR) și Threat Intelligence asupra campaniilor reale de phishing, vishing bancar și fraudă e-commerce — investigații care au condus la blocări oficiale la nivel național prin DNSC (PNRISC #178465) — și dezvolt arhitecturi software reziliente în Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular) și C++.'
   ],
   storyParagraphsEn: [
-    'I am Moană Ștefănuț-Cornel (@stefanutc1), pursuing my B.Sc. in Business Informatics (2024 – 2027) at the Faculty of Economics and Business Administration (FEAA), University of Craiova. I have been coding since 2015 (11+ years of continuous hands-on building), starting with multiplayer game server engineering in PAWN and MySQL (RedZone SA-MP in 2015, NQGaming RPG in 2016–2018), server-side anti-cheat systems, Vue 3 community portals (Crowland Wiki), PHP/MySQL/Nginx web platforms (Kronick), and Python/Docker bots (Roadman Bot)—all preserved with full commit history in stefanutc1/old.',
+    'I am Moană Ștefănuț-Cornel (@stefanutc1), pursuing my B.Sc. in Business Informatics (2024 – 2027) at the Faculty of Economics and Business Administration (FEAA), University of Craiova. With over a decade of hands-on software development experience dating back to 2015, I built my technical foundation engineering multiplayer server architectures in PAWN and MySQL (RedZone in 2015, NQGaming RPG in 2016–2018), server-side anti-cheat systems, Vue 3 web portals (Crowland Wiki), PHP/MySQL/Nginx community platforms (Kronick), and Python/Docker automation (Roadman)—all preserved in the stefanutc1/old archive.',
     'Over the past years, I engineered a multi-node hybrid homelab datacenter from the ground up (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64, and Kubernetes k3s), managed 100% as Infrastructure-as-Code (57 Terraform files and 18 Ansible playbooks) and defended by OPNsense 24.7, Suricata DPI, and Wazuh SIEM across 5 isolated 802.1Q VLANs.',
     'Alongside infrastructure engineering, I conduct independent Digital Forensics & Incident Response (DFIR) investigations into real-world phishing syndicates, FinTech vishing, and payment fraud—leading to official national takedowns via the Romanian National CSIRT (DNSC #178465)—while building full-stack software systems in Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular), and C++.'
   ]
@@ -127,15 +127,15 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     periodRo: '2015 – 2018',
     periodEn: '2015 – 2018',
-    roleRo: 'Începuturile în Programare: Game Server Engineering, PAWN, MySQL & Anti-Cheat (RedZone & NQGaming)',
-    roleEn: 'Coding Beginnings: Game Server Engineering, PAWN, MySQL & Anti-Cheat (RedZone & NQGaming)',
+    roleRo: 'Arhitectură Servere Multiplayer, PAWN, MySQL & Sisteme Anti-Cheat (RedZone & NQGaming)',
+    roleEn: 'Multiplayer Server Architecture, PAWN, MySQL & Anti-Cheat Systems (RedZone & NQGaming)',
     orgRo: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
     orgEn: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
     descRo:
-      'Primele linii de cod scrise în septembrie 2015: dezvoltarea de la zero a gamemode-urilor multiplayer Roleplay/RPG în PAWN și MySQL/DINI (RedZone și NQGaming SA-MP 0.3.7). Implementarea a 10 facțiuni, 8 joburi cu skill 1–5, sisteme dinamice de case/afaceri/dealership, HUD-uri TextDraw și filtre anti-cheat server-side (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
+      'Debutul în dezvoltarea software (septembrie 2015): proiectarea de la zero a gamemode-urilor multiplayer Roleplay/RPG în PAWN și MySQL/DINI (RedZone și NQGaming SA-MP 0.3.7). Implementarea a 10 facțiuni, 8 joburi cu skill 1–5, sisteme dinamice de case/afaceri/dealership, HUD-uri TextDraw și filtre anti-cheat server-side (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
     descEn:
-      'Started coding in September 2015 by developing multiplayer Roleplay/RPG server gamemodes from scratch in PAWN and MySQL/DINI (RedZone and NQGaming SA-MP 0.3.7). Engineered 10 factions, 8 skill-based jobs, dynamic house/business/dealership economies, TextDraw HUDs, and server-side anti-cheat systems (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
-    tags: ['Coding Since 2015', 'PAWN', 'SA-MP 0.3.7', 'MySQL', 'Anti-Cheat Engineering', 'Game Server Dev']
+      'Early software engineering foundation (September 2015): designing multiplayer Roleplay/RPG server gamemodes from scratch in PAWN and MySQL/DINI (RedZone and NQGaming SA-MP 0.3.7). Engineered 10 factions, 8 skill-based jobs, dynamic house/business/dealership economies, TextDraw HUDs, and server-side anti-cheat systems (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
+    tags: ['PAWN', 'SA-MP 0.3.7', 'MySQL', 'Anti-Cheat Engineering', 'Game Server Architecture']
   }
 ];
 
@@ -198,9 +198,9 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     titleRo: 'Arhiva Istorică de Proiecte (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
     titleEn: 'Historical Projects Archive (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
     descRo:
-      'Monorepo ce conservă 100% din istoricul de commit-uri al primelor mele proiecte dezvoltate începând cu septembrie 2015: serverele SA-MP Roleplay/RPG RedZone (2015) și NQGaming (2016–2018), portalul Vue 3 Crowland Wiki (2019–2020), platforma web PHP/MySQL/Nginx Kronick (2021–2023) și botul Python/Docker Roadman (2022).',
+      'Monorepo ce conservă 100% din istoricul de commit-uri al proiectelor dezvoltate între 2015 și 2023: serverele SA-MP Roleplay/RPG RedZone (2015) și NQGaming (2016–2018), portalul Vue 3 Crowland Wiki (2019–2020), platforma web PHP/MySQL/Nginx Kronick (2021–2023) și botul Python/Docker Roadman (2022).',
     descEn:
-      'Monorepo preserving 100% of the commit history of my early codebases built since September 2015: the RedZone (2015) and NQGaming (2016–2018) SA-MP Roleplay/RPG servers, the Vue 3 Crowland Wiki (2019–2020), the Kronick PHP/MySQL/Nginx web platform (2021–2023), and the Python/Docker Roadman bot (2022).',
+      'Monorepo preserving 100% of the commit history of codebases built between 2015 and 2023: the RedZone (2015) and NQGaming (2016–2018) SA-MP Roleplay/RPG servers, the Vue 3 Crowland Wiki (2019–2020), the Kronick PHP/MySQL/Nginx web platform (2021–2023), and the Python/Docker Roadman bot (2022).',
     highlightsRo: [
       'redzone/ (2015–2016) & nqgaming/ (2016–2018): Gamemode-uri complete SA-MP în PAWN & MySQL/DINI, 10 facțiuni, 8 joburi, Dealership și filtre Anti-Cheat server-side (anti_cbug.pwn, anti-teleport, anti-dialog spoofing).',
       'wiki-crowland/ (2019–2020): Portal interactiv de documentație construit cu Vue 3 (Composition API) și Vite pentru phoenix.crowland.ro și rage.crowland.ro.',
@@ -211,7 +211,7 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
       'wiki-crowland/ (2019–2020): Interactive documentation portal built with Vue 3 (Composition API) and Vite for phoenix.crowland.ro and rage.crowland.ro.',
       'kronick/ (2021–2023) & 2022/ (Roadman Bot): Community web stack (PHP/MySQL/Nginx SSL + Bash backup automation) and a Dockerized Python 3 (discord.py v2.0) moderation bot.'
     ],
-    tags: ['Coding Since 2015', 'PAWN & SA-MP', 'Vue 3 & Vite', 'PHP & Nginx', 'MySQL', 'Python 3 & Docker'],
+    tags: ['PAWN & SA-MP', 'Vue 3 & Vite', 'PHP & Nginx', 'MySQL', 'Python 3 & Docker'],
     repoUrl: 'https://github.com/stefanutc1/old'
   },
   {

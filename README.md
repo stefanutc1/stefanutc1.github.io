@@ -10,8 +10,8 @@ Acest repository găzduiește site-ul de prezentare personală și jurnalul tehn
 
 ## Secțiuni Principale
 
-1. **Despre Mine & Prezentare Personală (`Codez din 2015` · `FEAA UCV 2024 – 2027`)**:
-   - Povestea inginerească începută în **septembrie 2015** (`11+ ani de cod`, arhivată în [`stefanutc1/old`](https://github.com/stefanutc1/old)), parcursul academic la **Universitatea din Craiova — FEAA, Informatică Economică (2024 – 2027)** și terminalul interactiv `stefanut@datacenter:~$` (cu suport pentru comenzile `whoami`, `old`, `blog`, `fleet`, `dfir`, `projects`, `stack`).
+1. **Despre Mine & Prezentare Personală (`Experiență Tehnică din 2015` · `FEAA UCV 2024 – 2027`)**:
+   - Parcursul tehnic început în **septembrie 2015** (`peste un deceniu de experiență practică în dezvoltare software`, arhivat în [`stefanutc1/old`](https://github.com/stefanutc1/old)), studiile universitare la **Universitatea din Craiova — FEAA, Informatică Economică (2024 – 2027)** și terminalul interactiv `stefanut@datacenter:~$` (cu suport pentru comenzile `whoami`, `old`, `blog`, `fleet`, `dfir`, `projects`, `stack`).
 2. **Jurnal Tehnic & Blog de Inginerie (7 Articole Lung-Format RO / EN)**:
    - `POST-01`: Anatomia campaniei de phishing Media Galaxy (`yiyangsaas.com` / `23.224.199.13`) și blocarea națională prin DNSC (`#178465`).
    - `POST-02`: Arhitectura și securitatea platformei Core-Banking (Registru ACID, PCI-DSS v4.0, 5 scenarii MITRE ATT&CK).
