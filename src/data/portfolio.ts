@@ -237,25 +237,55 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber/mediagalaxy-ecommerce-fraud-forensics'
   },
   {
+    id: 'ctf-19-09-2026',
+    code: 'cyber/ctf/19-09-2026',
+    category: 'cyber',
+    badge: 'CTF 19.09.2026 · 3/3 SOLVED (100%)',
+    titleRo: 'InvataCyber.ro CTF (19.09.2026) — Writeup Centralizat & 11 Solvere Python/JS',
+    titleEn: 'InvataCyber.ro CTF (19.09.2026) — Centralized Writeup & 11 Python/JS Solvers',
+    descRo:
+      'Arhiva completă a competiției CTF din 19.09.2026 (3/3 provocări rezolvate, 100%): The Blog (Stored XSS CWE-79 & exfiltrare /admin), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 pe cookie-ul TrackingId cu oracol de 5652 bytes) și Redacția CMS (Broken Access Control CWE-306 pe /edit/5 & Jinja2 SSTI CWE-1336 to RCE).',
+    descEn:
+      'Complete archive of the 19.09.2026 CTF competition (3/3 challenges solved, 100%): The Blog (Stored XSS CWE-79 & /admin exfiltration), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 on TrackingId cookie via 5652-byte oracle), and CMS Newsroom (Unauthenticated /edit/5 CWE-306 & Jinja2 SSTI CWE-1336 to RCE).',
+    highlightsRo: [
+      'Challenge 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py pentru exfiltrarea asincronă a panoului /admin din sesiunea botului headless -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
+      'Challenge 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): 8 scripturi Python (dump_users.py, dump_all_schema.py, solver_portal.py) cu oracol boolean pe 5652 bytes -> admin : s3cur3_l0ckd0wn_p4ssw0rd! pe /console -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
+      'Challenge 03 (Redacția CMS — writeup_03_cms_editor_ssti.md): blog_flag.py cu traversare de obiecte Python în render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+    ],
+    highlightsEn: [
+      'Challenge 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py asynchronously exfiltrating /admin from the headless bot session -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
+      'Challenge 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): 8 Python solvers (dump_users.py, dump_all_schema.py, solver_portal.py) leveraging a 5652-byte boolean oracle -> admin : s3cur3_l0ckd0wn_p4ssw0rd! on /console -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
+      'Challenge 03 (CMS Newsroom — writeup_03_cms_editor_ssti.md): blog_flag.py traversing Python object graph in render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+    ],
+    tags: [
+      'CTF 19.09.2026',
+      'Stored XSS (CWE-79)',
+      'Blind SQLi (CWE-89)',
+      'Jinja2 SSTI (CWE-1336)',
+      '11 Python/JS Solvers'
+    ],
+    repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026'
+  },
+  {
     id: 'dfir-revolut-steam-task',
     code: 'SEC-2026-VISH / TASK / AITM',
     category: 'cyber',
     badge: 'DFIR SUITE · 4 DOSSIERS & 5 CVEs',
-    titleRo: 'Dosarele Revolut Vishing, Task Scam API, Steam BitM & 100% CTF',
-    titleEn: 'Revolut Vishing, Task Scam API, Steam BitM & 100% CTF Suite',
+    titleRo: 'Dosarele Revolut Vishing, Task Scam API, Steam BitM & Reproduceri CVE',
+    titleEn: 'Revolut Vishing, Task Scam API, Steam BitM & CVE Reproductions Suite',
     descRo:
-      'Colecția de investigații asupra vishing-ului cu releu OTP, decompilării API-urilor de fraudă financiară (/api/v1/site/config), atacurilor Browser-in-the-Middle și rezolvările 100% InvataCyber CTF.',
+      'Colecția de investigații asupra vishing-ului cu releu OTP în timp real, decompilării API-urilor de fraudă financiară (/api/v1/site/config), atacurilor Browser-in-the-Middle pe Steam OpenID și reproducerilor CVE.',
     descEn:
-      'Suite of forensic investigations into live OTP vishing relays, unauthenticated task-scam APIs (/api/v1/site/config), Browser-in-the-Middle popups, and 100% InvataCyber CTF writeups.',
+      'Suite of forensic investigations into live OTP vishing relays, unauthenticated task-scam APIs (/api/v1/site/config), Browser-in-the-Middle Steam OpenID popups, and laboratory CVE reproductions.',
     highlightsRo: [
       '5 reproduceri CVE în laborator (CVE-2023-54391, CVE-2025-57539, CVE-2026-69603, CVE-2026-69730, CVE-2026-69845) cu patch-uri de remediere.',
-      'Solvere Python automatizate pentru Blind SQLi, Reflected XSS și Jinja2 SSTI.'
+      'Analize detaliate asupra arhitecturilor de phishing/vishing în timp real și exfiltrării sesiunilor OAuth/OpenID.'
     ],
     highlightsEn: [
       '5 laboratory CVE reproductions with remediation patches.',
-      'Automated Python exploit solvers for Blind SQLi, Reflected XSS, and Jinja2 SSTI.'
+      'In-depth technical analysis of real-time vishing relays and OAuth/OpenID session hijacking.'
     ],
-    tags: ['Vishing Relay', 'BitM / AiTM', 'API Decompilation', 'CVE Research', 'Python Solvers'],
+    tags: ['Vishing Relay', 'BitM / AiTM', 'API Decompilation', 'CVE Research', 'Threat Intel'],
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber'
   },
   {

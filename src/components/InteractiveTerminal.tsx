@@ -14,6 +14,7 @@ interface InteractiveTerminalProps {
 
 const COMMAND_HELP = [
   'whoami   — Profil ingineresc Moană Ștefănuț-Cornel (Experiență 2015–Prezent · FEAA UCV 2024–2027)',
+  'ctf      — CTF 19.09.2026 InvataCyber.ro (3/3 Solved · 11 Solvere Python/JS & Flags)',
   'old      — Arhiva proiectelor istorice 2015–2023 (stefanutc1/old)',
   'blog     — Listează cele 7 articole tehnice din jurnal',
   'fleet    — Topologia clusterului Proxmox VE (Nodes 1-4 & 5 VLANs)',
@@ -84,6 +85,15 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
                 'Role:       Information Systems Engineer, Hybrid Infrastructure Architect & DFIR Researcher',
               ].join('\n');
         break;
+      case 'ctf':
+        response = [
+          'InvataCyber.ro CTF — 19.09.2026 (cyber/ctf/19-09-2026 · 3/3 Provocări Rezolvate · 100%):',
+          '• [01] The Blog (CWE-79 Stored XSS)      | payload.js, solver.py                 -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}',
+          '• [02] Portal Lockdown (CWE-89 SQLi)     | dump_users.py (5652B boolean oracle)  -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}',
+          '• [03] Redacția CMS (CWE-1336 SSTI->RCE) | blog_flag.py (/edit/5 Jinja2 popen)   -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}',
+          'Repo: https://github.com/stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026',
+        ].join('\n');
+        break;
       case 'old':
         response = [
           'Arhiva stefanutc1/old (2015 – 2023):',
@@ -101,7 +111,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           '[POST-03] Construirea unui Datacenter Homelab cu 4 Noduri: Proxmox 9.2, OPNsense & 5 VLAN-uri',
           '[POST-04] Anatomia Bypass-ului 2FA: Steam OpenID BitM vs. Revolut Real-Time OTP Relay',
           '[POST-05] Decompilarea unei Platforme de Task Scam: Manipularea /api/v1/site/config & SQLi',
-          '[POST-06] InvataCyber.ro 100% CTF Writeup: Reflected XSS, Blind SQLi & Jinja2 SSTI',
+          '[POST-06] CTF 19.09.2026 — InvataCyber.ro Writeup Complet (3/3 · 100%): Stored XSS, Blind SQLi & Jinja2 SSTI',
           '[POST-07] De la Scripturi PAWN în 2015 la Infrastructură Enterprise: 11+ Ani de Cod (stefanutc1/old)',
         ].join('\n');
         break;
@@ -120,14 +130,14 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
           '2. Steam OpenID BitM       — Fake L4D2 Tournament DOM Browser-in-the-Middle window',
           '3. Revolut Vishing Relay   — Live operator OTP & Selfie KYC harvesting panel',
           '4. Task Scam Platform      — /api/v1/site/config withdrawal lock + SQL Injection exposure',
-          '5. InvataCyber CTF         — 100% completion across Web Exploitation, Cryptography & Linux Forensics',
+          '5. CTF 19.09.2026 (100%)   — 3/3 Challenges Solved (The Blog XSS, Portal SQLite Blind SQLi, CMS Jinja2 SSTI)',
         ].join('\n');
         break;
       case 'projects':
         response = [
           '• stefanutc1/old (2015–2023):          RedZone SA-MP, NQGaming RPG, Crowland Wiki, Kronick, Roadman Bot',
           '• stefanutc1/proiecte (2024–2027):     43+ Proiecte Universitare + Licență Core-Banking (Java/Python/C++/C#)',
-          '• stefanutc1/infrastructure (2025+):   4-Node Homelab Datacenter (57 Terraform, 18 Ansible, Wazuh SIEM)',
+          '• stefanutc1/infrastructure (2025+):   4-Node Homelab Datacenter + CTF 19.09.2026 + DFIR Dossiers',
         ].join('\n');
         break;
       case 'stack':
@@ -149,7 +159,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
     setInput('');
   };
 
-  const quickCommands = ['whoami', 'old', 'blog', 'fleet', 'dfir', 'projects', 'stack', 'clear'];
+  const quickCommands = ['whoami', 'ctf', 'old', 'blog', 'fleet', 'dfir', 'projects', 'stack', 'clear'];
 
   return (
     <div className="border border-[#52212e] bg-[#0c0c0c] text-[#efebe5] shadow-xl overflow-hidden">

