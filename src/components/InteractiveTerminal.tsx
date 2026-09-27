@@ -136,7 +136,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
       case 'projects':
         response = [
           '• stefanutc1/old (2015–2023):          RedZone SA-MP, NQGaming RPG, Crowland Wiki, Kronick, Roadman Bot',
-          '• stefanutc1/proiecte (2024–2027):     43+ Proiecte Universitare + Licență Core-Banking (Java/Python/C++/C#)',
+          '• stefanutc1/university (2024–2027):     43+ Proiecte Universitare + Licență Core-Banking (Java/Python/C++/C#)',
           '• stefanutc1/infrastructure (2025+):   4-Node Homelab Datacenter + CTF 19.09.2026 + DFIR Dossiers',
         ].join('\n');
         break;

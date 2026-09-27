@@ -53,7 +53,7 @@ export const PERSONAL_BIO = {
   email: 'moana.stefanut.f8p@student.ucv.ro',
   github: 'https://github.com/stefanutc1',
   infraLive: 'https://stefanutc1.github.io/infrastructure/',
-  bankingLive: 'https://stefanutc1.github.io/proiecte/',
+  bankingLive: 'https://stefanutc1.github.io/university/',
   oldRepo: 'https://github.com/stefanutc1/old',
   headlineRo:
     'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR)',
@@ -93,9 +93,9 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     orgRo: 'Facultatea de Economie și Administrarea Afacerilor (FEAA) · Universitatea din Craiova',
     orgEn: 'Faculty of Economics and Business Administration (FEAA) · University of Craiova',
     descRo:
-      'Studii universitare de licență (2024 – 2027) axate pe arhitectura sistemelor informatice, programare orientată pe obiecte (C++/Java/C#), baze de date relaționale (MySQL 8.0 / PostgreSQL), rețele enterprise Cisco, stagii de practică (PS2 & PELL3) și proiectul de diplomă Core-Banking (Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 scenarii MITRE ATT&CK).',
+      'Studii universitare de licență (2024 – 2027) axate pe arhitectura sistemelor informatice, programare orientată pe obiecte (C++/Java/C#), baze de date relaționale (MySQL 8.0 / PostgreSQL), rețele enterprise Cisco, stagii de practică (PracticaSpecialitate & PracticaElaborareLucrareLicenta) și proiectul de diplomă Core-Banking (LucrareLicenta: Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 scenarii MITRE ATT&CK).',
     descEn:
-      'Undergraduate degree (2024 – 2027) focused on information systems architecture, object-oriented programming (C++/Java/C#), relational databases (MySQL 8.0 / PostgreSQL), Cisco enterprise networking, specialty internships (PS2 & PELL3), and the Core-Banking thesis platform (Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 MITRE ATT&CK scenarios).',
+      'Undergraduate degree (2024 – 2027) focused on information systems architecture, object-oriented programming (C++/Java/C#), relational databases (MySQL 8.0 / PostgreSQL), Cisco enterprise networking, specialty internships (PracticaSpecialitate & PracticaElaborareLucrareLicenta), and the Core-Banking thesis platform (LucrareLicenta: Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 MITRE ATT&CK scenarios).',
     tags: ['Informatică Economică (2024–2027)', 'Java 17 & Spring Boot', 'Python 3.11', 'C++ / C#', 'MySQL 8.0', 'PCI-DSS v4.0']
   },
   {
@@ -167,7 +167,7 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
   },
   {
     id: 'sys-licenta',
-    code: 'LL3-LucrareLicenta',
+    code: 'LucrareLicenta',
     category: 'flagship',
     badge: 'BACHELOR THESIS · FEAA UCV (2024–2027)',
     titleRo: 'Arhitectura și Securitatea Sistemelor Informatice Bancare',
@@ -187,8 +187,8 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
       'Dedicated Proxmox virtualization (VMs 310–313) and automated LaTeX thesis PDF build pipeline.'
     ],
     tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/LL3-LucrareLicenta',
-    liveUrl: 'https://stefanutc1.github.io/proiecte/'
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta',
+    liveUrl: 'https://stefanutc1.github.io/university/'
   },
   {
     id: 'sys-old-archive',
@@ -290,15 +290,15 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
   },
   {
     id: 'proj-ps2',
-    code: 'PS2-Practica',
+    code: 'PracticaSpecialitate & PracticaElaborareLucrareLicenta',
     category: 'web',
     badge: 'NEXT.JS 15 · REACT 19',
-    titleRo: 'Aplicație Web Telemetrie Meteo (ucv-ps2-vremea) & Jurnal Bilingv',
-    titleEn: 'Weather Telemetry Web App (ucv-ps2-vremea) & Bilingual Logbook',
+    titleRo: 'Aplicație Web Telemetrie Meteo (ucv-ps2-vremea) & Stagiile de Practică',
+    titleEn: 'Weather Telemetry Web App (ucv-ps2-vremea) & Specialty Internships',
     descRo:
-      'Aplicație web modernă construită cu Next.js 15 App Router, React 19, TypeScript 5.7 și Tailwind CSS, însoțită de 14 jurnale zilnice bilingve de practică.',
+      'Aplicație web modernă construită cu Next.js 15 App Router, React 19, TypeScript 5.7 și Tailwind CSS în PracticaSpecialitate, alături de documentația din PracticaElaborareLucrareLicenta.',
     descEn:
-      'Modern web application built with Next.js 15 App Router, React 19, TypeScript 5.7, and Tailwind CSS, paired with 14 bilingual daily engineering logs.',
+      'Modern web application built with Next.js 15 App Router, React 19, TypeScript 5.7, and Tailwind CSS in PracticaSpecialitate, paired with PracticaElaborareLucrareLicenta.',
     highlightsRo: [
       'Arhitectură de componente React 19 cu interogare asincronă API și design responsiv.',
       'Validare statică automatizată în pipeline-ul CI GitHub Actions.'
@@ -308,19 +308,19 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
       'Automated static typechecking and build verification in GitHub Actions CI.'
     ],
     tags: ['Next.js 15', 'React 19', 'TypeScript 5.7', 'Tailwind CSS'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/PS2-Practica'
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/PracticaSpecialitate'
   },
   {
     id: 'proj-poo2',
-    code: 'POO2-Proiect & Platforme',
+    code: 'ProgramareOrientataObiect/{Proiect,Platforme}',
     category: 'systems',
     badge: 'C++ · MFC WIN32',
     titleRo: 'Sisteme Desktop de Gestiune și Platforme SDI/MDI în C++ / MFC',
     titleEn: 'Commercial Management Desktop System & SDI/MDI Platforms in C++ / MFC',
     descRo:
-      'Aplicație completă de gestiune comercială și suită de 8 platforme de laborator (Lab 2–9 MDI) dezvoltate în C++ și Microsoft Foundation Classes.',
+      'Aplicație completă de gestiune comercială (ProgramareOrientataObiect/Proiect) și suită de 8 platforme de laborator (ProgramareOrientataObiect/Platforme) dezvoltate în C++ și Microsoft Foundation Classes.',
     descEn:
-      'Full commercial management desktop application and 8 laboratory platforms (Lab 2–9 MDI) engineered in C++ and Microsoft Foundation Classes.',
+      'Full commercial management desktop application (ProgramareOrientataObiect/Proiect) and 8 laboratory platforms (ProgramareOrientataObiect/Platforme) engineered in C++ and Microsoft Foundation Classes.',
     highlightsRo: [
       'Arhitectură Document/View, serializare binară CArchive, randare vectorială GDI și ferestre de dialog complexe.',
       'Ierarhii polimorfice de clase și gestiune sigură a memoriei.'
@@ -330,51 +330,51 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
       'Polymorphic class hierarchies and deterministic resource management.'
     ],
     tags: ['C++', 'MFC', 'Win32 API', 'OOP', 'Visual Studio'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/POO2-Proiect'
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/ProgramareOrientataObiect'
   },
   {
     id: 'proj-sd2-pc1',
-    code: 'SD2 & PC1-Platforme',
+    code: 'StructuriDeDate & ProgramareaCalculatoarelor',
     category: 'systems',
     badge: 'C++ · C# · .NET WINFORMS',
     titleRo: 'Structuri de Date Avansate (C++ BST/Liste) & Platforme .NET (C#/VB)',
     titleEn: 'Advanced Data Structures (C++ BST/Lists) & .NET WinForms Suite (C#/VB)',
     descRo:
-      'Implementări de la zero în C++ pentru arbori binari de căutare, liste înlănțuite și algoritmi, alături de 10 aplicații desktop .NET WinForms în C# și Visual Basic.',
+      'Implementări de la zero în C++ pentru arbori binari de căutare și liste înlănțuite (StructuriDeDate/Proiect și StructuriDeDate/Teme), alături de 10 aplicații desktop .NET WinForms în C# și Visual Basic (ProgramareaCalculatoarelor).',
     descEn:
-      'From-scratch C++ implementations of Binary Search Trees, linked lists, and algorithms, alongside 10 .NET WinForms desktop applications in C# and Visual Basic.',
+      'From-scratch C++ implementations of Binary Search Trees and linked lists (StructuriDeDate/Proiect & StructuriDeDate/Teme), alongside 10 .NET WinForms desktop applications in C# and Visual Basic (ProgramareaCalculatoarelor).',
     highlightsRo: [
-      'Operații complete pe arbori binari de căutare (inserare, ștergere, traversări recursiv/iterativ) în SD2-Proiect și SD2-Teme.',
-      '10 soluții Visual Studio pentru calcule matriciale, statistice și financiare în PC1-Platforme.'
+      'Operații complete pe arbori binari de căutare (inserare, ștergere, traversări recursiv/iterativ) în StructuriDeDate/Proiect și StructuriDeDate/Teme.',
+      '10 soluții Visual Studio pentru calcule matriciale, statistice și financiare în ProgramareaCalculatoarelor.'
     ],
     highlightsEn: [
-      'Full BST lifecycle operations and 7 algorithmic problem sets in SD2-Proiect & SD2-Teme.',
-      '10 Visual Studio WinForms solutions for matrix, statistical, and financial computation in PC1-Platforme.'
+      'Full BST lifecycle operations and 7 algorithmic problem sets in StructuriDeDate/Proiect & StructuriDeDate/Teme.',
+      '10 Visual Studio WinForms solutions for matrix, statistical, and financial computation in ProgramareaCalculatoarelor.'
     ],
     tags: ['C++', 'Binary Search Trees', 'C#', 'Visual Basic', '.NET WinForms'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/SD2-Proiect'
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/StructuriDeDate'
   },
   {
     id: 'proj-bd2-rc2-anul3',
-    code: 'BD2 · RC2 · PW3 · APSI3 · GBD3',
+    code: 'BazeDeDate · ReteleCalculatoare · ProgramareWeb · APSI · GBD',
     category: 'datanet',
     badge: 'MYSQL 8 · CISCO IOS · UML',
-    titleRo: 'Baze de Date Relaționale (MySQL 8.0), Rețele Cisco VLAN & Platforme Anul 3',
-    titleEn: 'Relational Databases (MySQL 8.0), Cisco VLAN Networks & Year 3 Suite',
+    titleRo: 'Baze de Date Relaționale, Rețele Cisco VLAN, Programare Web & Analiza Sistemelor',
+    titleEn: 'Relational Databases, Cisco VLAN Networks, Web Programming & Systems Analysis',
     descRo:
-      'Arhitecturi de baze de date normalizate (E-R MySQL Workbench, DDL/DML, proceduri stocate), topologii enterprise multi-VLAN în Cisco Packet Tracer și modulele de analiză UML și web din anul 3.',
+      'Arhitecturi de baze de date normalizate (BazeDeDate & GestiuneaBazelorDeDate), topologii enterprise multi-VLAN în Cisco Packet Tracer (ReteleCalculatoare) și modulele de analiză UML și web (AnalizaSiProiectareaSistemelorInformatice & ProgramareWeb).',
     descEn:
-      'Normalized relational database schemas (MySQL Workbench E-R, DDL/DML, stored procedures), multi-VLAN Cisco Packet Tracer enterprise topologies, and Year 3 UML/Web modules.',
+      'Normalized relational database schemas (BazeDeDate & GestiuneaBazelorDeDate), multi-VLAN Cisco Packet Tracer enterprise topologies (ReteleCalculatoare), and UML/Web modules (AnalizaSiProiectareaSistemelorInformatice & ProgramareWeb).',
     highlightsRo: [
-      'Scheme relaționale 3NF/BCNF cu constrângeri de integritate și interogări analitice complexe în BD2-Proiect și GBD3.',
-      'Topologii Cisco IOS cu subnetizare VLSM, rutare inter-VLAN și liste de control al accesului (ACL) în RC2-Proiect.'
+      'Scheme relaționale 3NF/BCNF cu constrângeri de integritate și interogări analitice complexe în BazeDeDate și GestiuneaBazelorDeDate.',
+      'Topologii Cisco IOS cu subnetizare VLSM, rutare inter-VLAN și liste de control al accesului (ACL) în ReteleCalculatoare.'
     ],
     highlightsEn: [
-      '3NF/BCNF relational schemas with referential integrity and complex analytical SQL queries in BD2-Proiect & GBD3.',
-      'Cisco IOS topologies featuring VLSM subnetting, inter-VLAN routing, and security ACLs in RC2-Proiect.'
+      '3NF/BCNF relational schemas with referential integrity and complex analytical SQL queries in BazeDeDate & GestiuneaBazelorDeDate.',
+      'Cisco IOS topologies featuring VLSM subnetting, inter-VLAN routing, and security ACLs in ReteleCalculatoare.'
     ],
     tags: ['MySQL 8.0', 'SQL DDL/DML', 'Cisco Packet Tracer', '802.1Q VLANs', 'UML Architecture'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta'
+    repoUrl: 'https://github.com/stefanutc1/university'
   }
 ];
 

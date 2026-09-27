@@ -539,12 +539,12 @@ export default function HomePage() {
                       <ExternalLink className="w-3 h-3 shrink-0" />
                     </a>
                     <a
-                      href="https://github.com/stefanutc1/proiecte"
+                      href="https://github.com/stefanutc1/university"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="dp-btn-outline inline-flex items-center justify-between px-3 py-2 text-[11px] font-mono"
                     >
-                      <span className="truncate">proiecte (24–27)</span>
+                      <span className="truncate">university (24–27)</span>
                       <ExternalLink className="w-3 h-3 shrink-0" />
                     </a>
                     <a
@@ -1071,15 +1071,15 @@ export default function HomePage() {
                 },
                 {
                   badge: '2024 – 2027 · FEAA UCV',
-                  titleRo: 'Licență & 43+ Proiecte (stefanutc1/proiecte)',
-                  titleEn: 'Thesis & 43+ Projects (stefanutc1/proiecte)',
+                  titleRo: 'Licență & 43+ Proiecte (stefanutc1/university)',
+                  titleEn: 'Thesis & 43+ Projects (stefanutc1/university)',
                   descRo:
                     'Monorepo-ul academic pentru Informatică Economică (FEAA Craiova, 2024 – 2027): lucrarea de licență Core-Banking FinTech, rapoarte DFIR, algoritmică C++, Java, C# .NET și topologii Cisco.',
                   descEn:
                     'Academic monorepo for Business Informatics (FEAA Craiova, 2024 – 2027): Core-Banking FinTech Bachelor’s Thesis, DFIR dossiers, C++, Java, C# .NET, and Cisco topologies.',
-                  url: 'https://github.com/stefanutc1/proiecte',
-                  ctaRo: 'Vezi stefanutc1/proiecte',
-                  ctaEn: 'View stefanutc1/proiecte',
+                  url: 'https://github.com/stefanutc1/university',
+                  ctaRo: 'Vezi stefanutc1/university',
+                  ctaEn: 'View stefanutc1/university',
                 },
                 {
                   badge: '2025 – PREZENT · DATACENTER',
@@ -1389,12 +1389,12 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/stefanutc1/proiecte"
+                    href="https://github.com/stefanutc1/university"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[var(--ink)] inline-flex items-center gap-1"
                   >
-                    stefanutc1/proiecte (2024–2027)
+                    stefanutc1/university (2024–2027)
                     <ArrowUpRight className="w-3 h-3" />
                   </a>
                 </li>

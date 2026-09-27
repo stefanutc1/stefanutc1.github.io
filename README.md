@@ -21,7 +21,7 @@ Acest repository găzduiește site-ul de prezentare personală și jurnalul tehn
    - `POST-06`: Writeup complet (100%) pentru provocările CTF InvataCyber.ro (Reflected XSS, Blind SQLi, Jinja2 SSTI).
    - `POST-07`: *De la Scripturi PAWN și Servere SA-MP în 2015 la Infrastructură Enterprise și Securitate Cibernetică: 11+ Ani de Cod prin Arhiva `stefanutc1/old`* (`RedZone`, `NQGaming`, `Crowland Wiki`, `Kronick`, `Roadman Bot`).
 3. **Arhiva de Proiecte (2015 – 2027)**:
-   - Catalog filtrabil pentru infrastructura homelab ([`stefanutc1/infrastructure`](https://github.com/stefanutc1/infrastructure)), proiectele universitare și lucrarea de licență ([`stefanutc1/proiecte`](https://github.com/stefanutc1/proiecte)) și arhiva istorică 2015–2023 ([`stefanutc1/old`](https://github.com/stefanutc1/old)).
+   - Catalog filtrabil pentru infrastructura homelab ([`stefanutc1/infrastructure`](https://github.com/stefanutc1/infrastructure)), proiectele universitare și lucrarea de licență ([`stefanutc1/university`](https://github.com/stefanutc1/university)) și arhiva istorică 2015–2023 ([`stefanutc1/old`](https://github.com/stefanutc1/old)).
 
 ---
 

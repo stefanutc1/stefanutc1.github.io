@@ -155,8 +155,8 @@ trackparcel.de`
     excerptEn:
       'An inside look at my Bachelor’s Thesis (Business Informatics, 2026): why modern banking platforms require defense-in-depth, how mathematical IBAN MOD-97 and Luhn validations work at the core layer, and how I tested transactional resilience against Race Condition Double-Spend and SQL Injection attacks.',
     tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Double-Entry ACID', 'LaTeX'],
-    repoUrl: 'https://github.com/stefanutc1/proiecte/tree/main/licenta/LL3-LucrareLicenta',
-    liveUrl: 'https://stefanutc1.github.io/proiecte/',
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta',
+    liveUrl: 'https://stefanutc1.github.io/university/',
     sections: [
       {
         headingRo: '1. Motivația Arhitecturală: De ce Simpla Validare la Nivel de UI Nu Este Suficientă în Banking',
