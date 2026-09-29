@@ -674,16 +674,16 @@ export default function HomePage() {
         )}
 
         {/* ===================================================================
-            3. ENGINEERING BLOG / POSTS (brunorochamoura.com/posts/ Exact Layout & Palette)
+            3. ENGINEERING BLOG / POSTS (brunorochamoura.com/posts/ Layout + Site Palette)
            =================================================================== */}
         {showBlog && (
           <section
             id="blog"
-            className="relative z-10 border-b border-[var(--border)] bg-[#282828] text-[#ebdbb2] px-5 sm:px-10 py-10 sm:py-14 scroll-mt-20"
+            className="relative z-10 border-b border-[var(--border)] bg-[var(--bg)] text-[var(--ink)] px-5 sm:px-10 py-10 sm:py-14 scroll-mt-20"
           >
             <SectionCrosshairs />
 
-            {/* Top Minimal Header Bar (matching brunorochamoura.com .header / .nav) */}
+            {/* Top Minimal Header Bar (matching brunorochamoura.com .header / .nav with Site Palette) */}
             <div className="mx-auto max-w-[1024px] flex items-center justify-between pb-8 sm:pb-10">
               <button
                 onClick={() => {
@@ -691,19 +691,19 @@ export default function HomePage() {
                   setSelectedTag(null);
                   setBlogQuery('');
                 }}
-                className="text-xl sm:text-2xl font-bold tracking-tight text-[#ebdbb2] hover:opacity-90 transition"
+                className="font-display text-xl sm:text-2xl font-bold tracking-tight text-[var(--ink)] hover:opacity-90 transition"
                 title="Moană Ștefănuț-Cornel — Posts"
               >
                 MȘC
               </button>
 
-              <ul className="flex flex-wrap items-center gap-5 sm:gap-7 text-[15px] font-medium text-[#ebdbb2]">
+              <ul className="flex flex-wrap items-center gap-5 sm:gap-7 text-[15px] font-medium text-[var(--ink)]">
                 <li>
                   <a
                     href="https://github.com/stefanutc1/university"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[#ebdbb2] hover:text-[#bdae93] transition"
+                    className="inline-flex items-center gap-1 text-[var(--ink-secondary)] hover:text-[var(--ink)] transition"
                   >
                     <span>Field Manual</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -718,8 +718,8 @@ export default function HomePage() {
                     }}
                     className={`pb-0.5 transition ${
                       !showTagsPanel
-                        ? 'border-b-2 border-[#ebdbb2] text-[#ebdbb2]'
-                        : 'text-[#ebdbb2] hover:text-[#bdae93]'
+                        ? 'border-b-2 border-[#52212e] text-[var(--ink)]'
+                        : 'text-[var(--ink-secondary)] hover:text-[var(--ink)]'
                     }`}
                   >
                     Posts
@@ -730,8 +730,8 @@ export default function HomePage() {
                     onClick={() => setShowTagsPanel((v) => !v)}
                     className={`pb-0.5 transition ${
                       showTagsPanel || selectedTag
-                        ? 'border-b-2 border-[#ebdbb2] text-[#ebdbb2]'
-                        : 'text-[#ebdbb2] hover:text-[#bdae93]'
+                        ? 'border-b-2 border-[#52212e] text-[var(--ink)]'
+                        : 'text-[var(--ink-secondary)] hover:text-[var(--ink)]'
                     }`}
                   >
                     Tags
@@ -740,7 +740,7 @@ export default function HomePage() {
                 <li>
                   <button
                     onClick={() => setActiveTab('about')}
-                    className="text-[#ebdbb2] hover:text-[#bdae93] transition"
+                    className="text-[var(--ink-secondary)] hover:text-[var(--ink)] transition"
                   >
                     About
                   </button>
@@ -752,7 +752,7 @@ export default function HomePage() {
             <div className="mx-auto max-w-[720px]">
               {/* .page-header */}
               <header className="mb-5">
-                <h2 className="text-[36px] sm:text-[40px] font-bold leading-tight text-[#ebdbb2] inline-flex items-center gap-3">
+                <h2 className="font-display text-[36px] sm:text-[40px] font-bold leading-tight text-[var(--ink)] inline-flex items-center gap-3">
                   <span>Posts</span>
                   <a
                     href="#blog"
@@ -764,7 +764,7 @@ export default function HomePage() {
                     }}
                     title="RSS / All Posts"
                     aria-label="RSS"
-                    className="text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                    className="text-[var(--ink)] hover:text-[#52212e] transition"
                   >
                     <Rss className="w-[23px] h-[23px]" strokeWidth={2.2} />
                   </a>
@@ -774,13 +774,13 @@ export default function HomePage() {
               {/* .post-content subtitle + interactive tags trigger */}
               <div className="mb-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <p className="text-[16px] sm:text-[18px] text-[#d5c4a1] leading-[1.6]">
+                  <p className="text-[16px] sm:text-[18px] text-[var(--ink-secondary)] leading-[1.6]">
                     {lang === 'ro' ? (
                       <>
                         Toate publicațiile și investigațiile mele. Pentru teme specifice, verifică{' '}
                         <button
                           onClick={() => setShowTagsPanel((v) => !v)}
-                          className="underline underline-offset-4 text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                          className="underline decoration-[#52212e] underline-offset-4 text-[var(--ink)] hover:text-[#d9d1ca] transition"
                         >
                           etichetele (tags)
                         </button>
@@ -791,7 +791,7 @@ export default function HomePage() {
                         All my publications. For specific themes, check the{' '}
                         <button
                           onClick={() => setShowTagsPanel((v) => !v)}
-                          className="underline underline-offset-4 text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                          className="underline decoration-[#52212e] underline-offset-4 text-[var(--ink)] hover:text-[#d9d1ca] transition"
                         >
                           tags
                         </button>
@@ -800,9 +800,9 @@ export default function HomePage() {
                     )}
                   </p>
 
-                  {/* Compact Search Input in Gruvbox style */}
+                  {/* Compact Search Input in Site Palette */}
                   <div className="relative w-full sm:w-[210px] shrink-0">
-                    <Search className="w-3.5 h-3.5 text-[#bdae93] absolute left-3 top-1/2 -translate-y-1/2" />
+                    <Search className="w-3.5 h-3.5 text-[var(--ink-muted)] absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
                       value={blogQuery}
@@ -810,14 +810,14 @@ export default function HomePage() {
                       placeholder={
                         lang === 'ro' ? 'Caută în articole...' : 'Search posts...'
                       }
-                      className="w-full rounded-[8px] border border-[#665c54] bg-[#3c3836] pl-8 pr-3 py-1.5 text-xs text-[#ebdbb2] placeholder:text-[#bdae93]/70 focus:outline-none focus:border-[#ebdbb2]"
+                      className="w-full rounded-[8px] border border-[var(--border)] bg-[var(--bg-elevated)] pl-8 pr-3 py-1.5 text-xs text-[var(--ink)] placeholder:text-[var(--ink-muted)] focus:outline-none focus:border-[#52212e]"
                     />
                   </div>
                 </div>
 
                 {/* Category & Tag Pills Bar (expandable when clicking "Tags" or active filter) */}
                 {(showTagsPanel || selectedTag || blogCategory !== 'all') && (
-                  <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] p-4 space-y-3">
+                  <div className="rounded-[8px] border border-[var(--border)] bg-[var(--bg-elevated)] p-4 space-y-3">
                     <div className="flex flex-wrap items-center gap-2">
                       {[
                         { id: 'all', label: 'All (7)' },
@@ -834,10 +834,10 @@ export default function HomePage() {
                               setBlogCategory(cat.id as BlogCategoryFilter);
                               setSelectedTag(null);
                             }}
-                            className={`rounded-[8px] border px-3 py-1 text-xs font-medium transition ${
+                            className={`rounded-[8px] border px-3 py-1 text-xs font-mono font-medium transition ${
                               active
-                                ? 'border-[#ebdbb2] bg-[#ebdbb2] text-[#282828]'
-                                : 'border-[#665c54] bg-[#504945] text-[#bdae93] hover:text-[#ebdbb2]'
+                                ? 'border-[#52212e] bg-[#52212e] text-[#efebe5]'
+                                : 'border-[var(--border)] bg-[var(--surface)] text-[var(--ink-secondary)] hover:border-[#52212e] hover:text-[var(--ink)]'
                             }`}
                           >
                             {cat.label}
@@ -846,7 +846,7 @@ export default function HomePage() {
                       })}
                     </div>
 
-                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[#665c54]/60">
+                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[var(--border)]">
                       {allBlogTags.map(([tag, count]) => {
                         const isSelected = selectedTag === tag;
                         return (
@@ -857,10 +857,10 @@ export default function HomePage() {
                                 prev === tag ? null : tag
                               )
                             }
-                            className={`rounded-[8px] border px-2.5 py-1 text-xs transition ${
+                            className={`rounded-[8px] border px-2.5 py-1 text-xs font-mono transition ${
                               isSelected
-                                ? 'border-[#fabd2f] bg-[#fabd2f] text-[#282828] font-semibold'
-                                : 'border-[#665c54] bg-[#504945] text-[#bdae93] hover:bg-[#665c54] hover:text-[#ebdbb2]'
+                                ? 'border-[#efebe5] bg-[#52212e] text-[#efebe5] font-semibold'
+                                : 'border-[var(--border)] bg-[var(--surface)] text-[var(--ink-secondary)] hover:border-[#52212e] hover:text-[var(--ink)]'
                             }`}
                           >
                             #{tag} <span className="opacity-75">({count})</span>
@@ -872,13 +872,13 @@ export default function HomePage() {
                 )}
               </div>
 
-              {/* Vertical Stack of .post-entry Cards (exact brunorochamoura.com/posts/ structure) */}
+              {/* Vertical Stack of .post-entry Cards (brunorochamoura.com/posts/ structure + Site Palette) */}
               <div className="space-y-6">
                 {filteredBlogPosts.map((post) => (
                   <article
                     key={post.slug}
                     onClick={() => setActivePost(post)}
-                    className="group relative cursor-pointer rounded-[8px] border border-[#665c54] bg-[#3c3836] p-5 sm:p-6 transition-all duration-100 active:scale-[0.98] hover:border-[#bdae93]"
+                    className="group relative cursor-pointer rounded-[8px] border border-[var(--border)] bg-[var(--bg-elevated)] p-5 sm:p-6 transition-all duration-150 active:scale-[0.99] hover:border-[#52212e] hover:bg-[#17090d]"
                   >
                     {/* .entry-cover */}
                     <figure className="mb-6">
@@ -887,18 +887,18 @@ export default function HomePage() {
 
                     {/* .entry-header */}
                     <header>
-                      <h3 className="text-[21px] sm:text-[24px] font-bold leading-[1.3] text-[#ebdbb2] group-hover:underline decoration-[#bdae93] underline-offset-4">
+                      <h3 className="font-display text-[21px] sm:text-[24px] font-bold leading-[1.3] text-[var(--ink)] group-hover:text-[#efebe5] group-hover:underline decoration-[#52212e] underline-offset-4">
                         {lang === 'ro' ? post.titleRo : post.titleEn}
                       </h3>
                     </header>
 
                     {/* .entry-content */}
-                    <div className="my-2 text-[14px] leading-[1.6] text-[#bdae93] line-clamp-2">
+                    <div className="my-2 text-[14px] leading-[1.6] text-[var(--ink-secondary)] line-clamp-2">
                       <p>{lang === 'ro' ? post.subtitleRo : post.subtitleEn}</p>
                     </div>
 
                     {/* .entry-footer */}
-                    <footer className="text-[13px] text-[#bdae93]">
+                    <footer className="text-[13px] font-mono text-[var(--ink-muted)]">
                       <span>{lang === 'ro' ? post.dateRo : post.dateEn}</span>
                       <span>&nbsp;·&nbsp;</span>
                       <span>{post.readTime}</span>

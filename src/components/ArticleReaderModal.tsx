@@ -60,31 +60,38 @@ export default function ArticleReaderModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-2 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-2 sm:p-6 overflow-y-auto"
       onClick={onClose}
     >
       <article
-        className="relative w-full max-w-[780px] max-h-[92vh] overflow-y-auto rounded-[8px] border border-[#665c54] bg-[#282828] text-[#d5c4a1] shadow-2xl"
+        className="relative w-full max-w-[780px] max-h-[92vh] overflow-y-auto rounded-[8px] border border-[var(--border-strong)] bg-[var(--bg-elevated)] text-[var(--ink-secondary)] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Sticky Reader Bar (BRM minimal nav style) */}
-        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-[#665c54]/60 bg-[#282828]/95 backdrop-blur-md px-6 py-3.5">
-          <div className="flex items-center gap-3 text-sm text-[#bdae93]">
+        {/* Top Sticky Reader Bar (BRM minimal nav style with site palette) */}
+        <div
+          className="sticky top-0 z-20 flex items-center justify-between border-b border-[var(--border)] px-6 py-3.5"
+          style={{
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
+            backgroundColor: 'rgba(20, 11, 15, 0.92)',
+          }}
+        >
+          <div className="flex items-center gap-3 text-sm text-[var(--ink-muted)]">
             <button
               onClick={onClose}
-              className="font-bold text-[#ebdbb2] hover:underline"
+              className="font-display font-bold text-[#efebe5] hover:underline"
             >
               MȘC
             </button>
             <span>/</span>
             <button
               onClick={onClose}
-              className="text-[#bdae93] hover:text-[#ebdbb2] transition"
+              className="text-[#d9d1ca] hover:text-[#efebe5] transition"
             >
               Posts
             </button>
             <span>/</span>
-            <span className="font-mono text-xs text-[#bdae93] truncate max-w-[200px] sm:max-w-[320px]">
+            <span className="font-mono text-xs text-[#827470] truncate max-w-[200px] sm:max-w-[320px]">
               {post.id}
             </span>
           </div>
@@ -95,7 +102,7 @@ export default function ArticleReaderModal({
                 href={post.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-[8px] border border-[#665c54] bg-[#3c3836] px-3 py-1 text-xs text-[#ebdbb2] hover:bg-[#504945] transition"
+                className="dp-btn-outline inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono"
               >
                 <span>GitHub</span>
                 <ExternalLink className="w-3 h-3" />
@@ -106,7 +113,7 @@ export default function ArticleReaderModal({
                 href={post.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-[8px] border border-[#665c54] bg-[#3c3836] px-3 py-1 text-xs text-[#ebdbb2] hover:bg-[#504945] transition"
+                className="hidden sm:inline-flex items-center gap-1.5 dp-btn-outline px-3 py-1 text-xs font-mono"
               >
                 <span>Live</span>
                 <ExternalLink className="w-3 h-3" />
@@ -114,7 +121,7 @@ export default function ArticleReaderModal({
             )}
             <button
               onClick={onClose}
-              className="inline-flex items-center justify-center rounded-[8px] border border-[#665c54] bg-[#3c3836] p-1.5 text-[#ebdbb2] hover:bg-[#504945] transition"
+              className="dp-btn-primary inline-flex items-center justify-center p-1.5"
               aria-label="Close article"
             >
               <X className="w-4 h-4" />
@@ -126,13 +133,13 @@ export default function ArticleReaderModal({
         <div className="px-6 sm:px-10 py-8 space-y-6">
           {/* Post Header (.post-header) */}
           <header className="space-y-2.5">
-            <h1 className="text-[28px] sm:text-[36px] font-bold leading-[1.25] text-[#ebdbb2]">
+            <h1 className="font-display text-[28px] sm:text-[36px] font-bold leading-[1.22] text-[var(--ink)]">
               {title}
             </h1>
-            <p className="text-[15px] text-[#bdae93] leading-relaxed">
+            <p className="text-[15px] text-[var(--ink-secondary)] leading-relaxed">
               {subtitle}
             </p>
-            <div className="text-[14px] text-[#bdae93] pt-1">
+            <div className="text-[14px] font-mono text-[var(--ink-muted)] pt-1">
               <span>{date}</span>
               <span>&nbsp;·&nbsp;</span>
               <span>{post.readTime}</span>
@@ -146,18 +153,20 @@ export default function ArticleReaderModal({
             <BlogPostCover post={post} lang={lang} />
           </figure>
 
-          {/* Collapsible Table of Contents (.toc) */}
-          <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] px-4 py-2.5 text-sm">
+          {/* Collapsible Table of Contents (.toc) in Site Palette */}
+          <div className="rounded-[8px] border border-[var(--border)] bg-[var(--surface)] px-4 py-2.5 text-sm">
             <details open>
-              <summary className="cursor-pointer font-semibold text-[#ebdbb2] select-none py-1">
-                {lang === 'ro' ? 'Cuprins (Table of Contents)' : 'Table of Contents'}
+              <summary className="cursor-pointer font-display font-semibold text-[var(--ink)] select-none py-1">
+                {lang === 'ro'
+                  ? 'Cuprins (Table of Contents)'
+                  : 'Table of Contents'}
               </summary>
-              <ul className="mt-2 mb-1 space-y-1.5 pl-5 list-disc text-[#bdae93]">
+              <ul className="mt-2 mb-1 space-y-1.5 pl-5 list-disc text-[var(--ink-secondary)]">
                 {post.sections.map((sec, idx) => (
                   <li key={idx}>
                     <a
                       href={`#sec-${idx}`}
-                      className="hover:text-[#ebdbb2] hover:underline transition"
+                      className="hover:text-[var(--ink)] hover:underline transition"
                     >
                       {lang === 'ro' ? sec.headingRo : sec.headingEn}
                     </a>
@@ -168,7 +177,7 @@ export default function ArticleReaderModal({
           </div>
 
           {/* Executive Summary Blockquote */}
-          <blockquote className="border-l-[3px] border-[#ebdbb2] pl-4 py-1 text-[15px] sm:text-[16px] text-[#bdae93] italic leading-relaxed">
+          <blockquote className="dp-wine-banner px-5 py-3.5 text-[15px] sm:text-[16px] text-[#efebe5] leading-relaxed">
             {excerpt}
           </blockquote>
 
@@ -184,38 +193,38 @@ export default function ArticleReaderModal({
 
               return (
                 <section key={idx} id={`sec-${idx}`} className="space-y-4">
-                  <h2 className="group text-[22px] sm:text-[24px] font-bold leading-[1.3] text-[#ebdbb2] flex items-center gap-2">
+                  <h2 className="group font-display text-[22px] sm:text-[24px] font-bold leading-[1.3] text-[var(--ink)] flex items-center gap-2">
                     <span>{heading}</span>
-                    <span className="opacity-0 group-hover:opacity-100 text-[#bdae93] font-normal text-base transition-opacity">
+                    <span className="opacity-0 group-hover:opacity-100 text-[#827470] font-normal text-base transition-opacity">
                       #
                     </span>
                   </h2>
 
-                  <div className="space-y-4 text-[15px] sm:text-[16px] text-[#d5c4a1] leading-[1.68]">
+                  <div className="space-y-4 text-[15px] sm:text-[16px] text-[var(--ink-secondary)] leading-[1.68]">
                     {paragraphs.map((para, pIdx) => (
                       <p key={pIdx}>{para}</p>
                     ))}
                   </div>
 
                   {callout && (
-                    <blockquote className="border-l-[3px] border-[#fabd2f] bg-[#3c3836]/70 rounded-r-[8px] px-4 py-3 text-sm text-[#ebdbb2] leading-relaxed">
+                    <blockquote className="dp-wine-banner rounded-r-[8px] px-4 py-3 text-sm text-[#efebe5] leading-relaxed">
                       {callout}
                     </blockquote>
                   )}
 
                   {section.codeBlock && (
-                    <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] overflow-hidden my-3">
-                      <div className="flex items-center justify-between border-b border-[#665c54]/60 bg-[#32302f] px-4 py-2 text-xs font-mono text-[#bdae93]">
+                    <div className="rounded-[8px] border border-[#401823] bg-[#0c0c0c] overflow-hidden my-3">
+                      <div className="flex items-center justify-between border-b border-[#24181e] bg-[#17090d] px-4 py-2 text-xs font-mono text-[#d9d1ca]">
                         <span>{section.codeBlock.caption}</span>
                         <button
                           onClick={() =>
                             handleCopyCode(section.codeBlock!.code, idx)
                           }
-                          className="inline-flex items-center gap-1 rounded-[6px] bg-[#504945] px-2.5 py-1 text-xs text-[#ebdbb2] hover:bg-[#665c54] transition"
+                          className="inline-flex items-center gap-1 rounded-[6px] border border-[#52212e] bg-[#401823] px-2.5 py-1 text-xs text-[#efebe5] hover:bg-[#52212e] transition"
                         >
                           {copiedIdx === idx ? (
                             <>
-                              <Check className="w-3.5 h-3.5 text-[#b8bb26]" />
+                              <Check className="w-3.5 h-3.5 text-[#efebe5]" />
                               <span>copied!</span>
                             </>
                           ) : (
@@ -226,7 +235,7 @@ export default function ArticleReaderModal({
                           )}
                         </button>
                       </div>
-                      <pre className="p-4 text-xs sm:text-[13px] font-mono text-[#ebdbb2] overflow-x-auto leading-relaxed">
+                      <pre className="p-4 text-xs sm:text-[13px] font-mono text-[#efebe5] overflow-x-auto leading-relaxed">
                         <code>{section.codeBlock.code}</code>
                       </pre>
                     </div>
@@ -236,30 +245,30 @@ export default function ArticleReaderModal({
             })}
           </div>
 
-          {/* Post Tags (.post-tags) */}
-          <div className="pt-6 border-t border-[#665c54]/60 flex flex-wrap gap-2">
+          {/* Post Tags (.post-tags) in Site Palette */}
+          <div className="pt-6 border-t border-[var(--border)] flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-[8px] border border-[#665c54] bg-[#504945] px-3.5 py-1.5 text-[13px] text-[#bdae93] hover:bg-[#665c54] hover:text-[#ebdbb2] transition"
+                className="rounded-[8px] border border-[var(--border)] bg-[var(--surface)] px-3.5 py-1.5 text-[13px] font-mono text-[var(--ink-secondary)] hover:border-[#52212e] hover:text-[var(--ink)] transition"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          {/* Prev / Next Navigation (.paginav) */}
+          {/* Prev / Next Navigation (.paginav) in Site Palette */}
           <nav className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {prevPost ? (
               <button
                 onClick={() => onSelectPost(prevPost)}
-                className="rounded-[8px] border border-[#665c54] bg-[#504945] hover:bg-[#665c54] p-4 text-left transition"
+                className="dp-showroom-card rounded-[8px] p-4 text-left transition"
               >
-                <span className="inline-flex items-center gap-1 text-xs uppercase tracking-wider text-[#bdae93]">
+                <span className="inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-[var(--ink-muted)]">
                   <ChevronLeft className="w-3.5 h-3.5" />
                   {lang === 'ro' ? 'Anterior' : 'Prev'}
                 </span>
-                <div className="font-bold text-sm text-[#ebdbb2] line-clamp-1 mt-1">
+                <div className="font-display font-bold text-sm text-[var(--ink)] line-clamp-1 mt-1">
                   {lang === 'ro' ? prevPost.titleRo : prevPost.titleEn}
                 </div>
               </button>
@@ -270,13 +279,13 @@ export default function ArticleReaderModal({
             {nextPost && (
               <button
                 onClick={() => onSelectPost(nextPost)}
-                className="rounded-[8px] border border-[#665c54] bg-[#504945] hover:bg-[#665c54] p-4 text-right transition"
+                className="dp-showroom-card rounded-[8px] p-4 text-right transition"
               >
-                <span className="inline-flex items-center justify-end gap-1 text-xs uppercase tracking-wider text-[#bdae93]">
+                <span className="inline-flex items-center justify-end gap-1 text-xs font-mono uppercase tracking-wider text-[var(--ink-muted)]">
                   {lang === 'ro' ? 'Următor' : 'Next'}
                   <ChevronRight className="w-3.5 h-3.5" />
                 </span>
-                <div className="font-bold text-sm text-[#ebdbb2] line-clamp-1 mt-1">
+                <div className="font-display font-bold text-sm text-[var(--ink)] line-clamp-1 mt-1">
                   {lang === 'ro' ? nextPost.titleRo : nextPost.titleEn}
                 </div>
               </button>
