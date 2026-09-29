@@ -3,18 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import {
   X,
-  Clock,
-  Calendar,
   ExternalLink,
   Copy,
   Check,
   ChevronLeft,
   ChevronRight,
-  BookOpen,
-  Terminal,
-  ShieldAlert,
 } from 'lucide-react';
 import { BlogPost } from '@/data/blog';
+import BlogPostCover from '@/components/BlogPostCover';
 
 interface ArticleReaderModalProps {
   post: BlogPost | null;
@@ -61,37 +57,35 @@ export default function ArticleReaderModal({
   const subtitle = lang === 'ro' ? post.subtitleRo : post.subtitleEn;
   const excerpt = lang === 'ro' ? post.excerptRo : post.excerptEn;
   const date = lang === 'ro' ? post.dateRo : post.dateEn;
-  const categoryLabel =
-    lang === 'ro' ? post.categoryLabelRo : post.categoryLabelEn;
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-2 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-2 sm:p-6 overflow-y-auto"
       onClick={onClose}
     >
       <article
-        className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto border border-[var(--border-strong)] bg-[var(--bg-elevated)] shadow-2xl"
+        className="relative w-full max-w-[780px] max-h-[92vh] overflow-y-auto rounded-[8px] border border-[#665c54] bg-[#282828] text-[#d5c4a1] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Top Sticky Reader Bar */}
-        <div
-          className="sticky top-0 z-20 flex items-center justify-between border-b border-[var(--border)] px-5 py-3.5"
-          style={{
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            backgroundColor: 'rgba(20, 11, 15, 0.92)',
-          }}
-        >
-          <div className="flex items-center gap-2.5 text-xs font-mono text-[#d9d1ca]">
-            <BookOpen className="w-3.5 h-3.5 text-[#52212e]" />
-            <span className="uppercase tracking-wider text-[#efebe5] font-semibold">
+        {/* Top Sticky Reader Bar (BRM minimal nav style) */}
+        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-[#665c54]/60 bg-[#282828]/95 backdrop-blur-md px-6 py-3.5">
+          <div className="flex items-center gap-3 text-sm text-[#bdae93]">
+            <button
+              onClick={onClose}
+              className="font-bold text-[#ebdbb2] hover:underline"
+            >
+              MȘC
+            </button>
+            <span>/</span>
+            <button
+              onClick={onClose}
+              className="text-[#bdae93] hover:text-[#ebdbb2] transition"
+            >
+              Posts
+            </button>
+            <span>/</span>
+            <span className="font-mono text-xs text-[#bdae93] truncate max-w-[200px] sm:max-w-[320px]">
               {post.id}
-            </span>
-            <span>·</span>
-            <span>{categoryLabel}</span>
-            <span>·</span>
-            <span className="hidden sm:inline text-[#827470]">
-              {post.readTime}
             </span>
           </div>
 
@@ -101,9 +95,9 @@ export default function ArticleReaderModal({
                 href={post.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="dp-btn-outline inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono"
+                className="inline-flex items-center gap-1.5 rounded-[8px] border border-[#665c54] bg-[#3c3836] px-3 py-1 text-xs text-[#ebdbb2] hover:bg-[#504945] transition"
               >
-                <span>GitHub Repo</span>
+                <span>GitHub</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             )}
@@ -112,15 +106,15 @@ export default function ArticleReaderModal({
                 href={post.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 dp-btn-outline px-3 py-1 text-xs font-mono"
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-[8px] border border-[#665c54] bg-[#3c3836] px-3 py-1 text-xs text-[#ebdbb2] hover:bg-[#504945] transition"
               >
-                <span>Live Portal</span>
+                <span>Live</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             )}
             <button
               onClick={onClose}
-              className="dp-btn-primary inline-flex items-center justify-center p-1.5"
+              className="inline-flex items-center justify-center rounded-[8px] border border-[#665c54] bg-[#3c3836] p-1.5 text-[#ebdbb2] hover:bg-[#504945] transition"
               aria-label="Close article"
             >
               <X className="w-4 h-4" />
@@ -128,141 +122,146 @@ export default function ArticleReaderModal({
           </div>
         </div>
 
-        {/* Editorial Header */}
-        <div
-          className="px-6 sm:px-12 pt-8 pb-7 border-b border-[var(--border)]"
-          style={{
-            background:
-              'linear-gradient(270deg, rgba(12, 12, 12, 0.6) 0%, rgb(23, 9, 13) 100%)',
-          }}
-        >
-          <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[var(--ink-muted)] mb-4">
-            <span className="inline-flex items-center gap-2 rounded-[30px] bg-[#52212e] px-3.5 py-1 text-[#efebe5]">
-              <span className="h-1.5 w-1.5 rounded-[2px] bg-[#efebe5]" />
-              {categoryLabel}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[var(--ink-secondary)]">
-              <Calendar className="w-3.5 h-3.5 text-[#827470]" />
-              {date}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[var(--ink-secondary)]">
-              <Clock className="w-3.5 h-3.5 text-[#827470]" />
-              {post.readTime}
-            </span>
-            <span>·</span>
-            <span className="text-[var(--ink-secondary)]">
-              Moană Ștefănuț-Cornel (@stefanutc1)
-            </span>
+        {/* Main Single-Column Post Container (matching brunorochamoura.com --main-width: 720px) */}
+        <div className="px-6 sm:px-10 py-8 space-y-6">
+          {/* Post Header (.post-header) */}
+          <header className="space-y-2.5">
+            <h1 className="text-[28px] sm:text-[36px] font-bold leading-[1.25] text-[#ebdbb2]">
+              {title}
+            </h1>
+            <p className="text-[15px] text-[#bdae93] leading-relaxed">
+              {subtitle}
+            </p>
+            <div className="text-[14px] text-[#bdae93] pt-1">
+              <span>{date}</span>
+              <span>&nbsp;·&nbsp;</span>
+              <span>{post.readTime}</span>
+              <span>&nbsp;·&nbsp;</span>
+              <span>Moană Ștefănuț-Cornel</span>
+            </div>
+          </header>
+
+          {/* Entry Cover (.entry-cover) */}
+          <figure className="my-5">
+            <BlogPostCover post={post} lang={lang} />
+          </figure>
+
+          {/* Collapsible Table of Contents (.toc) */}
+          <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] px-4 py-2.5 text-sm">
+            <details open>
+              <summary className="cursor-pointer font-semibold text-[#ebdbb2] select-none py-1">
+                {lang === 'ro' ? 'Cuprins (Table of Contents)' : 'Table of Contents'}
+              </summary>
+              <ul className="mt-2 mb-1 space-y-1.5 pl-5 list-disc text-[#bdae93]">
+                {post.sections.map((sec, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={`#sec-${idx}`}
+                      className="hover:text-[#ebdbb2] hover:underline transition"
+                    >
+                      {lang === 'ro' ? sec.headingRo : sec.headingEn}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
 
-          <h1 className="font-display text-2xl sm:text-4xl font-medium tracking-tight text-[var(--ink)] leading-tight mb-3">
-            {title}
-          </h1>
-          <p className="font-display font-light italic text-base sm:text-xl text-[var(--ink-secondary)] leading-relaxed">
-            {subtitle}
-          </p>
-        </div>
-
-        {/* Article Body Sections */}
-        <div className="px-6 sm:px-12 py-8 space-y-8">
-          {/* Executive Lead in drivepoint.ro Burgundy Callout Banner */}
-          <div className="dp-wine-banner px-5 py-4 text-sm sm:text-base text-[#efebe5] leading-relaxed">
+          {/* Executive Summary Blockquote */}
+          <blockquote className="border-l-[3px] border-[#ebdbb2] pl-4 py-1 text-[15px] sm:text-[16px] text-[#bdae93] italic leading-relaxed">
             {excerpt}
+          </blockquote>
+
+          {/* Post Content Sections (.post-content) */}
+          <div className="space-y-8 pt-2">
+            {post.sections.map((section, idx) => {
+              const heading =
+                lang === 'ro' ? section.headingRo : section.headingEn;
+              const paragraphs =
+                lang === 'ro' ? section.paragraphsRo : section.paragraphsEn;
+              const callout =
+                lang === 'ro' ? section.calloutRo : section.calloutEn;
+
+              return (
+                <section key={idx} id={`sec-${idx}`} className="space-y-4">
+                  <h2 className="group text-[22px] sm:text-[24px] font-bold leading-[1.3] text-[#ebdbb2] flex items-center gap-2">
+                    <span>{heading}</span>
+                    <span className="opacity-0 group-hover:opacity-100 text-[#bdae93] font-normal text-base transition-opacity">
+                      #
+                    </span>
+                  </h2>
+
+                  <div className="space-y-4 text-[15px] sm:text-[16px] text-[#d5c4a1] leading-[1.68]">
+                    {paragraphs.map((para, pIdx) => (
+                      <p key={pIdx}>{para}</p>
+                    ))}
+                  </div>
+
+                  {callout && (
+                    <blockquote className="border-l-[3px] border-[#fabd2f] bg-[#3c3836]/70 rounded-r-[8px] px-4 py-3 text-sm text-[#ebdbb2] leading-relaxed">
+                      {callout}
+                    </blockquote>
+                  )}
+
+                  {section.codeBlock && (
+                    <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] overflow-hidden my-3">
+                      <div className="flex items-center justify-between border-b border-[#665c54]/60 bg-[#32302f] px-4 py-2 text-xs font-mono text-[#bdae93]">
+                        <span>{section.codeBlock.caption}</span>
+                        <button
+                          onClick={() =>
+                            handleCopyCode(section.codeBlock!.code, idx)
+                          }
+                          className="inline-flex items-center gap-1 rounded-[6px] bg-[#504945] px-2.5 py-1 text-xs text-[#ebdbb2] hover:bg-[#665c54] transition"
+                        >
+                          {copiedIdx === idx ? (
+                            <>
+                              <Check className="w-3.5 h-3.5 text-[#b8bb26]" />
+                              <span>copied!</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-3.5 h-3.5" />
+                              <span>copy</span>
+                            </>
+                          )}
+                        </button>
+                      </div>
+                      <pre className="p-4 text-xs sm:text-[13px] font-mono text-[#ebdbb2] overflow-x-auto leading-relaxed">
+                        <code>{section.codeBlock.code}</code>
+                      </pre>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
           </div>
 
-          {post.sections.map((section, idx) => {
-            const heading =
-              lang === 'ro' ? section.headingRo : section.headingEn;
-            const paragraphs =
-              lang === 'ro' ? section.paragraphsRo : section.paragraphsEn;
-            const callout =
-              lang === 'ro' ? section.calloutRo : section.calloutEn;
-
-            return (
-              <section key={idx} className="space-y-4">
-                <div className="dp-heading-accent flex items-center gap-2.5">
-                  <span className="text-xs font-mono text-[#827470]">
-                    [0{idx + 1}]
-                  </span>
-                  <h2 className="font-display text-xl sm:text-2xl font-medium text-[var(--ink)]">
-                    {heading}
-                  </h2>
-                </div>
-
-                <div className="space-y-3.5 text-sm sm:text-base text-[var(--ink-secondary)] leading-relaxed">
-                  {paragraphs.map((para, pIdx) => (
-                    <p key={pIdx}>{para}</p>
-                  ))}
-                </div>
-
-                {callout && (
-                  <div className="dp-wine-banner flex items-start gap-3 p-4 text-xs sm:text-sm text-[#efebe5]">
-                    <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5 text-[#d9d1ca]" />
-                    <div className="leading-relaxed">{callout}</div>
-                  </div>
-                )}
-
-                {section.codeBlock && (
-                  <div className="border border-[var(--border-strong)] bg-[#0c0c0c] overflow-hidden">
-                    <div className="flex items-center justify-between border-b border-[#24181e] px-4 py-2.5 bg-[#17090d]">
-                      <div className="flex items-center gap-2 text-xs font-mono text-[#d9d1ca]">
-                        <Terminal className="w-3.5 h-3.5 text-[#52212e]" />
-                        <span>{section.codeBlock.caption}</span>
-                      </div>
-                      <button
-                        onClick={() =>
-                          handleCopyCode(section.codeBlock!.code, idx)
-                        }
-                        className="inline-flex items-center gap-1 text-xs font-mono text-[#d9d1ca] hover:text-[#efebe5] transition"
-                      >
-                        {copiedIdx === idx ? (
-                          <>
-                            <Check className="w-3.5 h-3.5 text-[#efebe5]" />
-                            <span>Copied</span>
-                          </>
-                        ) : (
-                          <>
-                            <Copy className="w-3.5 h-3.5" />
-                            <span>Copy</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
-                    <pre className="p-4 text-xs sm:text-[13px] font-mono text-[#efebe5] overflow-x-auto leading-relaxed">
-                      <code>{section.codeBlock.code}</code>
-                    </pre>
-                  </div>
-                )}
-              </section>
-            );
-          })}
-
-          {/* Tags */}
-          <div className="pt-6 border-t border-[var(--border)] flex flex-wrap items-center gap-2">
+          {/* Post Tags (.post-tags) */}
+          <div className="pt-6 border-t border-[#665c54]/60 flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-[4px] border border-[var(--border)] bg-[var(--surface)] px-2.5 py-1 text-xs font-mono text-[var(--ink-secondary)]"
+                className="rounded-[8px] border border-[#665c54] bg-[#504945] px-3.5 py-1.5 text-[13px] text-[#bdae93] hover:bg-[#665c54] hover:text-[#ebdbb2] transition"
               >
-                #{tag}
+                {tag}
               </span>
             ))}
           </div>
 
-          {/* Prev / Next Navigation */}
-          <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {/* Prev / Next Navigation (.paginav) */}
+          <nav className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {prevPost ? (
               <button
                 onClick={() => onSelectPost(prevPost)}
-                className="dp-showroom-card flex flex-col items-start p-4 text-left group"
+                className="rounded-[8px] border border-[#665c54] bg-[#504945] hover:bg-[#665c54] p-4 text-left transition"
               >
-                <span className="inline-flex items-center gap-1 text-xs font-mono text-[var(--ink-muted)] mb-1">
-                  <ChevronLeft className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" />
-                  {lang === 'ro' ? 'Articolul Anterior' : 'Previous Article'}
+                <span className="inline-flex items-center gap-1 text-xs uppercase tracking-wider text-[#bdae93]">
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                  {lang === 'ro' ? 'Anterior' : 'Prev'}
                 </span>
-                <span className="font-display text-sm font-medium text-[var(--ink)] line-clamp-1">
+                <div className="font-bold text-sm text-[#ebdbb2] line-clamp-1 mt-1">
                   {lang === 'ro' ? prevPost.titleRo : prevPost.titleEn}
-                </span>
+                </div>
               </button>
             ) : (
               <div />
@@ -271,18 +270,18 @@ export default function ArticleReaderModal({
             {nextPost && (
               <button
                 onClick={() => onSelectPost(nextPost)}
-                className="dp-showroom-card flex flex-col items-end p-4 text-right group"
+                className="rounded-[8px] border border-[#665c54] bg-[#504945] hover:bg-[#665c54] p-4 text-right transition"
               >
-                <span className="inline-flex items-center gap-1 text-xs font-mono text-[var(--ink-muted)] mb-1">
-                  {lang === 'ro' ? 'Articolul Următor' : 'Next Article'}
-                  <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                <span className="inline-flex items-center justify-end gap-1 text-xs uppercase tracking-wider text-[#bdae93]">
+                  {lang === 'ro' ? 'Următor' : 'Next'}
+                  <ChevronRight className="w-3.5 h-3.5" />
                 </span>
-                <span className="font-display text-sm font-medium text-[var(--ink)] line-clamp-1">
+                <div className="font-bold text-sm text-[#ebdbb2] line-clamp-1 mt-1">
                   {lang === 'ro' ? nextPost.titleRo : nextPost.titleEn}
-                </span>
+                </div>
               </button>
             )}
-          </div>
+          </nav>
         </div>
       </article>
     </div>

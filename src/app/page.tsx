@@ -10,8 +10,6 @@ import {
   Moon,
   Globe,
   ArrowUpRight,
-  Clock,
-  Calendar,
   MapPin,
   GraduationCap,
   Check,
@@ -24,9 +22,8 @@ import {
   Mail,
   ChevronRight,
   ShieldCheck,
-  Layers,
   Cpu,
-  Terminal,
+  Rss,
 } from 'lucide-react';
 import { BLOG_POSTS, BlogPost } from '@/data/blog';
 import {
@@ -38,6 +35,7 @@ import {
   ProjectItem,
 } from '@/data/portfolio';
 import ArticleReaderModal from '@/components/ArticleReaderModal';
+import BlogPostCover from '@/components/BlogPostCover';
 import InteractiveTerminal from '@/components/InteractiveTerminal';
 import CommandPalette from '@/components/CommandPalette';
 
@@ -88,10 +86,22 @@ export default function HomePage() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [activeTab, setActiveTab] = useState<ActiveTab>('all');
 
-  // Blog filtering state
+  // Blog filtering state (brunorochamoura.com/posts/ style)
   const [blogCategory, setBlogCategory] = useState<BlogCategoryFilter>('all');
   const [blogQuery, setBlogQuery] = useState('');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showTagsPanel, setShowTagsPanel] = useState(false);
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
+
+  const allBlogTags = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const post of BLOG_POSTS) {
+      for (const t of post.tags) {
+        counts.set(t, (counts.get(t) || 0) + 1);
+      }
+    }
+    return Array.from(counts.entries());
+  }, []);
 
   // Portfolio filtering state
   const [portfolioFilter, setPortfolioFilter] =
@@ -123,6 +133,7 @@ export default function HomePage() {
     return BLOG_POSTS.filter((post) => {
       const matchesCat =
         blogCategory === 'all' || post.category === blogCategory;
+      const matchesTag = !selectedTag || post.tags.includes(selectedTag);
       const title = lang === 'ro' ? post.titleRo : post.titleEn;
       const subtitle = lang === 'ro' ? post.subtitleRo : post.subtitleEn;
       const excerpt = lang === 'ro' ? post.excerptRo : post.excerptEn;
@@ -132,9 +143,9 @@ export default function HomePage() {
         subtitle.toLowerCase().includes(q) ||
         excerpt.toLowerCase().includes(q) ||
         post.tags.some((t) => t.toLowerCase().includes(q));
-      return matchesCat && matchesQuery;
+      return matchesCat && matchesTag && matchesQuery;
     });
-  }, [blogCategory, blogQuery, lang]);
+  }, [blogCategory, selectedTag, blogQuery, lang]);
 
   const filteredPortfolio = useMemo(() => {
     return PORTFOLIO_ITEMS.filter(
@@ -193,8 +204,6 @@ export default function HomePage() {
   const showBlog = activeTab === 'all' || activeTab === 'blog';
   const showProjects = activeTab === 'all' || activeTab === 'projects';
   const showInfra = activeTab === 'all' || activeTab === 'infra';
-
-  const featuredPost = BLOG_POSTS[0];
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--ink)] relative overflow-x-hidden">
@@ -665,249 +674,240 @@ export default function HomePage() {
         )}
 
         {/* ===================================================================
-            3. ENGINEERING BLOG & TECHNICAL JOURNAL (drivepoint.ro Showroom Grid UX)
+            3. ENGINEERING BLOG / POSTS (brunorochamoura.com/posts/ Exact Layout & Palette)
            =================================================================== */}
         {showBlog && (
           <section
             id="blog"
-            className="relative z-10 border-b border-[var(--border)] px-5 sm:px-10 py-14 sm:py-16 space-y-10 scroll-mt-20"
+            className="relative z-10 border-b border-[var(--border)] bg-[#282828] text-[#ebdbb2] px-5 sm:px-10 py-10 sm:py-14 scroll-mt-20"
           >
             <SectionCrosshairs />
-            {/* Section Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-              <div className="dp-heading-accent">
-                <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
-                  {lang === 'ro'
-                    ? '[02] · JURNAL DE INGINERIE & BLOG PERSONAL'
-                    : '[02] · ENGINEERING JOURNAL & PERSONAL BLOG'}
-                </div>
-                <h2 className="font-display text-3xl sm:text-4xl font-medium text-[var(--ink)] leading-tight">
-                  {lang === 'ro' ? (
-                    <>
-                      Articole tehnice și investigații{' '}
-                      <span className="font-light italic text-[var(--ink-secondary)]">
-                        explicate în profunzime.
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      Technical articles and investigations{' '}
-                      <span className="font-light italic text-[var(--ink-secondary)]">
-                        explained in depth.
-                      </span>
-                    </>
-                  )}
-                </h2>
-              </div>
 
-              <div className="relative min-w-[260px]">
-                <Search className="w-3.5 h-3.5 text-[var(--ink-muted)] absolute left-3.5 top-1/2 -translate-y-1/2" />
-                <input
-                  type="text"
-                  value={blogQuery}
-                  onChange={(e) => setBlogQuery(e.target.value)}
-                  placeholder={
-                    lang === 'ro'
-                      ? 'Caută în cele 7 articole...'
-                      : 'Search all 7 articles...'
-                  }
-                  className="w-full rounded-tl-[14px] rounded-br-[14px] border border-[var(--border-strong)] bg-[var(--surface)] pl-9 pr-3.5 py-2 text-xs text-[var(--ink)] placeholder:text-[var(--ink-muted)] focus:outline-none focus:border-[#efebe5]"
-                />
-              </div>
-            </div>
+            {/* Top Minimal Header Bar (matching brunorochamoura.com .header / .nav) */}
+            <div className="mx-auto max-w-[1024px] flex items-center justify-between pb-8 sm:pb-10">
+              <button
+                onClick={() => {
+                  setBlogCategory('all');
+                  setSelectedTag(null);
+                  setBlogQuery('');
+                }}
+                className="text-xl sm:text-2xl font-bold tracking-tight text-[#ebdbb2] hover:opacity-90 transition"
+                title="Moană Ștefănuț-Cornel — Posts"
+              >
+                MȘC
+              </button>
 
-            {/* Featured Article Callout Banner (drivepoint.ro .framer-1fspcz5 4px left border burgundy banner) */}
-            <div
-              onClick={() => setActivePost(featuredPost)}
-              className="dp-wine-banner cursor-pointer p-6 sm:p-9 transition-all hover:brightness-110 group"
-            >
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono">
-                  <span className="inline-flex items-center gap-2 rounded-[30px] bg-[#52212e] border border-[#efebe5]/30 px-3.5 py-1 text-[#efebe5]">
-                    <span className="h-2 w-2 rounded-[2.5px] bg-[#efebe5]" />
-                    {lang === 'ro' ? 'ARTICOL PRINCIPAL' : 'FEATURED REPORT'}
-                  </span>
-                  <span className="rounded-[30px] border border-[#d9d1ca]/25 px-3 py-1 text-[#d9d1ca]">
-                    {lang === 'ro'
-                      ? featuredPost.categoryLabelRo
-                      : featuredPost.categoryLabelEn}
-                  </span>
-                  <span className="text-[#d9d1ca]/80 inline-flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5" />
-                    {lang === 'ro' ? featuredPost.dateRo : featuredPost.dateEn}
-                  </span>
-                  <span className="text-[#d9d1ca]/80 inline-flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" />
-                    {featuredPost.readTime}
-                  </span>
-                </div>
-
-                <span className="font-mono text-xs text-[#d9d1ca]">
-                  {featuredPost.id}
-                </span>
-              </div>
-
-              <h3 className="font-display text-2xl sm:text-3xl font-medium text-[#efebe5] leading-snug mb-3">
-                {lang === 'ro' ? featuredPost.titleRo : featuredPost.titleEn}
-              </h3>
-
-              <p className="text-sm sm:text-base text-[#d9d1ca] leading-relaxed mb-6 max-w-4xl">
-                {lang === 'ro'
-                  ? featuredPost.excerptRo
-                  : featuredPost.excerptEn}
-              </p>
-
-              <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#d9d1ca]/15">
-                <div className="flex flex-wrap gap-2">
-                  {featuredPost.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-[6px] border border-[#d9d1ca]/20 bg-[#0c0c0c]/40 px-2.5 py-1 text-[11px] font-mono text-[#d9d1ca]"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-
-                <span className="dp-btn-cream inline-flex items-center gap-2 px-5 py-2.5 text-xs font-medium">
-                  <span>
-                    {lang === 'ro'
-                      ? 'Citește studiul de caz complet'
-                      : 'Read full case study'}
-                  </span>
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                </span>
-              </div>
-            </div>
-
-            {/* Category Filter Buttons (drivepoint.ro chamfered tabs) */}
-            <div className="flex flex-wrap items-center gap-2">
-              {[
-                {
-                  id: 'all',
-                  label: { ro: 'Toate Articolele (7)', en: 'All Articles (7)' },
-                },
-                {
-                  id: 'dfir',
-                  label: { ro: 'DFIR & Threat Intel', en: 'DFIR & Threat Intel' },
-                },
-                {
-                  id: 'fintech',
-                  label: { ro: 'Licență & Core-Banking', en: 'Thesis & Core-Banking' },
-                },
-                {
-                  id: 'infra',
-                  label: { ro: 'Homelab & Arhivă 2015+', en: 'Homelab & 2015+ Archive' },
-                },
-                {
-                  id: 'ctf',
-                  label: { ro: 'CTF & Exploit Dev', en: 'CTF & Exploit Dev' },
-                },
-              ].map((cat) => {
-                const active = blogCategory === cat.id;
-                return (
+              <ul className="flex flex-wrap items-center gap-5 sm:gap-7 text-[15px] font-medium text-[#ebdbb2]">
+                <li>
+                  <a
+                    href="https://github.com/stefanutc1/university"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[#ebdbb2] hover:text-[#bdae93] transition"
+                  >
+                    <span>Field Manual</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </li>
+                <li>
                   <button
-                    key={cat.id}
-                    onClick={() =>
-                      setBlogCategory(cat.id as BlogCategoryFilter)
-                    }
-                    className={`px-4 py-2 text-xs font-mono transition ${
-                      active
-                        ? 'dp-btn-primary font-medium'
-                        : 'dp-btn-outline opacity-80 hover:opacity-100'
+                    onClick={() => {
+                      setShowTagsPanel(false);
+                      setBlogCategory('all');
+                      setSelectedTag(null);
+                    }}
+                    className={`pb-0.5 transition ${
+                      !showTagsPanel
+                        ? 'border-b-2 border-[#ebdbb2] text-[#ebdbb2]'
+                        : 'text-[#ebdbb2] hover:text-[#bdae93]'
                     }`}
                   >
-                    {cat.label[lang]}
+                    Posts
                   </button>
-                );
-              })}
+                </li>
+                <li>
+                  <button
+                    onClick={() => setShowTagsPanel((v) => !v)}
+                    className={`pb-0.5 transition ${
+                      showTagsPanel || selectedTag
+                        ? 'border-b-2 border-[#ebdbb2] text-[#ebdbb2]'
+                        : 'text-[#ebdbb2] hover:text-[#bdae93]'
+                    }`}
+                  >
+                    Tags
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setActiveTab('about')}
+                    className="text-[#ebdbb2] hover:text-[#bdae93] transition"
+                  >
+                    About
+                  </button>
+                </li>
+              </ul>
             </div>
 
-            {/* Blog Articles Grid — Styled after drivepoint.ro Showroom Spec Cards (.framer-1ncbgsb) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filteredBlogPosts.map((post) => (
-                <article
-                  key={post.slug}
-                  onClick={() => setActivePost(post)}
-                  className="dp-showroom-card cursor-pointer flex flex-col justify-between group overflow-hidden"
-                >
-                  <div>
-                    {/* Top Atmospheric Showroom Band with #52212e Status Pill */}
-                    <div
-                      className="relative px-5 pt-5 pb-4 border-b border-[var(--border)]"
-                      style={{
-                        background:
-                          'linear-gradient(270deg, rgba(12, 12, 12, 0.55) 0%, rgba(64, 24, 35, 0.55) 100%)',
-                      }}
-                    >
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center gap-2 rounded-[30px] bg-[#52212e] px-3 py-1 text-[11px] font-mono text-[#efebe5]">
-                          <span className="h-1.5 w-1.5 rounded-[2px] bg-[#efebe5]" />
-                          {lang === 'ro'
-                            ? post.categoryLabelRo
-                            : post.categoryLabelEn}
-                        </span>
-                        <span className="font-mono text-xs text-[var(--ink-muted)]">
-                          {post.id}
-                        </span>
-                      </div>
+            {/* Centered 720px Main Column (matching brunorochamoura.com --main-width: 720px) */}
+            <div className="mx-auto max-w-[720px]">
+              {/* .page-header */}
+              <header className="mb-5">
+                <h2 className="text-[36px] sm:text-[40px] font-bold leading-tight text-[#ebdbb2] inline-flex items-center gap-3">
+                  <span>Posts</span>
+                  <a
+                    href="#blog"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setBlogCategory('all');
+                      setSelectedTag(null);
+                      setBlogQuery('');
+                    }}
+                    title="RSS / All Posts"
+                    aria-label="RSS"
+                    className="text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                  >
+                    <Rss className="w-[23px] h-[23px]" strokeWidth={2.2} />
+                  </a>
+                </h2>
+              </header>
+
+              {/* .post-content subtitle + interactive tags trigger */}
+              <div className="mb-6 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <p className="text-[16px] sm:text-[18px] text-[#d5c4a1] leading-[1.6]">
+                    {lang === 'ro' ? (
+                      <>
+                        Toate publicațiile și investigațiile mele. Pentru teme specifice, verifică{' '}
+                        <button
+                          onClick={() => setShowTagsPanel((v) => !v)}
+                          className="underline underline-offset-4 text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                        >
+                          etichetele (tags)
+                        </button>
+                        .
+                      </>
+                    ) : (
+                      <>
+                        All my publications. For specific themes, check the{' '}
+                        <button
+                          onClick={() => setShowTagsPanel((v) => !v)}
+                          className="underline underline-offset-4 text-[#ebdbb2] hover:text-[#fabd2f] transition"
+                        >
+                          tags
+                        </button>
+                        .
+                      </>
+                    )}
+                  </p>
+
+                  {/* Compact Search Input in Gruvbox style */}
+                  <div className="relative w-full sm:w-[210px] shrink-0">
+                    <Search className="w-3.5 h-3.5 text-[#bdae93] absolute left-3 top-1/2 -translate-y-1/2" />
+                    <input
+                      type="text"
+                      value={blogQuery}
+                      onChange={(e) => setBlogQuery(e.target.value)}
+                      placeholder={
+                        lang === 'ro' ? 'Caută în articole...' : 'Search posts...'
+                      }
+                      className="w-full rounded-[8px] border border-[#665c54] bg-[#3c3836] pl-8 pr-3 py-1.5 text-xs text-[#ebdbb2] placeholder:text-[#bdae93]/70 focus:outline-none focus:border-[#ebdbb2]"
+                    />
+                  </div>
+                </div>
+
+                {/* Category & Tag Pills Bar (expandable when clicking "Tags" or active filter) */}
+                {(showTagsPanel || selectedTag || blogCategory !== 'all') && (
+                  <div className="rounded-[8px] border border-[#665c54] bg-[#3c3836] p-4 space-y-3">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {[
+                        { id: 'all', label: 'All (7)' },
+                        { id: 'dfir', label: 'DFIR & Threat Intel' },
+                        { id: 'ctf', label: 'CTF & OffSec' },
+                        { id: 'fintech', label: 'Core-Banking Thesis' },
+                        { id: 'infra', label: 'Homelab & 2015+ Archive' },
+                      ].map((cat) => {
+                        const active = blogCategory === cat.id && !selectedTag;
+                        return (
+                          <button
+                            key={cat.id}
+                            onClick={() => {
+                              setBlogCategory(cat.id as BlogCategoryFilter);
+                              setSelectedTag(null);
+                            }}
+                            className={`rounded-[8px] border px-3 py-1 text-xs font-medium transition ${
+                              active
+                                ? 'border-[#ebdbb2] bg-[#ebdbb2] text-[#282828]'
+                                : 'border-[#665c54] bg-[#504945] text-[#bdae93] hover:text-[#ebdbb2]'
+                            }`}
+                          >
+                            {cat.label}
+                          </button>
+                        );
+                      })}
                     </div>
 
-                    {/* Title & Subtitle */}
-                    <div className="p-5 space-y-2.5">
-                      <h3 className="font-display text-lg sm:text-xl font-medium text-[var(--ink)] group-hover:text-[#efebe5] leading-snug line-clamp-2">
+                    <div className="flex flex-wrap gap-1.5 pt-2 border-t border-[#665c54]/60">
+                      {allBlogTags.map(([tag, count]) => {
+                        const isSelected = selectedTag === tag;
+                        return (
+                          <button
+                            key={tag}
+                            onClick={() =>
+                              setSelectedTag((prev) =>
+                                prev === tag ? null : tag
+                              )
+                            }
+                            className={`rounded-[8px] border px-2.5 py-1 text-xs transition ${
+                              isSelected
+                                ? 'border-[#fabd2f] bg-[#fabd2f] text-[#282828] font-semibold'
+                                : 'border-[#665c54] bg-[#504945] text-[#bdae93] hover:bg-[#665c54] hover:text-[#ebdbb2]'
+                            }`}
+                          >
+                            #{tag} <span className="opacity-75">({count})</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Vertical Stack of .post-entry Cards (exact brunorochamoura.com/posts/ structure) */}
+              <div className="space-y-6">
+                {filteredBlogPosts.map((post) => (
+                  <article
+                    key={post.slug}
+                    onClick={() => setActivePost(post)}
+                    className="group relative cursor-pointer rounded-[8px] border border-[#665c54] bg-[#3c3836] p-5 sm:p-6 transition-all duration-100 active:scale-[0.98] hover:border-[#bdae93]"
+                  >
+                    {/* .entry-cover */}
+                    <figure className="mb-6">
+                      <BlogPostCover post={post} lang={lang} />
+                    </figure>
+
+                    {/* .entry-header */}
+                    <header>
+                      <h3 className="text-[21px] sm:text-[24px] font-bold leading-[1.3] text-[#ebdbb2] group-hover:underline decoration-[#bdae93] underline-offset-4">
                         {lang === 'ro' ? post.titleRo : post.titleEn}
                       </h3>
-                      <p className="text-xs text-[var(--ink-secondary)] leading-relaxed line-clamp-3">
-                        {lang === 'ro' ? post.excerptRo : post.excerptEn}
-                      </p>
-                    </div>
-                  </div>
+                    </header>
 
-                  {/* Bottom Spec Telemetry Strip + Price/Metric Bar (exact drivepoint.ro card footer pattern) */}
-                  <div>
-                    {/* 4-Spec Strip */}
-                    <div className="grid grid-cols-2 gap-2 px-5 py-3 border-t border-[var(--border)] bg-[var(--bg)]/40 text-[11px] font-mono text-[var(--ink-secondary)]">
-                      <div className="inline-flex items-center gap-1.5 truncate">
-                        <Calendar className="w-3.5 h-3.5 text-[#827470] shrink-0" />
-                        <span className="truncate">
-                          {lang === 'ro' ? post.dateRo : post.dateEn}
-                        </span>
-                      </div>
-                      <div className="inline-flex items-center gap-1.5 truncate">
-                        <Clock className="w-3.5 h-3.5 text-[#827470] shrink-0" />
-                        <span>{post.readTime}</span>
-                      </div>
-                      <div className="inline-flex items-center gap-1.5 truncate">
-                        <Layers className="w-3.5 h-3.5 text-[#827470] shrink-0" />
-                        <span className="truncate">{post.tags[0]}</span>
-                      </div>
-                      <div className="inline-flex items-center gap-1.5 truncate">
-                        <Terminal className="w-3.5 h-3.5 text-[#827470] shrink-0" />
-                        <span className="truncate">
-                          {post.sections.length}{' '}
-                          {lang === 'ro' ? 'secțiuni' : 'sections'}
-                        </span>
-                      </div>
+                    {/* .entry-content */}
+                    <div className="my-2 text-[14px] leading-[1.6] text-[#bdae93] line-clamp-2">
+                      <p>{lang === 'ro' ? post.subtitleRo : post.subtitleEn}</p>
                     </div>
 
-                    {/* Card Footer Bar with Primary Metric + Light Secondary Sub-label + ChevronRight */}
-                    <div className="flex items-center justify-between px-5 py-4 border-t border-[var(--border)] bg-[var(--bg-elevated)]/70 group-hover:bg-[#401823]/40 transition">
-                      <div className="min-w-0">
-                        <div className="font-display text-sm font-semibold text-[var(--ink)] truncate">
-                          {lang === 'ro'
-                            ? 'Citește Articolul Complet'
-                            : 'Read Full Article'}
-                        </div>
-                        <div className="font-display text-xs font-light text-[var(--ink-secondary)] truncate">
-                          {post.tags.slice(0, 3).join(' · ')}
-                        </div>
-                      </div>
-                      <ChevronRight className="w-5 h-5 text-[var(--ink-secondary)] group-hover:text-[var(--ink)] group-hover:translate-x-1 transition-transform shrink-0" />
-                    </div>
-                  </div>
-                </article>
-              ))}
+                    {/* .entry-footer */}
+                    <footer className="text-[13px] text-[#bdae93]">
+                      <span>{lang === 'ro' ? post.dateRo : post.dateEn}</span>
+                      <span>&nbsp;·&nbsp;</span>
+                      <span>{post.readTime}</span>
+                      <span>&nbsp;·&nbsp;</span>
+                      <span>Moană Ștefănuț-Cornel</span>
+                    </footer>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         )}
