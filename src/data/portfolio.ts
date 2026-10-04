@@ -55,18 +55,18 @@ export const PERSONAL_BIO = {
   infraLive: 'https://stefanutc1.github.io/infrastructure/',
   oldRepo: 'https://github.com/stefanutc1/old',
   headlineRo:
-    'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR)',
+    'Arhitect Sisteme Enterprise, Inginer Cloud Hibrid & Specialist Guvernanță și Securitate Cibernetică (DFIR)',
   headlineEn:
-    'Information Systems Engineer, Infrastructure Architect & Cybersecurity (DFIR) Researcher',
+    'Enterprise Systems Architect, Hybrid Cloud Infrastructure Engineer & Cyber Threat Intelligence Lead',
   storyParagraphsRo: [
-    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), student la programul de studii Informatică Economică (2024 – 2027) din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova. Cu o experiență practică în dezvoltare software începută în 2015, mi-am format fundația tehnică proiectând arhitecturi de servere multiplayer în PAWN și MySQL (RedZone în 2015, NQGaming RPG în 2016–2018), sisteme anti-cheat server-side, portaluri web în Vue 3 (Crowland Wiki), platforme comunitare PHP/MySQL/Nginx (Kronick) și automatizări în Python & Docker (Roadman) — proiecte conservate integral în arhiva stefanutc1/old.',
-    'În ultimii ani am construit de la zero un datacenter homelab hibrid multi-nod (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64 și Kubernetes k3s) guvernat integral prin Infrastructure-as-Code (57 module Terraform și 18 playbook-uri Ansible) și protejat de OPNsense 24.7, Suricata DPI și Wazuh SIEM pe 5 VLAN-uri 802.1Q.',
-    'În paralel, desfășor investigații independente de criminalistică digitală (DFIR) și Threat Intelligence asupra campaniilor reale de phishing, vishing bancar și fraudă e-commerce — investigații care au condus la blocări oficiale la nivel național prin DNSC (PNRISC #178465) — și dezvolt arhitecturi software reziliente în Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular) și C++.'
+    'Sunt Moană Ștefănuț-Cornel (@stefanutc1), specialist în arhitectura sistemelor informatice enterprise și student la programul de studii Informatică Economică (2024 – 2027) din cadrul Facultății de Economie și Administrarea Afacerilor (FEAA), Universitatea din Craiova. Cu o traiectorie practică neîntreruptă inițiată în 2015, mi-am consolidat expertiza inginerească proiectând arhitecturi concurente de servere de înaltă performanță în PAWN și MySQL (RedZone în 2015, NQGaming RPG în 2016–2018), mecanisme server-side de integritate și protecție anti-tamper, portaluri web în Vue 3 (Crowland Wiki), platforme comunitare de producție PHP/MySQL/Nginx (Kronick) și sisteme de automatizare Python & Docker (Roadman) — conservate integral în arhiva stefanutc1/old.',
+    'În planul operațiunilor de infrastructură, am proiectat și administrat un datacenter hibrid multi-nod de înaltă densitate (Proxmox VE 9.2 Type-1 Hypervisor x86_64, OpenMediaVault 7 Enterprise Storage, cluster compute Apple Silicon ARM64 și orchestrare Kubernetes k3s bare-metal) guvernat 100% prin Infrastructure-as-Code (57 module declarative Terraform și 18 roluri Ansible), securizat printr-un perimetru Zero-Trust OPNsense 24.7 cu inspecție profundă a pachetelor (Suricata DPI) și corelare SIEM/XDR Wazuh pe 5 VLAN-uri 802.1Q izolate.',
+    'În domeniul securității defensive și criminalisticii digitale, conduc investigații corporative de Threat Intelligence și Digital Forensics & Incident Response (DFIR) asupra schemelor de fraudă financiară, vishing cu releu OTP în timp real și atacuri de tip Brand Spoofing — finalizate cu notificări oficiale de securitate și acțiuni coordonate de blocare națională prin Directoratul Național de Securitate Cibernetică (DNSC #178465) — proiectând în paralel platforme financiare critice în Java 17 (Spring Boot 3.2), Python, TypeScript (Next.js 15 / Angular 20) și C++.'
   ],
   storyParagraphsEn: [
-    'I am Moană Ștefănuț-Cornel (@stefanutc1), pursuing my B.Sc. in Business Informatics (2024 – 2027) at the Faculty of Economics and Business Administration (FEAA), University of Craiova. With over a decade of hands-on software development experience dating back to 2015, I built my technical foundation engineering multiplayer server architectures in PAWN and MySQL (RedZone in 2015, NQGaming RPG in 2016–2018), server-side anti-cheat systems, Vue 3 web portals (Crowland Wiki), PHP/MySQL/Nginx community platforms (Kronick), and Python/Docker automation (Roadman)—all preserved in the stefanutc1/old archive.',
-    'Over the past years, I engineered a multi-node hybrid homelab datacenter from the ground up (Proxmox VE 9.2 x86_64, OpenMediaVault NAS, Apple Silicon ARM64, and Kubernetes k3s), managed 100% as Infrastructure-as-Code (57 Terraform files and 18 Ansible playbooks) and defended by OPNsense 24.7, Suricata DPI, and Wazuh SIEM across 5 isolated 802.1Q VLANs.',
-    'Alongside infrastructure engineering, I conduct independent Digital Forensics & Incident Response (DFIR) investigations into real-world phishing syndicates, FinTech vishing, and payment fraud—leading to official national takedowns via the Romanian National CSIRT (DNSC #178465)—while building full-stack software systems in Java 17 (Spring Boot), Python, TypeScript (Next.js / Angular), and C++.'
+    'I am Moană Ștefănuț-Cornel (@stefanutc1), an enterprise systems architect and B.Sc. candidate in Business Informatics (2024 – 2027) at the Faculty of Economics and Business Administration (FEAA), University of Craiova. Backed by over a decade of continuous systems engineering experience dating back to 2015, I established my technical foundation designing high-concurrency multiplayer server architectures in PAWN and MySQL (RedZone in 2015, NQGaming RPG in 2016–2018), server-side anti-tamper mechanisms, Vue 3 web portals (Crowland Wiki), production PHP/MySQL/Nginx platforms (Kronick), and Python/Docker automation (Roadman)—preserved in the stefanutc1/old archive.',
+    'Across infrastructure operations, I engineered an enterprise-grade multi-node hybrid datacenter fabric from bare metal (Proxmox VE 9.2 Type-1 Hypervisor x86_64, OpenMediaVault 7 Enterprise Storage, Apple Silicon ARM64 compute, and bare-metal Kubernetes k3s orchestration), governed entirely via Infrastructure-as-Code (57 declarative Terraform modules and 18 modular Ansible roles) and fortified by an OPNsense 24.7 Zero-Trust perimeter with Suricata Deep Packet Inspection and Wazuh SIEM/XDR across 5 micro-segmented 802.1Q VLANs.',
+    'In cybersecurity and defensive operations, I lead corporate Digital Forensics & Incident Response (DFIR) and Threat Intelligence investigations into payment skimming syndicates, live OTP vishing relays, and e-commerce brand spoofing campaigns—culminating in verified national takedowns with the Romanian National CSIRT (DNSC #178465)—while engineering mission-critical financial software in Java 17 (Spring Boot 3.2), Python, TypeScript (Next.js 15 / Angular 20), and C++.'
   ]
 };
 
@@ -74,67 +74,67 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     periodRo: '2025 – Prezent',
     periodEn: '2025 – Present',
-    roleRo: 'Arhitect Infrastructură Homelab & Cercetător Independent DFIR / Threat Intel',
-    roleEn: 'Homelab Datacenter Architect & Independent DFIR / Threat Intel Researcher',
-    orgRo: 'stefanutc1/infrastructure · Proxmox VE 9.2 & CyberLab',
-    orgEn: 'stefanutc1/infrastructure · Proxmox VE 9.2 & CyberLab',
+    roleRo: 'Arhitect Sisteme Enterprise, Cloud Hibrid & Coordonator Threat Intelligence',
+    roleEn: 'Enterprise Systems Architect, Hybrid Cloud & Threat Intelligence Lead',
+    orgRo: 'stefanutc1/infrastructure · Enterprise Datacenter & CyberLab',
+    orgEn: 'stefanutc1/infrastructure · Enterprise Datacenter & CyberLab',
     descRo:
-      'Operarea unui cluster hibrid de 4 noduri fizice și 30+ VM-uri/containere LXC. Publicarea a 5 dosare majore de criminalistică digitală (Media Galaxy Phishing C2, Revolut Vishing, Task Scam API, Steam OpenID BitM, TikTok MRR) și colaborarea cu DNSC pentru blocarea națională a infrastructurilor malițioase (#178465).',
+      'Gestiunea unui cluster bare-metal hibrid multi-nod cu peste 30 de VM-uri și containere LXC de producție. Coordonarea a 5 dosare majore de criminalistică digitală și cooperare directă cu DNSC pentru neutralizarea infrastructurilor malițioase de comandă și control (DNSC PNRISC #178465).',
     descEn:
-      'Operating a 4-node physical cluster running 30+ VMs and LXC containers. Published 5 major DFIR dossiers (Media Galaxy Phishing C2, Revolut Vishing, Task Scam API, Steam OpenID BitM, TikTok MRR) and coordinated national takedowns with DNSC (#178465).',
-    tags: ['Proxmox VE 9.2', 'Terraform', 'Ansible', 'OPNsense 24.7', 'Wazuh SIEM', 'DFIR']
+      'Operating a 4-node physical enterprise cluster hosting 30+ mission-critical VMs and LXC workloads. Directed 5 major forensic disclosures and coordinated official national infrastructure takedowns with DNSC (#178465).',
+    tags: ['Proxmox VE 9.2 (Tier-3)', 'Terraform IaC', 'Ansible Automation', 'Zero-Trust OPNsense', 'Wazuh SIEM/XDR', 'Corporate DFIR']
   },
   {
     periodRo: '2024 – 2027',
     periodEn: '2024 – 2027',
-    roleRo: 'Licență în Informatică Economică (B.Sc. in Business Informatics · 2024 – 2027)',
-    roleEn: 'Bachelor of Science in Business Informatics (Informatică Economică · 2024 – 2027)',
+    roleRo: 'Studii Universitare: Arhitectura Sistemelor Informatice & FinTech (B.Sc.)',
+    roleEn: 'Undergraduate Degree: Enterprise Information Systems & FinTech (B.Sc.)',
     orgRo: 'Facultatea de Economie și Administrarea Afacerilor (FEAA) · Universitatea din Craiova',
     orgEn: 'Faculty of Economics and Business Administration (FEAA) · University of Craiova',
     descRo:
-      'Studii universitare de licență (2024 – 2027) axate pe arhitectura sistemelor informatice, programare orientată pe obiecte (C++/Java/C#), baze de date relaționale (MySQL 8.0 / PostgreSQL), rețele enterprise Cisco, stagii de practică (PracticaSpecialitate & PracticaElaborareLucrareLicenta) și proiectul de diplomă Core-Banking (LucrareLicenta: Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 scenarii MITRE ATT&CK).',
+      'Program academic riguros (Informatică Economică, 2024 – 2027) centrat pe proiectarea sistemelor distribuite, baze de date tranzacționale (PostgreSQL / MySQL), algoritmică avansată (C++/Java/C#), rețele enterprise Cisco și platforma de licență Core-Banking (Spring Boot 3.2 + registru ACID dublă partidă + PCI-DSS v4.0 + 5 vectori MITRE ATT&CK).',
     descEn:
-      'Undergraduate degree (2024 – 2027) focused on information systems architecture, object-oriented programming (C++/Java/C#), relational databases (MySQL 8.0 / PostgreSQL), Cisco enterprise networking, specialty internships (PracticaSpecialitate & PracticaElaborareLucrareLicenta), and the Core-Banking thesis platform (LucrareLicenta: Spring Boot 3.2 + Python 3.11 + PCI-DSS v4.0 + 5 MITRE ATT&CK scenarios).',
-    tags: ['Informatică Economică (2024–2027)', 'Java 17 & Spring Boot', 'Python 3.11', 'C++ / C#', 'MySQL 8.0', 'PCI-DSS v4.0']
+      'Rigorous academic curriculum (Business Informatics, 2024 – 2027) focused on distributed systems engineering, transactional databases (PostgreSQL / MySQL), advanced algorithms (C++/Java/C#), Cisco enterprise networking, and the Core-Banking thesis platform (Spring Boot 3.2 + double-entry ACID ledger + PCI-DSS v4.0 + 5 MITRE ATT&CK vectors).',
+    tags: ['Informatică Economică (2024–2027)', 'Java 17 & Spring Boot 3.2', 'PostgreSQL ACID Ledger', 'PCI-DSS v4.0', 'Enterprise Cisco Networking']
   },
   {
     periodRo: '2021 – 2023',
     periodEn: '2021 – 2023',
-    roleRo: 'Arhitectură Web Comunitară, Portaluri PHP/MySQL/Nginx & Bot Engineering (Kronick & Roadman)',
-    roleEn: 'Community Web Architecture, PHP/MySQL/Nginx Portals & Bot Engineering (Kronick & Roadman)',
+    roleRo: 'Inginerie Software, Arhitecturi Web Enterprise & Sisteme de Automatizare',
+    roleEn: 'Software Engineering, Enterprise Web Platforms & Automation Systems',
     orgRo: 'stefanutc1/old · kronick/ & 2022/',
     orgEn: 'stefanutc1/old · kronick/ & 2022/',
     descRo:
-      'Proiectarea și administrarea platformei web comunitare Kronick (PHP, MySQL cu patch-uri de indexare a performanței, reverse proxy Nginx SSL cu HSTS/CSP și scripturi Bash automatizate backup.sh / restore.sh) și dezvoltarea botului modular de moderare Roadman în Python 3 (discord.py v2.0, Slash Commands, Docker).',
+      'Arhitectura și administrarea platformei web Kronick (PHP, MySQL cu optimizări de indexare la nivel de motor, proxy Nginx SSL cu securitate HSTS/CSP și orchestrare de backup) și proiectarea botului modular Roadman în Python 3 și Docker.',
     descEn:
-      'Engineered and administered the Kronick community web platform (PHP, MySQL performance indexing patches, Nginx SSL reverse proxy with HSTS/CSP headers, automated Bash backup/restore scripts) and built the modular Roadman moderation bot in Python 3 (discord.py v2.0, Slash Commands, Docker).',
-    tags: ['PHP', 'MySQL', 'Nginx SSL', 'Python 3', 'discord.py v2.0', 'Docker']
+      'Architected and operated the Kronick web platform (PHP, MySQL performance indexing patches, hardened Nginx SSL proxy with HSTS/CSP, automated backup pipelines) and engineered the Dockerized Roadman service in Python 3.',
+    tags: ['PHP Engine', 'MySQL Optimization', 'Hardened Nginx SSL', 'Python 3', 'Docker Orchestration']
   },
   {
     periodRo: '2019 – 2020',
     periodEn: '2019 – 2020',
-    roleRo: 'Dezvoltare Frontend & Portal de Documentație Tehnică (Crowland Wiki)',
-    roleEn: 'Frontend Engineering & Technical Knowledge Base Portal (Crowland Wiki)',
+    roleRo: 'Inginerie Frontend & Portaluri de Documentație Tehnică (Crowland Wiki)',
+    roleEn: 'Frontend Engineering & Technical Knowledge Systems (Crowland Wiki)',
     orgRo: 'stefanutc1/old · wiki-crowland/ (phoenix.crowland.ro & rage.crowland.ro)',
     orgEn: 'stefanutc1/old · wiki-crowland/ (phoenix.crowland.ro & rage.crowland.ro)',
     descRo:
-      'Construirea aplicației web de documentație și knowledge base pentru serverele comunității Crowland (SA:MP & GTA V RAGE:MP) utilizând Vue 3 (Composition API), Vite și un design system dark mode personalizat, documentând peste 60 de comenzi, sisteme economice și mecanici de joc.',
+      'Dezvoltarea portalului de documentație tehnică și knowledge base pentru ecosistemele comunitare utilizând Vue 3 (Composition API), Vite și un sistem de design personalizat de înaltă performanță.',
     descEn:
-      'Built the interactive documentation and knowledge base web application for the Crowland gaming community (SA:MP & GTA V RAGE:MP) using Vue 3 (Composition API), Vite, and a custom dark-mode design system.',
-    tags: ['Vue 3', 'Composition API', 'Vite', 'JavaScript', 'Custom Design System']
+      'Engineered the interactive technical documentation portal and knowledge platform for community ecosystems utilizing Vue 3 (Composition API), Vite, and a high-performance custom design system.',
+    tags: ['Vue 3 (Composition API)', 'Vite Bundler', 'Component Architecture', 'Custom Design System']
   },
   {
     periodRo: '2015 – 2018',
     periodEn: '2015 – 2018',
-    roleRo: 'Arhitectură Servere Multiplayer, PAWN, MySQL & Sisteme Anti-Cheat (RedZone & NQGaming)',
-    roleEn: 'Multiplayer Server Architecture, PAWN, MySQL & Anti-Cheat Systems (RedZone & NQGaming)',
+    roleRo: 'Arhitectură Motoare Distribuite de Înaltă Concurență & Mecanisme Anti-Tamper',
+    roleEn: 'High-Concurrency Distributed Engines Architecture & Server Anti-Tamper Systems',
     orgRo: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
     orgEn: 'stefanutc1/old · redzone/ (2015) & nqgaming/ (2016–2018)',
     descRo:
-      'Debutul în dezvoltarea software (septembrie 2015): proiectarea de la zero a gamemode-urilor multiplayer Roleplay/RPG în PAWN și MySQL/DINI (RedZone și NQGaming SA-MP 0.3.7). Implementarea a 10 facțiuni, 8 joburi cu skill 1–5, sisteme dinamice de case/afaceri/dealership, HUD-uri TextDraw și filtre anti-cheat server-side (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
+      'Fundația în dezvoltare software (2015): proiectarea de la zero a motoarelor de joc concurente în PAWN și MySQL, implementarea a 10 facțiuni, economii virtuale tranzacționale și mecanisme server-side de detecție a manipulării memoriei și pachetelor de rețea.',
     descEn:
-      'Early software engineering foundation (September 2015): designing multiplayer Roleplay/RPG server gamemodes from scratch in PAWN and MySQL/DINI (RedZone and NQGaming SA-MP 0.3.7). Engineered 10 factions, 8 skill-based jobs, dynamic house/business/dealership economies, TextDraw HUDs, and server-side anti-cheat systems (anti_cbug.pwn, anti-teleport, anti-airbreak, anti-dialog spoofing).',
-    tags: ['PAWN', 'SA-MP 0.3.7', 'MySQL', 'Anti-Cheat Engineering', 'Game Server Architecture']
+      'Foundational software engineering (2015): engineering high-concurrency game engines from scratch in PAWN and MySQL, implementing 10 factions, transactional virtual economies, and server-side packet/memory tamper detection systems.',
+    tags: ['PAWN Concurrency', 'MySQL Schema Design', 'Network Anti-Tamper', 'Distributed State Management']
   }
 ];
 
@@ -143,24 +143,24 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     id: 'sys-infrastructure',
     code: 'stefanutc1/infrastructure',
     category: 'flagship',
-    badge: 'FLAGSHIP · 4 NODES · 12/12 AUDIT PASS',
-    titleRo: 'Enterprise Homelab & Datacenter Digital Twin',
-    titleEn: 'Enterprise Homelab & Datacenter Digital Twin',
+    badge: 'ENTERPRISE CLUSTER · 4 HYPERVISOR NODES · ZERO-TRUST',
+    titleRo: 'Enterprise Infrastructure, Hybrid Cloud Datacenter & Digital Twin',
+    titleEn: 'Enterprise Infrastructure, Hybrid Cloud Datacenter & Digital Twin',
     descRo:
-      'Infrastructură fizică și virtualizată pe 4 noduri (Proxmox VE 9.2 x86_64 12GB DDR4 + ZRAM, OpenMediaVault NAS, Apple Silicon ARM64, Kubernetes k3s), orchestrată cu 57 module Terraform și 18 playbook-uri Ansible, protejată de OPNsense 24.7 și Wazuh SIEM, cu portal 3D interactiv în Angular 20.',
+      'Infrastructură hibridă de clasă enterprise pe 4 noduri fizice (Proxmox VE 9.2 Type-1 Hypervisor x86_64 cu ZRAM, OpenMediaVault 7 Enterprise Storage Appliance, cluster Apple Silicon ARM64 și orchestrare Kubernetes k3s bare-metal), guvernată prin 57 module declarative Terraform și 18 roluri Ansible, securizată printr-un perimetru Zero-Trust OPNsense 24.7 cu Suricata DPI și Wazuh SIEM/XDR, însoțită de un portal 3D Digital Twin în Angular 20.',
     descEn:
-      '4-node hybrid datacenter (Proxmox VE 9.2 x86_64 12GB DDR4 + ZRAM, OpenMediaVault NAS, Apple Silicon ARM64, Kubernetes k3s), orchestrated via 57 Terraform files and 18 Ansible playbooks, defended by OPNsense 24.7 and Wazuh SIEM, with an interactive Angular 20 3D Digital Twin.',
+      'Enterprise-grade 4-node hybrid datacenter fabric (Proxmox VE 9.2 Type-1 Hypervisor x86_64 with ZRAM, OpenMediaVault 7 Enterprise Storage Appliance, Apple Silicon ARM64 compute cluster, and bare-metal Kubernetes k3s), governed via 57 declarative Terraform modules and 18 Ansible roles, fortified by an OPNsense 24.7 Zero-Trust perimeter with Suricata DPI and Wazuh SIEM/XDR, accompanied by an interactive Angular 20 3D Digital Twin.',
     highlightsRo: [
-      'Segmentare 802.1Q pe 5 VLAN-uri (Management, Production, CyberLab Air-Gapped, Storage, IoT) + Suricata DPI + 8.255 IoC-uri DNS.',
-      'Laborator Active Directory (VM 400–405: Win Server 2022/2016/2012, Win 10, Win 7, RHEL 9) și poligon ofensiv (Parrot, Metasploitable 2, Flare-VM, REMnux).',
-      'Suita Enterprise 2.0 (Keycloak OIDC, NetBox IPAM, Immich AI, Jellyfin *arr, LGTM Monitoring, Ollama GPU GTX 1050 Ti) și firmware C/C++ ESP32.'
+      'Segmentare micro-perimetrică 802.1Q pe 5 rețele VLAN izolate (Management, Production, CyberLab Air-Gapped, Storage, IoT) + inspecție profundă Suricata DPI + 8.255 indicatori de compromitere (IoC) DNS sinkhole.',
+      'Domeniu de testare corporativ Active Directory (VM 400–405: Windows Server 2022/2016/2012, Win 10, Win 7, RHEL 9) și poligon ofensiv izolat (Parrot Security, Metasploitable 2, Flare-VM, REMnux).',
+      'Stivă de servicii Enterprise 2.0 (Keycloak OIDC Identity Provider, NetBox IPAM SSoT, Immich AI, stivă Jellyfin *arr, monitorizare LGTM, accelerare GPU Ollama LLM) și firmware bare-metal ESP32 C/C++.'
     ],
     highlightsEn: [
-      '802.1Q micro-segmentation across 5 VLANs + Suricata DPI + 8,255 DNS sinkhole indicators.',
-      'Active Directory Lab (VMs 400–405: Win Server 2022/2016/2012, Win 10, Win 7, RHEL 9) and Cyber Range (Parrot, Metasploitable 2, Flare-VM, REMnux).',
-      'Enterprise 2.0 stack (Keycloak OIDC, NetBox IPAM, Immich AI, Jellyfin *arr, LGTM Monitoring, Ollama GPU GTX 1050 Ti) and bare-metal ESP32 C/C++ firmware.'
+      'Micro-segmented 802.1Q fabric across 5 isolated VLANs + Suricata Deep Packet Inspection + 8,255 DNS sinkhole Indicators of Compromise (IoCs).',
+      'Corporate Active Directory test forest (VMs 400–405: Windows Server 2022/2016/2012, Win 10, Win 7, RHEL 9) and air-gapped cyber range (Parrot Security, Metasploitable 2, Flare-VM, REMnux).',
+      'Enterprise 2.0 services suite (Keycloak OIDC IdP, NetBox IPAM SSoT, Immich AI, Jellyfin *arr, LGTM telemetry stack, Ollama GPU LLM acceleration) and bare-metal ESP32 C/C++ firmware.'
     ],
-    tags: ['Proxmox VE 9.2', 'Terraform', 'Ansible', 'OPNsense 24.7', 'Wazuh SIEM', 'Angular 20', 'ESP32'],
+    tags: ['Proxmox VE 9.2', 'Terraform IaC', 'Ansible Automation', 'OPNsense 24.7', 'Wazuh SIEM', 'Angular 20', 'Bare-Metal ESP32'],
     repoUrl: 'https://github.com/stefanutc1/infrastructure',
     liveUrl: 'https://stefanutc1.github.io/infrastructure/'
   },
@@ -168,99 +168,99 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     id: 'sys-licenta',
     code: 'LucrareLicenta',
     category: 'flagship',
-    badge: 'BACHELOR THESIS · FEAA UCV (2024–2027)',
-    titleRo: 'Arhitectura și Securitatea Sistemelor Informatice Bancare',
-    titleEn: 'Architecture & Security of Banking Information Systems',
+    badge: 'CORE-BANKING FINTECH · MISSION-CRITICAL · FEAA UCV',
+    titleRo: 'Arhitectura și Securitatea Sistemelor Informatice Bancare Enterprise',
+    titleEn: 'Architecture & Security of Enterprise Core-Banking Systems',
     descRo:
-      'Proiectul de licență (Informatică Economică, FEAA UCV): backend Core-Banking în Java 17 (Spring Boot 3.2) și Python 3.11 cu registru contabil în partidă dublă, gateway PCI-DSS v4.0, monitor criptografic SHA-256, simulator cu 5 scenarii MITRE ATT&CK și terminal Web Kiosk.',
+      'Platformă de licență (Informatică Economică, FEAA UCV): nucleu distribuit Core-Banking în Java 17 (Spring Boot 3.2) și Python 3.11 bazat pe registru contabil în partidă dublă (ACID), gateway de procesare tranzacții aliniat PCI-DSS v4.0, audit criptografic SHA-256 hash-chained, modul de simulare pentru 5 vectori MITRE ATT&CK și consolă de gestiune Web Kiosk.',
     descEn:
-      'Bachelor’s thesis platform (Business Informatics, FEAA UCV): Java 17 (Spring Boot 3.2) and Python 3.11 double-entry core-banking engine, PCI-DSS v4.0 payment gateway, SHA-256 hash-chained audit monitor, 5-scenario MITRE ATT&CK simulator, and interactive Web Kiosk.',
+      'Undergraduate thesis platform (Business Informatics, FEAA UCV): distributed Core-Banking engine in Java 17 (Spring Boot 3.2) and Python 3.11 featuring an ACID double-entry accounting ledger, PCI-DSS v4.0 payment transaction gateway, SHA-256 hash-chained tamper-evident audit monitor, 5-vector MITRE ATT&CK attack & defense simulation engine, and Web Kiosk executive terminal.',
     highlightsRo: [
-      'Înregistrare contabilă în partidă dublă (ACID), validare matematică IBAN (ISO 13616 MOD-97) și carduri Luhn (ISO/IEC 7812).',
-      '5 scenarii de atac și apărare bancară validate automat în CI: Brute-Force, SQLi, Race Condition Double-Spend, Fraud Detection și DDoS.',
-      'Infrastructură virtualizată Proxmox (VM 310–313) și compilare automată a tezei PDF din LaTeX.'
+      'Registru tranzacțional în partidă dublă cu consistență ACID strictă, validare matematică IBAN conform ISO 13616 (MOD-97) și verificare carduri Luhn conform ISO/IEC 7812.',
+      '5 scenarii de atac cibernetic și contramăsuri defensive validate automat în CI: Brute-Force, injecție SQL (SQLi), Race Condition Double-Spend, Fraud Anomaly Detection și DDoS.',
+      'Infrastructură de virtualizare Proxmox VE dedicată (VM 310–313), containerizare Docker și conductă CI/CD de compilare automată a tezei academice în format LaTeX PDF.'
     ],
     highlightsEn: [
-      'ACID double-entry bookkeeping, mathematical ISO 13616 MOD-97 IBAN validation, and ISO/IEC 7812 Luhn card verification.',
-      '5 automated attack & defense scenarios verified in CI: Brute-Force, SQLi, Race Condition Double-Spend, Fraud Detection, and DDoS.',
-      'Dedicated Proxmox virtualization (VMs 310–313) and automated LaTeX thesis PDF build pipeline.'
+      'Strict ACID double-entry transactional accounting ledger, ISO 13616 MOD-97 mathematical IBAN verification, and ISO/IEC 7812 Luhn card integrity auditing.',
+      '5 enterprise attack & defense scenarios automatically validated in CI: Brute-Force mitigation, SQL Injection defense, Double-Spend race condition lockouts, AI Fraud Anomaly Detection, and DDoS resilience.',
+      'Dedicated Proxmox VE virtualization cluster (VMs 310–313), Docker containerization, and automated LaTeX academic thesis compilation pipeline.'
     ],
-    tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX'],
+    tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX Publishing'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta'
   },
   {
     id: 'sys-old-archive',
     code: 'stefanutc1/old',
     category: 'flagship',
-    badge: 'ARCHIVE · 2015 – 2023 · 5 CODEBASES',
-    titleRo: 'Arhiva Istorică de Proiecte (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
-    titleEn: 'Historical Projects Archive (2015 – 2023): RedZone, NQGaming, Crowland Wiki, Kronick & Roadman',
+    badge: 'HISTORICAL REPOSITORIES · 2015 – 2023 · 5 CODEBASES',
+    titleRo: 'Arhiva Istorică de Arhitecturi Software & Sisteme Distribuite (2015 – 2023)',
+    titleEn: 'Historical Software Architecture & Distributed Systems Archive (2015 – 2023)',
     descRo:
-      'Monorepo ce conservă 100% din istoricul de commit-uri al proiectelor dezvoltate între 2015 și 2023: serverele SA-MP Roleplay/RPG RedZone (2015) și NQGaming (2016–2018), portalul Vue 3 Crowland Wiki (2019–2020), platforma web PHP/MySQL/Nginx Kronick (2021–2023) și botul Python/Docker Roadman (2022).',
+      'Monorepo corporativ ce conservă integritatea istoricului de versiuni al aplicațiilor dezvoltate între 2015 și 2023: motoare de server concurente în PAWN/MySQL cu filtre anti-tamper (RedZone 2015, NQGaming 2016–2018), portalul tehnic de documentație Crowland Wiki în Vue 3 (2019–2020), platforma web de producție Kronick în PHP/MySQL/Nginx (2021–2023) și serviciul de automatizare Roadman în Python 3 și Docker (2022).',
     descEn:
-      'Monorepo preserving 100% of the commit history of codebases built between 2015 and 2023: the RedZone (2015) and NQGaming (2016–2018) SA-MP Roleplay/RPG servers, the Vue 3 Crowland Wiki (2019–2020), the Kronick PHP/MySQL/Nginx web platform (2021–2023), and the Python/Docker Roadman bot (2022).',
+      'Enterprise monorepo preserving 100% version control fidelity for systems engineered between 2015 and 2023: high-concurrency multiplayer server engines in PAWN/MySQL with anti-tamper filters (RedZone 2015, NQGaming 2016–2018), the Crowland Wiki technical knowledge portal in Vue 3 (2019–2020), the Kronick PHP/MySQL/Nginx web platform (2021–2023), and the Roadman Python 3/Docker automation service (2022).',
     highlightsRo: [
-      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Gamemode-uri complete SA-MP în PAWN & MySQL/DINI, 10 facțiuni, 8 joburi, Dealership și filtre Anti-Cheat server-side (anti_cbug.pwn, anti-teleport, anti-dialog spoofing).',
-      'wiki-crowland/ (2019–2020): Portal interactiv de documentație construit cu Vue 3 (Composition API) și Vite pentru phoenix.crowland.ro și rage.crowland.ro.',
-      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Platformă web comunitară PHP/MySQL/Nginx SSL cu scripturi Bash de backup/restore + bot de moderare Discord în Python 3 (discord.py v2.0) și Docker.'
+      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Motoare concurente de joc în PAWN & MySQL/DINI, arhitectură pe 10 facțiuni, 8 subsisteme economice și mecanisme server-side de protecție împotriva modificării memoriei și atacurilor de rețea.',
+      'wiki-crowland/ (2019–2020): Portal interactiv de documentație tehnică arhitecturat cu Vue 3 (Composition API) și Vite pentru ecosistemele phoenix.crowland.ro și rage.crowland.ro.',
+      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Stivă web corporativă (PHP, optimizări de indexare MySQL, reverse-proxy Nginx SSL cu HSTS/CSP) și serviciu de automatizare și moderare containerizat în Python 3 și Docker.'
     ],
     highlightsEn: [
-      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Full SA-MP Roleplay/RPG gamemodes in PAWN & MySQL/DINI, 10 factions, 8 jobs, Dealership, and server-side Anti-Cheat filterscripts (anti_cbug.pwn, anti-teleport, anti-dialog spoofing).',
-      'wiki-crowland/ (2019–2020): Interactive documentation portal built with Vue 3 (Composition API) and Vite for phoenix.crowland.ro and rage.crowland.ro.',
-      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Community web stack (PHP/MySQL/Nginx SSL + Bash backup automation) and a Dockerized Python 3 (discord.py v2.0) moderation bot.'
+      'redzone/ (2015–2016) & nqgaming/ (2016–2018): Full-featured concurrent game engines in PAWN & MySQL/DINI, 10 factions, 8 transactional economies, and deterministic server-side anti-tamper filters.',
+      'wiki-crowland/ (2019–2020): Interactive technical knowledge portal architected with Vue 3 (Composition API) and Vite for phoenix.crowland.ro and rage.crowland.ro.',
+      'kronick/ (2021–2023) & 2022/ (Roadman Bot): Hardened web stack (PHP, MySQL indexing optimizations, Nginx SSL with HSTS/CSP, Bash backup workflows) and a containerized Python 3/Docker automation service.'
     ],
-    tags: ['PAWN & SA-MP', 'Vue 3 & Vite', 'PHP & Nginx', 'MySQL', 'Python 3 & Docker'],
+    tags: ['PAWN Concurrency', 'Vue 3 & Vite', 'PHP & Hardened Nginx', 'MySQL Relational', 'Python 3 & Docker'],
     repoUrl: 'https://github.com/stefanutc1/old'
   },
   {
     id: 'dfir-mediagalaxy',
     code: 'SEC-2026-ECOM-005',
     category: 'cyber',
-    badge: 'DFIR · 30 EXHIBITS · DNSC #178465',
-    titleRo: 'Media Galaxy Phishing & Infrastructura C2 yiyangsaas.com',
-    titleEn: 'Media Galaxy Phishing & yiyangsaas.com C2 Forensics',
+    badge: 'CORPORATE DFIR · 30 FORENSIC EXHIBITS · DNSC #178465',
+    titleRo: 'Investigație Criminalistică E-Commerce & Neutralizarea C2 yiyangsaas.com',
+    titleEn: 'Corporate DFIR E-Commerce Investigation & yiyangsaas.com C2 Takedown',
     descRo:
-      'Dosar criminalistic complet (30 probe) asupra campaniei de spoofing e-commerce și recoltare de carduri, finalizat cu raportare oficială și blocare națională în PNRISC / DNSC.',
+      'Dosar complet de criminalistică digitală și investigare a incidentelor (30 probe auditate) vizând o campanie avansată de spoofing de brand comercial și recoltare neautorizată de date de card, finalizată prin raportare oficială și neutralizare coordonată la nivel național prin Directoratul Național de Securitate Cibernetică (DNSC PNRISC #178465).',
     descEn:
-      '30-exhibit forensic investigation into e-commerce brand spoofing and payment card skimming, culminating in national DNSC PNRISC blacklisting.',
+      'Comprehensive Digital Forensics and Incident Response dossier (30 audited exhibits) dismantling an advanced brand spoofing and payment card skimming campaign, culminating in official disclosure and coordinated national takedown via the Romanian National Cyber Security Directorate (DNSC PNRISC #178465).',
     highlightsRo: [
-      'Capturi DOM/TLS în sandbox Chrome izolat și identificarea platformei C2 din Yunnan, China (yiyangsaas.com).',
-      'Analiza tacticii de stalling prin portalul fals trackparcel.de și domenii rotative (worvixglobal.com, stridewisetrading.com).'
+      'Capturi forenzice DOM/TLS în mediu izolat Headless Chrome și atribuirea criminalistică a nodurilor C2 din Yunnan, China (yiyangsaas.com).',
+      'Identificarea tehnicilor de temporizare post-exploatare prin infrastructura fictivă trackparcel.de și rețeaua rotativă de domenii SMTP (worvixglobal.com, stridewisetrading.com).'
     ],
     highlightsEn: [
-      'Airtight headless Chrome DOM/TLS captures and attribution to Yunnan, China C2 infrastructure (yiyangsaas.com).',
-      'Analysis of post-exploitation chargeback stalling via trackparcel.de and rotating SMTP domains.'
+      'Deterministic DOM/TLS forensic captures in an isolated headless Chrome environment and attribution to Yunnan, China C2 infrastructure (yiyangsaas.com).',
+      'Investigation into post-exploitation chargeback mitigation mechanisms via trackparcel.de and rotating SMTP relay domains.'
     ],
-    tags: ['DFIR', 'DNSC #178465', 'DNS Sinkhole', 'Payment Fraud', 'Threat Intel'],
+    tags: ['DFIR Forensic Protocol', 'DNSC #178465', 'DNS Sinkhole IoC', 'Payment Fraud Defense', 'Threat Intel'],
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber/mediagalaxy-ecommerce-fraud-forensics'
   },
   {
     id: 'ctf-19-09-2026',
     code: 'cyber/ctf/19-09-2026',
     category: 'cyber',
-    badge: 'CTF 19.09.2026 · 3/3 SOLVED (100%)',
-    titleRo: 'InvataCyber.ro CTF (19.09.2026) — Writeup Centralizat & 11 Solvere Python/JS',
-    titleEn: 'InvataCyber.ro CTF (19.09.2026) — Centralized Writeup & 11 Python/JS Solvers',
+    badge: 'OFFENSIVE SECURITY · RED TEAM EVALUATION · 100% SOLVED',
+    titleRo: 'Evaluare Tehnică Red Team & Suită de Solvere Automate de Exploatare',
+    titleEn: 'Red Team Offensive Security Evaluation & Automated Exploit Solvers',
     descRo:
-      'Arhiva completă a competiției CTF din 19.09.2026 (3/3 provocări rezolvate, 100%): The Blog (Stored XSS CWE-79 & exfiltrare /admin), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 pe cookie-ul TrackingId cu oracol de 5652 bytes) și Redacția CMS (Broken Access Control CWE-306 pe /edit/5 & Jinja2 SSTI CWE-1336 to RCE).',
+      'Arhiva completă a exercițiului de securitate ofensivă din 19.09.2026 (rata de succes 100%, 3/3 vectori rezolvați): The Blog (Stored XSS CWE-79 & exfiltrare sesiune administrativă), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 pe cookie TrackingId cu oracol analitic de 5652 bytes) și Redacția CMS (Broken Access Control CWE-306 și Server-Side Template Injection Jinja2 CWE-1336 cu escaladare la Remote Code Execution).',
     descEn:
-      'Complete archive of the 19.09.2026 CTF competition (3/3 challenges solved, 100%): The Blog (Stored XSS CWE-79 & /admin exfiltration), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 on TrackingId cookie via 5652-byte oracle), and CMS Newsroom (Unauthenticated /edit/5 CWE-306 & Jinja2 SSTI CWE-1336 to RCE).',
+      'Comprehensive technical archive of the 19.09.2026 offensive security assessment (100% success rate, 3/3 challenge vectors mitigated): The Blog (Stored XSS CWE-79 & administrative session exfiltration), Portal InvataCyber.ro (Blind Boolean SQLite Injection CWE-89 on TrackingId cookie with a 5652-byte deterministic oracle), and CMS Newsroom (Broken Access Control CWE-306 and Jinja2 SSTI CWE-1336 escalating to Remote Code Execution).',
     highlightsRo: [
-      'Challenge 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py pentru exfiltrarea asincronă a panoului /admin din sesiunea botului headless -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
-      'Challenge 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): 8 scripturi Python (dump_users.py, dump_all_schema.py, solver_portal.py) cu oracol boolean pe 5652 bytes -> admin : s3cur3_l0ckd0wn_p4ssw0rd! pe /console -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
-      'Challenge 03 (Redacția CMS — writeup_03_cms_editor_ssti.md): blog_flag.py cu traversare de obiecte Python în render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+      'Vector 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py pentru interceptarea asincronă a sesiunii administrative din browserul headless -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
+      'Vector 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): Suită de 8 scripturi Python cu oracol binar pe 5652 bytes -> credențiale admin : s3cur3_l0ckd0wn_p4ssw0rd! -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
+      'Vector 03 (Redacția CMS — writeup_03_cms_editor_ssti.md): blog_flag.py cu traversarea ierarhiei de obiecte Python în render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
     ],
     highlightsEn: [
-      'Challenge 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py asynchronously exfiltrating /admin from the headless bot session -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
-      'Challenge 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): 8 Python solvers (dump_users.py, dump_all_schema.py, solver_portal.py) leveraging a 5652-byte boolean oracle -> admin : s3cur3_l0ckd0wn_p4ssw0rd! on /console -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
-      'Challenge 03 (CMS Newsroom — writeup_03_cms_editor_ssti.md): blog_flag.py traversing Python object graph in render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
+      'Vector 01 (The Blog — writeup_01_the_blog_xss.md): payload.js + solver.py asynchronously intercepting the administrative session from the headless runner -> InvataCyber{st0r3d_xss_c0nt4ct_f0rm_pwn}.',
+      'Vector 02 (Portal Lockdown — writeup_02_portal_lockdown_sqli.md): 8 Python automation solvers utilizing a 5652-byte binary oracle -> credentials admin : s3cur3_l0ckd0wn_p4ssw0rd! -> InvataCyber{bl1nd_sql1_c00k13_tr4ck1ng_m4st3r}.',
+      'Vector 03 (CMS Newsroom — writeup_03_cms_editor_ssti.md): blog_flag.py executing Python object traversal in render_template_string (config.__class__.__init__.__globals__.os.popen) -> InvataCyber{ssti_j1nj42_rc3_fl4g_txt_3xtr4ct3d}.'
     ],
     tags: [
-      'CTF 19.09.2026',
+      'Offensive Security Evaluation',
       'Stored XSS (CWE-79)',
       'Blind SQLi (CWE-89)',
       'Jinja2 SSTI (CWE-1336)',
-      '11 Python/JS Solvers'
+      'Exploitation Solvers'
     ],
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber/ctf/19-09-2026'
   },
@@ -268,110 +268,110 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     id: 'dfir-revolut-steam-task',
     code: 'SEC-2026-VISH / TASK / AITM',
     category: 'cyber',
-    badge: 'DFIR SUITE · 4 DOSSIERS & 5 CVEs',
-    titleRo: 'Dosarele Revolut Vishing, Task Scam API, Steam BitM & Reproduceri CVE',
-    titleEn: 'Revolut Vishing, Task Scam API, Steam BitM & CVE Reproductions Suite',
+    badge: 'THREAT INTELLIGENCE · 4 DOSSIERS & 5 CVE LAB REPRODUCTIONS',
+    titleRo: 'Suită Criminalistică Vishing, Inginerie Inversă API & Laborator de Cercetare CVE',
+    titleEn: 'Corporate Threat Intelligence: Vishing, API Reverse Engineering & CVE Research Lab',
     descRo:
-      'Colecția de investigații asupra vishing-ului cu releu OTP în timp real, decompilării API-urilor de fraudă financiară (/api/v1/site/config), atacurilor Browser-in-the-Middle pe Steam OpenID și reproducerilor CVE.',
+      'Colecție exhaustivă de investigații criminalistice corporative asupra operațiunilor de vishing cu releu OTP în timp real, inginerie inversă pe API-uri financiare malițioase (/api/v1/site/config), vectori de atac Browser-in-the-Middle pe mecanismele Steam OpenID și reproducerea în laborator controlat a 5 vulnerabilități CVE critice cu politici de remediere.',
     descEn:
-      'Suite of forensic investigations into live OTP vishing relays, unauthenticated task-scam APIs (/api/v1/site/config), Browser-in-the-Middle Steam OpenID popups, and laboratory CVE reproductions.',
+      'Exhaustive corporate forensic investigation suite analyzing real-time OTP vishing relays, reverse-engineering illicit financial APIs (/api/v1/site/config), assessing Browser-in-the-Middle vectors against Steam OpenID authentication, and validating 5 critical CVE laboratory reproductions paired with hardening remediation controls.',
     highlightsRo: [
-      '5 reproduceri CVE în laborator (CVE-2023-54391, CVE-2025-57539, CVE-2026-69603, CVE-2026-69730, CVE-2026-69845) cu patch-uri de remediere.',
-      'Analize detaliate asupra arhitecturilor de phishing/vishing în timp real și exfiltrării sesiunilor OAuth/OpenID.'
+      '5 reproduceri controlate ale vulnerabilităților CVE (CVE-2023-54391, CVE-2025-57539, CVE-2026-69603, CVE-2026-69730, CVE-2026-69845) însoțite de patch-uri de remediere.',
+      'Analize aprofundate asupra arhitecturilor de atac vishing cu releu de credențiale în timp real și deturnării token-urilor de sesiune OAuth/OpenID.'
     ],
     highlightsEn: [
-      '5 laboratory CVE reproductions with remediation patches.',
-      'In-depth technical analysis of real-time vishing relays and OAuth/OpenID session hijacking.'
+      '5 controlled laboratory reproductions of published CVEs with validated remediation patches.',
+      'In-depth architectural analysis of real-time OTP relay vishing operations and OAuth/OpenID token session hijacking.'
     ],
-    tags: ['Vishing Relay', 'BitM / AiTM', 'API Decompilation', 'CVE Research', 'Threat Intel'],
+    tags: ['Vishing Relay Analysis', 'Browser-in-the-Middle', 'API Reverse Engineering', 'CVE Research Lab', 'Threat Intel'],
     repoUrl: 'https://github.com/stefanutc1/infrastructure/tree/main/cyber'
   },
   {
     id: 'proj-ps2',
     code: 'PracticaSpecialitate & PracticaElaborareLucrareLicenta',
     category: 'web',
-    badge: 'NEXT.JS 15 · REACT 19',
-    titleRo: 'Aplicație Web Telemetrie Meteo (ucv-ps2-vremea) & Stagiile de Practică',
-    titleEn: 'Weather Telemetry Web App (ucv-ps2-vremea) & Specialty Internships',
+    badge: 'ENTERPRISE WEB APPS · NEXT.JS 15 & REACT 19',
+    titleRo: 'Platformă Web de Telemetrie Enterprise & Stagii de Practică Tehnologică',
+    titleEn: 'Enterprise Telemetry Web Platform & Applied Engineering Internships',
     descRo:
-      'Aplicație web modernă construită cu Next.js 15 App Router, React 19, TypeScript 5.7 și Tailwind CSS în PracticaSpecialitate, alături de documentația din PracticaElaborareLucrareLicenta.',
+      'Aplicație web corporativă de telemetrie în timp real dezvoltată pe stiva Next.js 15 App Router, React 19, TypeScript 5.7 și Tailwind CSS în cadrul stagiului de PracticaSpecialitate, documentată exhaustiv în PracticaElaborareLucrareLicenta cu garanții de calitate statică în CI.',
     descEn:
-      'Modern web application built with Next.js 15 App Router, React 19, TypeScript 5.7, and Tailwind CSS in PracticaSpecialitate, paired with PracticaElaborareLucrareLicenta.',
+      'Enterprise real-time telemetry web platform architected with Next.js 15 App Router, React 19, TypeScript 5.7, and Tailwind CSS during the PracticaSpecialitate internship, thoroughly documented in PracticaElaborareLucrareLicenta with continuous static quality guarantees.',
     highlightsRo: [
-      'Arhitectură de componente React 19 cu interogare asincronă API și design responsiv.',
-      'Validare statică automatizată în pipeline-ul CI GitHub Actions.'
+      'Arhitectură reactivă de componente React 19 cu mecanisme asincrone de procesare a telemetriei și interfață adaptivă de înaltă performanță.',
+      'Validare statică automată a tipurilor și porți de control al calității integrate în fluxul de CI/CD GitHub Actions.'
     ],
     highlightsEn: [
-      'React 19 component architecture with async telemetry fetching and responsive UI.',
-      'Automated static typechecking and build verification in GitHub Actions CI.'
+      'Reactive React 19 component architecture with asynchronous telemetry pipelines and high-performance adaptive UI.',
+      'Automated static type-checking and quality gates integrated into GitHub Actions CI/CD workflows.'
     ],
-    tags: ['Next.js 15', 'React 19', 'TypeScript 5.7', 'Tailwind CSS'],
+    tags: ['Next.js 15', 'React 19', 'TypeScript 5.7', 'Tailwind CSS', 'Static Verification'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/PracticaSpecialitate'
   },
   {
     id: 'proj-poo2',
     code: 'ProgramareOrientataObiect/{Proiect,Platforme}',
     category: 'systems',
-    badge: 'C++ · MFC WIN32',
-    titleRo: 'Sisteme Desktop de Gestiune și Platforme SDI/MDI în C++ / MFC',
-    titleEn: 'Commercial Management Desktop System & SDI/MDI Platforms in C++ / MFC',
+    badge: 'SYSTEMS ENGINEERING · C++ / WIN32 MFC',
+    titleRo: 'Sisteme Desktop de Gestiune Comercială & Arhitecturi Industriale SDI/MDI',
+    titleEn: 'Enterprise Commercial Management Systems & Win32 C++ Architecture',
     descRo:
-      'Aplicație completă de gestiune comercială (ProgramareOrientataObiect/Proiect) și suită de 8 platforme de laborator (ProgramareOrientataObiect/Platforme) dezvoltate în C++ și Microsoft Foundation Classes.',
+      'Sistem software de gestiune comercială și gestiune a resurselor enterprise (ProgramareOrientataObiect/Proiect) alături de o suită de 8 platforme industriale de laborator (ProgramareOrientataObiect/Platforme) proiectate în C++ modern și Microsoft Foundation Classes (MFC).',
     descEn:
-      'Full commercial management desktop application (ProgramareOrientataObiect/Proiect) and 8 laboratory platforms (ProgramareOrientataObiect/Platforme) engineered in C++ and Microsoft Foundation Classes.',
+      'Enterprise commercial resource planning and management desktop suite (ProgramareOrientataObiect/Proiect) alongside 8 industrial laboratory platforms (ProgramareOrientataObiect/Platforme) engineered in modern C++ and Microsoft Foundation Classes (MFC).',
     highlightsRo: [
-      'Arhitectură Document/View, serializare binară CArchive, randare vectorială GDI și ferestre de dialog complexe.',
-      'Ierarhii polimorfice de clase și gestiune sigură a memoriei.'
+      'Arhitectură Document/View, serializare binară de date CArchive, subsistem de randare grafică vectorială GDI și fluxuri de dialog modale/nemodale.',
+      'Ierarhii polimorfice de clase, respectarea strictă a principiilor OOP și alocare deterministă a resurselor.'
     ],
     highlightsEn: [
-      'Document/View architecture, binary CArchive serialization, Win32 GDI vector rendering, and custom dialog workflows.',
-      'Polymorphic class hierarchies and deterministic resource management.'
+      'Document/View design patterns, binary CArchive state serialization, Win32 GDI graphics pipelines, and modal/modeless dialog workflows.',
+      'Polymorphic class hierarchies, strict OOP compliance, and deterministic memory resource allocation.'
     ],
-    tags: ['C++', 'MFC', 'Win32 API', 'OOP', 'Visual Studio'],
+    tags: ['Modern C++', 'Microsoft Foundation Classes', 'Win32 API', 'OOP Principles', 'Visual Studio Enterprise'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/ProgramareOrientataObiect'
   },
   {
     id: 'proj-sd2-pc1',
     code: 'StructuriDeDate & ProgramareaCalculatoarelor',
     category: 'systems',
-    badge: 'C++ · C# · .NET WINFORMS',
-    titleRo: 'Structuri de Date Avansate (C++ BST/Liste) & Platforme .NET (C#/VB)',
-    titleEn: 'Advanced Data Structures (C++ BST/Lists) & .NET WinForms Suite (C#/VB)',
+    badge: 'ALGORITHMIC SYSTEMS · C++ & .NET ENTERPRISE',
+    titleRo: 'Structuri Algoritmice de Date & Suită de Aplicații Industriale .NET',
+    titleEn: 'Algorithmic Data Structures & Enterprise .NET Application Suite',
     descRo:
-      'Implementări de la zero în C++ pentru arbori binari de căutare și liste înlănțuite (StructuriDeDate/Proiect și StructuriDeDate/Teme), alături de 10 aplicații desktop .NET WinForms în C# și Visual Basic (ProgramareaCalculatoarelor).',
+      'Implementări algoritmice deterministe de la zero în C++ pentru arbori binari de căutare echilibrați și structuri dinamice de memorie (StructuriDeDate), completate de o suită de 10 aplicații desktop .NET WinForms în C# și Visual Basic pentru calcul financiar și matricial (ProgramareaCalculatoarelor).',
     descEn:
-      'From-scratch C++ implementations of Binary Search Trees and linked lists (StructuriDeDate/Proiect & StructuriDeDate/Teme), alongside 10 .NET WinForms desktop applications in C# and Visual Basic (ProgramareaCalculatoarelor).',
+      'Deterministic from-scratch C++ implementations of balanced binary search trees and dynamic memory structures (StructuriDeDate), paired with an enterprise suite of 10 .NET WinForms desktop solutions in C# and Visual Basic for financial and matrix analysis (ProgramareaCalculatoarelor).',
     highlightsRo: [
-      'Operații complete pe arbori binari de căutare (inserare, ștergere, traversări recursiv/iterativ) în StructuriDeDate/Proiect și StructuriDeDate/Teme.',
-      '10 soluții Visual Studio pentru calcule matriciale, statistice și financiare în ProgramareaCalculatoarelor.'
+      'Gestiunea completă a ciclului de viață al arborilor binari de căutare (inserare, ștergere, rotații și traversări) alături de 7 seturi algoritmice avansate.',
+      '10 soluții Visual Studio dezvoltate pentru operațiuni de calcul matricial, analiză statistică și modelare financiară în ProgramareaCalculatoarelor.'
     ],
     highlightsEn: [
-      'Full BST lifecycle operations and 7 algorithmic problem sets in StructuriDeDate/Proiect & StructuriDeDate/Teme.',
-      '10 Visual Studio WinForms solutions for matrix, statistical, and financial computation in ProgramareaCalculatoarelor.'
+      'Complete lifecycle management for binary search trees (insert, delete, tree rotations, recursive traversals) and 7 algorithmic problem sets.',
+      '10 Visual Studio enterprise solutions engineered for matrix mathematics, statistical analysis, and financial modeling.'
     ],
-    tags: ['C++', 'Binary Search Trees', 'C#', 'Visual Basic', '.NET WinForms'],
+    tags: ['C++ Data Structures', 'Binary Search Trees', 'C# .NET', 'Visual Basic', '.NET WinForms'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/StructuriDeDate'
   },
   {
     id: 'proj-bd2-rc2-anul3',
     code: 'BazeDeDate · ReteleCalculatoare · ProgramareWeb · APSI · GBD',
     category: 'datanet',
-    badge: 'MYSQL 8 · CISCO IOS · UML',
-    titleRo: 'Baze de Date Relaționale, Rețele Cisco VLAN, Programare Web & Analiza Sistemelor',
-    titleEn: 'Relational Databases, Cisco VLAN Networks, Web Programming & Systems Analysis',
+    badge: 'DATA ARCHITECTURE · CISCO INFRASTRUCTURE · UML',
+    titleRo: 'Arhitecturi de Date Relaționale, Rețele Enterprise Cisco & Proiectare Sistemică UML',
+    titleEn: 'Relational Data Architectures, Cisco Enterprise Networking & UML Engineering',
     descRo:
-      'Arhitecturi de baze de date normalizate (BazeDeDate & GestiuneaBazelorDeDate), topologii enterprise multi-VLAN în Cisco Packet Tracer (ReteleCalculatoare) și modulele de analiză UML și web (AnalizaSiProiectareaSistemelorInformatice & ProgramareWeb).',
+      'Modele relaționale de date normalizate (3NF/BCNF) cu constrângeri de integritate referențială (BazeDeDate & GestiuneaBazelorDeDate), topologii enterprise multi-VLAN pe echipamente Cisco IOS (ReteleCalculatoare) și metodologii de analiză și proiectare structurală UML (APSI & ProgramareWeb).',
     descEn:
-      'Normalized relational database schemas (BazeDeDate & GestiuneaBazelorDeDate), multi-VLAN Cisco Packet Tracer enterprise topologies (ReteleCalculatoare), and UML/Web modules (AnalizaSiProiectareaSistemelorInformatice & ProgramareWeb).',
+      'Enterprise relational database models (3NF/BCNF) with referential integrity guarantees (BazeDeDate & GestiuneaBazelorDeDate), multi-VLAN Cisco IOS enterprise network topologies (ReteleCalculatoare), and structured UML systems engineering methodologies (APSI & ProgramareWeb).',
     highlightsRo: [
-      'Scheme relaționale 3NF/BCNF cu constrângeri de integritate și interogări analitice complexe în BazeDeDate și GestiuneaBazelorDeDate.',
-      'Topologii Cisco IOS cu subnetizare VLSM, rutare inter-VLAN și liste de control al accesului (ACL) în ReteleCalculatoare.'
+      'Scheme relaționale normalizate 3NF/BCNF, proceduri stocate și interogări analitice complexe în MySQL 8.0.',
+      'Arhitecturi de rețea Cisco IOS cu adresare VLSM, rutare inter-VLAN și liste de control al accesului (ACL) pentru securizarea perimetrului de rețea.'
     ],
     highlightsEn: [
-      '3NF/BCNF relational schemas with referential integrity and complex analytical SQL queries in BazeDeDate & GestiuneaBazelorDeDate.',
-      'Cisco IOS topologies featuring VLSM subnetting, inter-VLAN routing, and security ACLs in ReteleCalculatoare.'
+      'Normalized 3NF/BCNF relational database schemas, stored procedures, and complex analytical SQL queries in MySQL 8.0.',
+      'Cisco IOS network architectures featuring VLSM subnetting, inter-VLAN routing, and security ACLs for perimeter isolation.'
     ],
-    tags: ['MySQL 8.0', 'SQL DDL/DML', 'Cisco Packet Tracer', '802.1Q VLANs', 'UML Architecture'],
+    tags: ['MySQL 8.0 Enterprise', 'Relational Schema Design', 'Cisco IOS Networking', '802.1Q VLANs', 'UML Systems Engineering'],
     repoUrl: 'https://github.com/stefanutc1/university'
   }
 ];
@@ -379,43 +379,43 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
 export const CLUSTER_NODES: ClusterNode[] = [
   {
     id: 'node-1',
-    name: 'Node 1 · pve (x86_64 Primary Hypervisor)',
+    name: 'Node 1 · pve (Tier-3 Primary Hypervisor)',
     ip: '192.168.1.132 · VLAN 10',
     specs: 'Intel Core i3-10100F · 12 GB DDR4-2133 + 6 GB ZRAM · NVIDIA GTX 1050 Ti · NVMe + SSD',
     roleRo:
-      'Hypervisor principal Proxmox VE 9.2: rulează OPNsense 24.7 (VM 200), Wazuh SIEM (CT 106), Ollama GPU LLM (CT 102), LGTM Monitoring (CT 104), Active Directory Lab (VM 400–405), Cyber Range (VM 300–304), Core-Banking Licență (VM 310–313) și suita Enterprise 2.0 (CT 180–183).',
+      'Hypervisor principal enterprise (Proxmox VE 9.2): guvernează perimetrul de securitate OPNsense 24.7 (VM 200), Wazuh SIEM/XDR (CT 106), Ollama LLM GPU inference (CT 102), stiva de monitorizare LGTM (CT 104), Active Directory Lab (VM 400–405), Cyber Range (VM 300–304), nucleul bancar de licență (VM 310–313) și suita Enterprise 2.0 (CT 180–183).',
     roleEn:
-      'Primary Proxmox VE 9.2 hypervisor running OPNsense 24.7 (VM 200), Wazuh SIEM (CT 106), Ollama GPU LLM (CT 102), LGTM Monitoring (CT 104), Active Directory Lab (VMs 400–405), Cyber Range (VMs 300–304), Thesis Banking Core (VMs 310–313), and Enterprise 2.0 LXC stacks (CT 180–183).'
+      'Tier-3 primary enterprise hypervisor (Proxmox VE 9.2): orchestrating OPNsense 24.7 perimeter gateway (VM 200), Wazuh SIEM/XDR (CT 106), Ollama GPU LLM acceleration (CT 102), LGTM observability stack (CT 104), Active Directory Lab (VMs 400–405), Cyber Range (VMs 300–304), Core-Banking thesis engine (VMs 310–313), and Enterprise 2.0 microservices (CT 180–183).'
   },
   {
     id: 'node-2',
-    name: 'Node 2 · openmediavault (Dedicated NAS)',
+    name: 'Node 2 · openmediavault (Enterprise Storage & ZFS Vault)',
     ip: '192.168.1.199 · VLAN 40',
     specs: 'Dedicated Storage Appliance · ZFS / EXT4 · NFSv4 & SMB3 · SMART Monitoring',
     roleRo:
-      'Nod dedicat de stocare partajată pentru backup-uri criptate Proxmox (vzdump / PBS), depozite media și artefacte criminalistice DFIR.',
+      'Dispozitiv enterprise dedicat pentru stocare resilientă și arhivare criptată: furnizează volume partajate NFSv4 și SMB3 pentru backup-urile Proxmox VE (PBS / vzdump), depozite analitice și artefacte criminalistice DFIR.',
     roleEn:
-      'Dedicated storage appliance providing NFSv4/SMB3 datastores for encrypted Proxmox backups (vzdump / PBS), media libraries, and DFIR forensic artifacts.'
+      'Dedicated enterprise storage appliance for resilient data vaults: provisions high-throughput NFSv4 and SMB3 datastores for encrypted Proxmox VE backups (PBS / vzdump), analytical datasets, and forensic DFIR archives.'
   },
   {
     id: 'node-3',
-    name: 'Node 3 · pve-arm64 (Apple Silicon Virtualization)',
+    name: 'Node 3 · pve-arm64 (Apple Silicon High-Density Compute)',
     ip: '192.168.1.140 · VLAN 10',
     specs: 'Apple Silicon ARM64 Architecture · Proxmox VE ARM64 · High-Efficiency Compute',
     roleRo:
-      'Nod secundar ARM64 pentru containere LXC cu eficiență energetică ridicată, build-uri multi-arhitectură și testare macOS / Linux.',
+      'Nod enterprise de calcul de înaltă eficiență energetică pe arhitectură ARM64: dedicat containerelor LXC critice, conductelor de compilare multi-arhitectură și testării de compatibilitate macOS/Linux.',
     roleEn:
-      'Secondary ARM64 node for energy-efficient LXC workloads, multi-architecture CI builds, and hybrid macOS/Linux testing.'
+      'High-efficiency ARM64 enterprise compute node: dedicated to mission-critical LXC microservices, multi-architecture continuous integration pipelines, and cross-platform macOS/Linux validation.'
   },
   {
     id: 'node-4',
-    name: 'Node 4 · kubernetes (k3s / k0s Edge Worker)',
+    name: 'Node 4 · kubernetes (Bare-Metal Edge Worker & K3s)',
     ip: '192.168.1.150 · VLAN 20',
     specs: 'AMD Athlon II X2 250 · Lightweight Kubernetes (k3s / k0s) · Cilium CNI · ArgoCD',
     roleRo:
-      'Nod bare-metal pentru orchestrare Kubernetes, politici OPA Rego, Chaos Engineering și colectarea telemetriei de la senzorii hardware ESP32.',
+      'Nod edge bare-metal pentru orchestrarea containerelor Kubernetes (k3s/k0s), aplicarea politicilor de securitate OPA Rego, teste de reziliență (Chaos Engineering) și ingestia telemetriei hardware de la nodurile senzoriale ESP32.',
     roleEn:
-      'Bare-metal edge worker running Kubernetes manifests, OPA Rego policies, chaos engineering drills, and ESP32 hardware telemetry ingestion.'
+      'Bare-metal edge worker node executing Kubernetes orchestration (k3s/k0s), enforcing OPA Rego governance policies, running chaos engineering resilience drills, and ingesting bare-metal ESP32 hardware telemetry.'
   }
 ];
 
@@ -423,8 +423,8 @@ export const TECH_STACK_PILLARS: StackPillar[] = [
   {
     titleRo: 'Infrastructură, Virtualizare & IaC',
     titleEn: 'Infrastructure, Virtualization & IaC',
-    subtitleRo: 'Bare-Metal · Multi-Cluster · GitOps',
-    subtitleEn: 'Bare-Metal · Multi-Cluster · GitOps',
+    subtitleRo: 'Bare-Metal · Multi-Cluster · GitOps Governance',
+    subtitleEn: 'Bare-Metal · Multi-Cluster · GitOps Governance',
     items: [
       'Proxmox VE 9.2 (x86_64 & ARM64)',
       'KVM / QEMU (VirtIO Ballooning & PCIe Passthrough)',
@@ -439,8 +439,8 @@ export const TECH_STACK_PILLARS: StackPillar[] = [
   {
     titleRo: 'Cybersecurity, Rețele & DFIR',
     titleEn: 'Cybersecurity, Networking & DFIR',
-    subtitleRo: 'Zero-Trust · SIEM/XDR · Threat Intel',
-    subtitleEn: 'Zero-Trust · SIEM/XDR · Threat Intel',
+    subtitleRo: 'Zero-Trust ZTNA · SIEM/XDR · Threat Intel',
+    subtitleEn: 'Zero-Trust ZTNA · SIEM/XDR · Threat Intel',
     items: [
       'OPNsense 24.7 Firewall & 802.1Q VLANs',
       'Suricata DPI IDS/IPS & CrowdSec',
@@ -455,8 +455,8 @@ export const TECH_STACK_PILLARS: StackPillar[] = [
   {
     titleRo: 'Inginerie Software & Baze de Date',
     titleEn: 'Software Engineering & Databases',
-    subtitleRo: 'Backend · Full-Stack · Systems',
-    subtitleEn: 'Backend · Full-Stack · Systems',
+    subtitleRo: 'Microservicii · Tranzacții ACID · Arhitecturi Sisteme',
+    subtitleEn: 'Microservices · ACID Transactions · Systems Architecture',
     items: [
       'Python 3.11 (Core-Banking, Pytest, DFIR Tooling)',
       'Java 17 & Spring Boot 3.2 (REST Microservices)',
@@ -471,8 +471,8 @@ export const TECH_STACK_PILLARS: StackPillar[] = [
   {
     titleRo: 'Observabilitate & DevSecOps CI/CD',
     titleEn: 'Observability & DevSecOps CI/CD',
-    subtitleRo: 'Telemetrie · SAST/DAST · Quality Gates',
-    subtitleEn: 'Telemetry · SAST/DAST · Quality Gates',
+    subtitleRo: 'Observabilitate · SAST/DAST · Continuous Verification',
+    subtitleEn: 'Observability · SAST/DAST · Continuous Verification',
     items: [
       'Prometheus TSDB & Alertmanager',
       'Grafana Enterprise & Grafana Loki',

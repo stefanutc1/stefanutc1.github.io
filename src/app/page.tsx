@@ -362,8 +362,8 @@ export default function HomePage() {
                   <span className="h-2 w-2 rounded-[2.5px] bg-[#efebe5]" />
                   <span>
                     {lang === 'ro'
-                      ? 'EXPERIENȚĂ TEHNICĂ DIN 2015 · FEAA UCV (2024 – 2027)'
-                      : 'ENGINEERING EXPERIENCE SINCE 2015 · FEAA UCV (2024 – 2027)'}
+                      ? 'ARHITECTURĂ ENTERPRISE DIN 2015 · FEAA UCV (2024 – 2027)'
+                      : 'ENTERPRISE ARCHITECTURE SINCE 2015 · FEAA UCV (2024 – 2027)'}
                   </span>
                 </div>
 
@@ -373,8 +373,8 @@ export default function HomePage() {
                     {PERSONAL_BIO.name}
                     <span className="block font-display font-light italic text-2xl sm:text-3xl lg:text-[34px] text-[var(--ink-secondary)] mt-2 leading-[1.18]">
                       {lang === 'ro'
-                        ? 'sisteme distribuite, arhitectură Core-Banking și investigații DFIR.'
-                        : 'distributed systems, Core-Banking architecture, and DFIR investigations.'}
+                        ? 'arhitectură Core-Banking, cloud hibrid și guvernanță DFIR.'
+                        : 'Core-Banking architecture, hybrid cloud, and DFIR governance.'}
                     </span>
                   </h1>
                 </div>
@@ -421,8 +421,8 @@ export default function HomePage() {
                     <BookOpen className="w-4 h-4" />
                     <span>
                       {lang === 'ro'
-                        ? 'Citește Ultimul Articol (Media Galaxy DFIR)'
-                        : 'Read Latest Article (Media Galaxy DFIR)'}
+                        ? 'Dosar Criminalistic (Media Galaxy DFIR)'
+                        : 'Forensic Dossier (Media Galaxy DFIR)'}
                     </span>
                   </button>
 
@@ -433,7 +433,7 @@ export default function HomePage() {
                     <FileText className="w-4 h-4" />
                     <span>
                       {lang === 'ro'
-                        ? 'Retrospectivă Tehnică (2015 – Prezent)'
+                        ? 'Retrospectivă Tehnologică (2015 – Prezent)'
                         : 'Engineering Retrospective (2015 – Present)'}
                     </span>
                   </button>
@@ -445,7 +445,7 @@ export default function HomePage() {
                   >
                     <span>
                       {lang === 'ro'
-                        ? 'Vezi Portofoliul'
+                        ? 'Explorează Portofoliul'
                         : 'Explore Portfolio'}
                     </span>
                     <ChevronRight className="w-4 h-4" />
@@ -460,8 +460,8 @@ export default function HomePage() {
                     <div>
                       <div className="text-[10px] font-mono uppercase tracking-widest text-[var(--ink-muted)]">
                         {lang === 'ro'
-                          ? 'DOSAR INGINERESC & TELEMETRIE'
-                          : 'ENGINEERING DOSSIER & TELEMETRY'}
+                          ? 'DOSAR EXECUTIV & TELEMETRIE ENTERPRISE'
+                          : 'EXECUTIVE DOSSIER & ENTERPRISE TELEMETRY'}
                       </div>
                       <div className="font-display text-base font-medium text-[var(--ink)] mt-0.5">
                         Moană Ștefănuț-Cornel ({PERSONAL_BIO.handle})
@@ -480,18 +480,18 @@ export default function HomePage() {
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)] mt-0.5">
                         {lang === 'ro'
-                          ? 'Experiență Practică în Cod'
-                          : 'Hands-On Coding Experience'}
+                          ? 'Inginerie Sisteme Software'
+                          : 'Systems Engineering Track'}
                       </div>
                     </div>
                     <div className="border border-[var(--border)] bg-[var(--bg)]/60 p-3.5">
                       <div className="font-display text-xl font-medium text-[var(--ink)]">
-                        7 Articole
+                        7 Publicații
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)] mt-0.5">
                         {lang === 'ro'
-                          ? 'Jurnal Tehnic & Studii DFIR'
-                          : 'Long-Form Technical Posts'}
+                          ? 'Studii Tehnice & DFIR'
+                          : 'Technical Analyses & DFIR'}
                       </div>
                     </div>
                     <div className="border border-[var(--border)] bg-[var(--bg)]/60 p-3.5">
@@ -500,8 +500,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)] mt-0.5">
                         {lang === 'ro'
-                          ? 'Cluster Proxmox VE 9.2 & k3s'
-                          : 'Proxmox VE 9.2 & k3s Cluster'}
+                          ? 'Cluster Hibrid & k3s Edge'
+                          : 'Hybrid Cluster & k3s Edge'}
                       </div>
                     </div>
                     <div className="border border-[var(--border)] bg-[var(--bg)]/60 p-3.5">
@@ -510,8 +510,8 @@ export default function HomePage() {
                       </div>
                       <div className="text-[11px] font-mono text-[var(--ink-muted)] mt-0.5">
                         {lang === 'ro'
-                          ? 'Takedown Național Phishing C2'
-                          : 'National Phishing C2 Takedown'}
+                          ? 'Neutralizare C2 Național'
+                          : 'National C2 Takedown'}
                       </div>
                     </div>
                   </div>
@@ -565,20 +565,20 @@ export default function HomePage() {
               <div className="dp-heading-accent">
                 <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                   {lang === 'ro'
-                    ? '[01] · DIRECȚII PRINCIPALE DE CERCETARE ȘI INGINERIE'
-                    : '[01] · CORE ENGINEERING & RESEARCH PILLARS'}
+                    ? '[01] · PILOANE STRATEGICE DE ARHITECTURĂ ȘI INGINERIE'
+                    : '[01] · STRATEGIC ARCHITECTURE & ENGINEERING PILLARS'}
                 </div>
                 <h2 className="font-display text-3xl sm:text-4xl font-medium text-[var(--ink)] leading-tight">
                   {lang === 'ro' ? (
                     <>
-                      Arhitectură software riguroasă,{' '}
+                      Arhitectură software enterprise,{' '}
                       <span className="font-light italic text-[var(--ink-secondary)]">
                         verificată în producție.
                       </span>
                     </>
                   ) : (
                     <>
-                      Rigorous software architecture,{' '}
+                      Enterprise software architecture,{' '}
                       <span className="font-light italic text-[var(--ink-secondary)]">
                         verified in production.
                       </span>
@@ -588,8 +588,8 @@ export default function HomePage() {
               </div>
               <p className="text-xs sm:text-sm text-[var(--ink-secondary)] max-w-md leading-relaxed">
                 {lang === 'ro'
-                  ? 'Fiecare sistem din portofoliu combină proiectarea aplicațiilor critice (de la primele servere din 2015 până la licența Core-Banking) cu infrastructură bare-metal și analiză criminalistică DFIR.'
-                  : 'Every system in my portfolio bridges critical application engineering (from early 2015 servers to my Core-Banking thesis) with bare-metal infrastructure and DFIR analysis.'}
+                  ? 'Fiecare soluție din portofoliu integrează proiectarea sistemelor de misiune critică (de la motoarele concurente din 2015 până la nucleul Core-Banking) cu arhitectura de datacenter hibrid și investigațiile criminalistice DFIR.'
+                  : 'Every solution in my portfolio bridges mission-critical systems engineering (from 2015 concurrent engines to the Core-Banking engine) with hybrid datacenter fabric and DFIR forensic operations.'}
               </p>
             </div>
 
@@ -598,32 +598,32 @@ export default function HomePage() {
                 {
                   index: '01',
                   icon: <Code2 className="w-5 h-5 text-[#efebe5]" />,
-                  titleRo: 'Inginerie Software (2015 – Prezent)',
-                  titleEn: 'Software Engineering (2015 – Present)',
+                  titleRo: 'Inginerie Software & Sisteme Distribuite',
+                  titleEn: 'Enterprise Software & Distributed Systems',
                   descRo:
-                    'Peste un deceniu de practică continuă: de la gamemode-uri concurente PAWN/MySQL și platforme web full-stack (stefanutc1/old, 2015–2023) la microservicii Java 17 Spring Boot, registru contabil ACID și aplicații Next.js 15 / Angular 20.',
+                    'Peste un deceniu de practică inginerească neîntreruptă: de la motoare concurente de server în PAWN/MySQL și platforme web de producție (stefanutc1/old, 2015–2023) la microservicii Java 17 Spring Boot 3.2, registre tranzacționale ACID și aplicații Next.js 15 / Angular 20.',
                   descEn:
-                    'Over a decade of continuous practice: from concurrent PAWN/MySQL servers and full-stack web portals (stefanutc1/old, 2015–2023) to Java 17 Spring Boot microservices, ACID ledgers, and Next.js 15 / Angular 20 apps.',
+                    'Over a decade of unbroken engineering practice: from concurrent server engines in PAWN/MySQL and production web platforms (stefanutc1/old, 2015–2023) to Java 17 Spring Boot 3.2 microservices, ACID transaction ledgers, and Next.js 15 / Angular 20 frontends.',
                 },
                 {
                   index: '02',
                   icon: <ShieldCheck className="w-5 h-5 text-[#efebe5]" />,
-                  titleRo: 'Investigații DFIR & Securitate',
-                  titleEn: 'DFIR Investigations & Security',
+                  titleRo: 'Criminalistică Digitală & Securitate Ofensivă',
+                  titleEn: 'Digital Forensics & Threat Intelligence',
                   descRo:
-                    'Decompilare de kituri de phishing multi-step (yiyangsaas.com), detecție Browser-in-the-Middle (Steam OpenID, Revolut OTP Relay), audit SQLi și raportări oficiale finalizate cu takedown național DNSC (#178465).',
+                    'Decompilare și analiză criminalistică a kiturilor complexe de atac (yiyangsaas.com), detecție atacuri Browser-in-the-Middle (Steam OpenID, Revolut OTP Relay), audituri de conformitate și acțiuni coordonate de neutralizare cu DNSC (#178465).',
                   descEn:
-                    'Decompiling multi-step phishing kits (yiyangsaas.com), detecting Browser-in-the-Middle relays (Steam OpenID, Revolut OTP), auditing SQLi exposures, and coordinating national DNSC takedowns (#178465).',
+                    'Decompilation and forensic attribution of advanced threat kits (yiyangsaas.com), detection of Browser-in-the-Middle relays (Steam OpenID, Revolut OTP), compliance auditing, and coordinated national infrastructure takedowns with DNSC (#178465).',
                 },
                 {
                   index: '03',
                   icon: <Server className="w-5 h-5 text-[#efebe5]" />,
-                  titleRo: 'Infrastructură Hibridă & IaC',
-                  titleEn: 'Hybrid Infrastructure & IaC',
+                  titleRo: 'Infrastructură Cloud Hibrid & GitOps',
+                  titleEn: 'Hybrid Cloud Fabric & GitOps Governance',
                   descRo:
-                    'Datacenter personal cu 4 noduri fizice (Proxmox VE 9.2, OpenMediaVault NAS, Apple Silicon ARM64, Kubernetes k3s), segmentat în 5 VLAN-uri OPNsense și automatizat prin 57 fișiere Terraform și 18 roluri Ansible.',
+                    'Datacenter hibrid de clasă enterprise pe 4 noduri bare-metal (Proxmox VE 9.2, OpenMediaVault Storage, Apple Silicon ARM64, Kubernetes k3s), micro-segmentat pe 5 rețele VLAN OPNsense și automatizat prin 57 module Terraform și 18 roluri Ansible.',
                   descEn:
-                    'Personal 4-node bare-metal datacenter (Proxmox VE 9.2, OpenMediaVault NAS, Apple Silicon ARM64, Kubernetes k3s), segmented across 5 OPNsense VLANs and automated via 57 Terraform files and 18 Ansible roles.',
+                    'Enterprise hybrid datacenter fabric across 4 bare-metal nodes (Proxmox VE 9.2, OpenMediaVault Storage, Apple Silicon ARM64, Kubernetes k3s), micro-segmented across 5 OPNsense VLANs and orchestrated via 57 Terraform modules and 18 Ansible roles.',
                 },
               ].map((pillar) => (
                 <div
@@ -880,22 +880,22 @@ export default function HomePage() {
               <div className="dp-heading-accent">
                 <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                   {lang === 'ro'
-                    ? '[03] · PORTOFOLIU DE SISTEME & LICENȚĂ (2015 – 2027)'
-                    : '[03] · SYSTEMS PORTFOLIO & THESIS ARCHIVE (2015 – 2027)'}
+                    ? '[03] · PORTOFOLIU ENTERPRISE & ARHIVĂ TEHNICĂ (2015 – 2027)'
+                    : '[03] · ENTERPRISE SYSTEMS PORTFOLIO & THESIS (2015 – 2027)'}
                 </div>
                 <h2 className="font-display text-3xl sm:text-4xl font-medium text-[var(--ink)] leading-tight">
                   {lang === 'ro' ? (
                     <>
-                      Sisteme flagship, dosare DFIR{' '}
+                      Sisteme de misiune critică, dosare DFIR{' '}
                       <span className="font-light italic text-[var(--ink-secondary)]">
-                        și proiecte universitare.
+                        și arhitecturi universitare.
                       </span>
                     </>
                   ) : (
                     <>
-                      Flagship systems, DFIR dossiers,{' '}
+                      Mission-critical systems, DFIR dossiers,{' '}
                       <span className="font-light italic text-[var(--ink-secondary)]">
-                        and university projects.
+                        and university architectures.
                       </span>
                     </>
                   )}
@@ -1014,36 +1014,36 @@ export default function HomePage() {
               {[
                 {
                   badge: '2015 – 2023 · ARCHIVE',
-                  titleRo: 'Arhiva Istorică (stefanutc1/old)',
-                  titleEn: 'Historical Archive (stefanutc1/old)',
+                  titleRo: 'Arhiva Istorică de Sisteme (stefanutc1/old)',
+                  titleEn: 'Historical Systems Archive (stefanutc1/old)',
                   descRo:
-                    'Primele proiecte funcționale construite începând din 2015: serverele SA-MP RedZone și NQGaming RPG (PAWN & MySQL), Crowland Wiki (Vue 3), platforma Kronick (PHP/Nginx) și botul Discord Roadman.',
+                    'Fundația inginerească dezvoltată începând din 2015: motoarele concurente de joc RedZone și NQGaming (PAWN & MySQL), portalul de documentație Crowland Wiki (Vue 3), platforma web Kronick (PHP/Nginx) și serviciul de automatizare Roadman.',
                   descEn:
-                    'Early production projects built starting in 2015: RedZone & NQGaming SA-MP RPG servers (PAWN & MySQL), Crowland Wiki (Vue 3), Kronick Web Portal (PHP/Nginx), and Roadman Discord Bot.',
+                    'Engineering foundation built starting in 2015: concurrent server engines RedZone and NQGaming (PAWN & MySQL), Crowland Wiki knowledge portal (Vue 3), Kronick web platform (PHP/Nginx), and Roadman automation service.',
                   url: 'https://github.com/stefanutc1/old',
                   ctaRo: 'Explorează stefanutc1/old',
                   ctaEn: 'Explore stefanutc1/old',
                 },
                 {
                   badge: '2024 – 2027 · FEAA UCV',
-                  titleRo: 'Licență & 43+ Proiecte (stefanutc1/university)',
-                  titleEn: 'Thesis & 43+ Projects (stefanutc1/university)',
+                  titleRo: 'Platformă FinTech & 43+ Soluții (stefanutc1/university)',
+                  titleEn: 'FinTech Platform & 43+ Solutions (stefanutc1/university)',
                   descRo:
-                    'Monorepo-ul academic pentru Informatică Economică (FEAA Craiova, 2024 – 2027): lucrarea de licență Core-Banking FinTech, rapoarte DFIR, algoritmică C++, Java, C# .NET și topologii Cisco.',
+                    'Monorepo universitar pentru Informatică Economică (FEAA Craiova, 2024 – 2027): teza Core-Banking FinTech cu registru ACID, dosare criminalistice DFIR, algoritmică avansată în C++, Java, C# .NET și topologii Cisco IOS.',
                   descEn:
-                    'Academic monorepo for Business Informatics (FEAA Craiova, 2024 – 2027): Core-Banking FinTech Bachelor’s Thesis, DFIR dossiers, C++, Java, C# .NET, and Cisco topologies.',
+                    'Academic monorepo for Business Informatics (FEAA Craiova, 2024 – 2027): Core-Banking FinTech thesis with ACID ledger, DFIR dossiers, advanced algorithms in C++, Java, C# .NET, and Cisco IOS topologies.',
                   url: 'https://github.com/stefanutc1/university',
                   ctaRo: 'Vezi stefanutc1/university',
                   ctaEn: 'View stefanutc1/university',
                 },
                 {
                   badge: '2025 – PREZENT · DATACENTER',
-                  titleRo: 'Infrastructură Homelab (stefanutc1/infrastructure)',
-                  titleEn: 'Homelab Infrastructure (stefanutc1/infrastructure)',
+                  titleRo: 'Infrastructură Datacenter & Cloud Hibrid (stefanutc1/infrastructure)',
+                  titleEn: 'Enterprise Datacenter & Hybrid Cloud (stefanutc1/infrastructure)',
                   descRo:
-                    'Codul IaC complet pentru clusterul Proxmox VE 9.2 cu 4 noduri: 57 fișiere Terraform, 18 roluri Ansible, firewall OPNsense cu 5 VLAN-uri, Wazuh SIEM/XDR, Kubernetes k3s și firmware ESP32.',
+                    'Depozit complet Infrastructure-as-Code pentru clusterul Proxmox VE 9.2 cu 4 noduri: 57 module Terraform, 18 roluri Ansible, perimetru OPNsense cu 5 VLAN-uri izolate, corelare Wazuh SIEM/XDR, Kubernetes k3s și firmware senzorial ESP32.',
                   descEn:
-                    'Complete IaC repository for the 4-node Proxmox VE 9.2 cluster: 57 Terraform files, 18 Ansible roles, 5-VLAN OPNsense firewall, Wazuh SIEM/XDR, Kubernetes k3s, and ESP32 firmware.',
+                    'Complete Infrastructure-as-Code repository for the 4-node Proxmox VE 9.2 cluster fabric: 57 Terraform modules, 18 Ansible roles, 5-VLAN OPNsense perimeter, Wazuh SIEM/XDR correlation, Kubernetes k3s, and bare-metal ESP32 telemetry.',
                   url: 'https://github.com/stefanutc1/infrastructure',
                   ctaRo: 'Vezi stefanutc1/infrastructure',
                   ctaEn: 'View stefanutc1/infrastructure',
@@ -1090,22 +1090,22 @@ export default function HomePage() {
             <div className="dp-heading-accent">
               <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                 {lang === 'ro'
-                  ? '[04] · EVOLUȚIE TEHNICĂ ȘI ACADEMICĂ (2015 – 2027)'
-                  : '[04] · TECHNICAL & ACADEMIC EVOLUTION (2015 – 2027)'}
+                  ? '[04] · TRAIECTORIE EXECUTIVĂ ȘI ACADEMICĂ (2015 – 2027)'
+                  : '[04] · EXECUTIVE & ACADEMIC TRAJECTORY (2015 – 2027)'}
               </div>
               <h2 className="font-display text-3xl sm:text-4xl font-medium text-[var(--ink)] leading-tight">
                 {lang === 'ro' ? (
                   <>
-                    Parcurs ingineresc și academic{' '}
+                    Evoluție inginerească și academică{' '}
                     <span className="font-light italic text-[var(--ink-secondary)]">
-                      etapă cu etapă.
+                      pe etape strategice.
                     </span>
                   </>
                 ) : (
                   <>
-                    Engineering and academic journey{' '}
+                    Engineering and academic evolution{' '}
                     <span className="font-light italic text-[var(--ink-secondary)]">
-                      stage by stage.
+                      across strategic milestones.
                     </span>
                   </>
                 )}
@@ -1166,20 +1166,20 @@ export default function HomePage() {
             <div className="dp-heading-accent">
               <div className="text-xs font-mono uppercase tracking-widest text-[var(--ink-muted)] mb-1">
                 {lang === 'ro'
-                  ? '[05] · TOPOLOGIE HARDWARE & CLOUD HIBRID'
-                  : '[05] · HARDWARE TOPOLOGY & HYBRID CLOUD'}
+                  ? '[05] · ARHITECTURĂ DATACENTER & CLUSTER HIBRID'
+                  : '[05] · DATACENTER FABRIC & HYBRID CLUSTER'}
               </div>
               <h2 className="font-display text-3xl sm:text-4xl font-medium text-[var(--ink)] leading-tight">
                 {lang === 'ro' ? (
                   <>
-                    Clusterul Homelab cu 4 noduri{' '}
+                    Clusterul de înaltă disponibilitate cu 4 noduri{' '}
                     <span className="font-light italic text-[var(--ink-secondary)]">
                       și matricea tehnologică.
                     </span>
                   </>
                 ) : (
                   <>
-                    4-node Homelab cluster{' '}
+                    High-availability 4-node cluster fabric{' '}
                     <span className="font-light italic text-[var(--ink-secondary)]">
                       and technology matrix.
                     </span>
