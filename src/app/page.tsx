@@ -12,8 +12,6 @@ import {
   ArrowUpRight,
   MapPin,
   GraduationCap,
-  Check,
-  Copy,
   ExternalLink,
   Sparkles,
   User,
@@ -23,7 +21,6 @@ import {
   ChevronRight,
   ShieldCheck,
   Cpu,
-  Rss,
 } from 'lucide-react';
 import { BLOG_POSTS, BlogPost } from '@/data/blog';
 import {
@@ -109,10 +106,8 @@ export default function HomePage() {
   const [activePortfolioItem, setActivePortfolioItem] =
     useState<ProjectItem | null>(null);
 
-  // Command palette & BibTeX copy
+  // Command palette
   const [cmdOpen, setCmdOpen] = useState(false);
-  const [copiedBibtex, setCopiedBibtex] = useState(false);
-
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
@@ -152,21 +147,6 @@ export default function HomePage() {
       (item) => portfolioFilter === 'all' || item.category === portfolioFilter
     );
   }, [portfolioFilter]);
-
-  const bibtexString = `@mastersthesis{moana2026corebanking,
-  author       = {Moană, Ștefănuț-Cornel},
-  title        = {Arhitectura și Securitatea Sistemelor Informatice Bancare: Registru ACID, Gateway PCI-DSS v4.0 și Detecție SIEM},
-  school       = {Universitatea din Craiova, FEAA, Informatică Economică},
-  year         = {2026},
-  address      = {Craiova, România},
-  url          = {https://stefanutc1.github.io}
-}`;
-
-  const copyBibtex = () => {
-    navigator.clipboard.writeText(bibtexString);
-    setCopiedBibtex(true);
-    setTimeout(() => setCopiedBibtex(false), 2000);
-  };
 
   const navItems: {
     id: ActiveTab;
@@ -699,17 +679,6 @@ export default function HomePage() {
 
               <ul className="flex flex-wrap items-center gap-5 sm:gap-7 text-[15px] font-medium text-[var(--ink)]">
                 <li>
-                  <a
-                    href="https://github.com/stefanutc1/university"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[var(--ink-secondary)] hover:text-[var(--ink)] transition"
-                  >
-                    <span>Field Manual</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </a>
-                </li>
-                <li>
                   <button
                     onClick={() => {
                       setShowTagsPanel(false);
@@ -752,22 +721,8 @@ export default function HomePage() {
             <div className="mx-auto max-w-[720px]">
               {/* .page-header */}
               <header className="mb-5">
-                <h2 className="font-display text-[36px] sm:text-[40px] font-bold leading-tight text-[var(--ink)] inline-flex items-center gap-3">
-                  <span>Posts</span>
-                  <a
-                    href="#blog"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setBlogCategory('all');
-                      setSelectedTag(null);
-                      setBlogQuery('');
-                    }}
-                    title="RSS / All Posts"
-                    aria-label="RSS"
-                    className="text-[var(--ink)] hover:text-[#52212e] transition"
-                  >
-                    <Rss className="w-[23px] h-[23px]" strokeWidth={2.2} />
-                  </a>
+                <h2 className="font-display text-[36px] sm:text-[40px] font-bold leading-tight text-[var(--ink)]">
+                  Posts
                 </h2>
               </header>
 
@@ -1281,41 +1236,6 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Academic Citation (BibTeX) in drivepoint.ro Burgundy Callout Banner */}
-            <div className="dp-wine-banner p-6 sm:p-8 space-y-4">
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <div className="text-xs font-mono uppercase tracking-wider text-[#d9d1ca]">
-                    {lang === 'ro'
-                      ? 'REFERINȚĂ ACADEMICĂ / CITARE BIBTEX'
-                      : 'ACADEMIC REFERENCE / BIBTEX CITATION'}
-                  </div>
-                  <h3 className="font-display text-xl font-medium text-[#efebe5] mt-0.5">
-                    Moană, Ștefănuț-Cornel — Universitatea din Craiova (FEAA 2024 – 2027)
-                  </h3>
-                </div>
-                <button
-                  onClick={copyBibtex}
-                  className="dp-btn-cream inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-medium"
-                >
-                  {copiedBibtex ? (
-                    <>
-                      <Check className="w-3.5 h-3.5" />
-                      <span>Copied</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copy BibTeX</span>
-                    </>
-                  )}
-                </button>
-              </div>
-              <pre className="border border-[#d9d1ca]/20 bg-[#0c0c0c]/85 p-4 text-xs font-mono text-[#efebe5] overflow-x-auto leading-relaxed">
-                <code>{bibtexString}</code>
-              </pre>
             </div>
           </section>
         )}

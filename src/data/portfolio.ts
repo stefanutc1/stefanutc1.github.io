@@ -53,7 +53,6 @@ export const PERSONAL_BIO = {
   email: 'moana.stefanut.f8p@student.ucv.ro',
   github: 'https://github.com/stefanutc1',
   infraLive: 'https://stefanutc1.github.io/infrastructure/',
-  bankingLive: 'https://stefanutc1.github.io/university/',
   oldRepo: 'https://github.com/stefanutc1/old',
   headlineRo:
     'Inginer Sisteme Informatice, Arhitect Infrastructură & Cercetător în Securitate Cibernetică (DFIR)',
@@ -187,8 +186,7 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
       'Dedicated Proxmox virtualization (VMs 310–313) and automated LaTeX thesis PDF build pipeline.'
     ],
     tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX'],
-    repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta',
-    liveUrl: 'https://stefanutc1.github.io/university/'
+    repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta'
   },
   {
     id: 'sys-old-archive',
