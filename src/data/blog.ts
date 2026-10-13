@@ -140,33 +140,37 @@ trackparcel.de`
     dateEn: 'September 22, 2026',
     readTime: '15 min read',
     category: 'fintech',
-    categoryLabelRo: 'Lucrare de Licență & FinTech Security',
-    categoryLabelEn: 'Bachelor Thesis & FinTech Security',
+    categoryLabelRo: 'Lucrare de Licență & Securitate Inteligentă',
+    categoryLabelEn: 'Bachelor Thesis & Intelligent Security',
     titleRo:
-      'Arhitectura și Securitatea Sistemelor Informatice Bancare: Proiectarea unui Core-Banking Rezilient și Simularea a 5 Vectori MITRE ATT&CK',
+      'Impactul Tehnologiilor Inteligente asupra Securității Digitale: Arhitectură Defensivă, Simulare Mediu Bancar și Izolare IaC',
     titleEn:
-      'Architecture & Security of Banking Information Systems: Engineering a Resilient Core-Banking Platform and Simulating 5 MITRE ATT&CK Vectors',
+      'Impact of Intelligent Technologies on Digital Security: Defensive Architecture, Banking Simulation & IaC Isolation',
     subtitleRo:
-      'Cum am construit lucrarea de licență la FEAA Craiova: de la motorul contabil în partidă dublă (ACID) și gateway-ul PCI-DSS v4.0 până la lanțul criptografic SHA-256 și poligonul virtualizat Proxmox.',
+      'Cercetare academică de licență (FEAA Craiova · Coordonator: prof. univ. dr. Georgeta Soava): inventar inițial de tehnologii inteligente, honeypots legacy, analiză malware, securitate Wi-Fi în SOC și izolare automată prin Ansible, Python și Terraform conform directivei NIS2.',
     subtitleEn:
-      'How I engineered my Bachelor’s Thesis at FEAA Craiova: from an ACID double-entry ledger and PCI-DSS v4.0 payment gateway to a SHA-256 hash-chained audit monitor and Proxmox cyber range.',
+      'Bachelor’s thesis research (FEAA Craiova · Academic Advisor: Prof. univ. dr. Georgeta Soavă): initial intelligent tech stack inventory, legacy honeypots, malware forensics, SOC Wi-Fi security, and automated Ansible, Python & Terraform IaC isolation under NIS2.',
     excerptRo:
-      'O privire detaliată în interiorul lucrării mele de licență (Informatică Economică, 2026): de ce sistemele bancare moderne au nevoie de apărare în profunzime, cum funcționează validarea matematică IBAN MOD-97 și Luhn, și cum am testat reziliența tranzacțională împotriva atacurilor de tip Race Condition Double-Spend și SQL Injection.',
+      'O sinteză exhaustivă a lucrării mele de licență «Impactul tehnologiilor inteligente asupra securitatii digitale»: inventarul inițial de stack (Windows Server, Linux, SIEM Splunk/Elastic/Wazuh/Sentinel, EDR, IDS/IPS, Ghidra/IDA/x64dbg, directiva NIS2, MITRE ATT&CK, Ansible/Python/Terraform IaC, Kubernetes, AWS), simularea mediului bancar (Active Directory, Windows 10/11), honeypots pe OS vechi, analiză malware și garanția legală de izolare strictă în VM-uri.',
     excerptEn:
-      'An inside look at my Bachelor’s Thesis (Business Informatics, 2026): why modern banking platforms require defense-in-depth, how mathematical IBAN MOD-97 and Luhn validations work at the core layer, and how I tested transactional resilience against Race Condition Double-Spend and SQL Injection attacks.',
-    tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Double-Entry ACID', 'LaTeX'],
+      'An exhaustive synthesis of my Bachelor’s Thesis «Impact of Intelligent Technologies on Digital Security»: initial stack inventory (Windows Server, Linux, Splunk/Elastic/Wazuh/Sentinel SIEM, EDR, IDS/IPS, Ghidra/IDA/x64dbg, NIS2 Directive, MITRE ATT&CK, Ansible/Python/Terraform IaC, Kubernetes, AWS), banking environment simulation (Active Directory, Windows 10/11), legacy honeypots, malware forensics, and legal guarantee of strict VM isolation.',
+    tags: ['Tehnologii Inteligente', 'SIEM & EDR', 'Wazuh', 'Ansible & Terraform', 'MITRE ATT&CK', 'NIS2 Directive', 'Reverse Engineering', 'Malware Forensics', 'LaTeX'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta',
     sections: [
       {
-        headingRo: '1. Motivația Arhitecturală: De ce Simpla Validare la Nivel de UI Nu Este Suficientă în Banking',
-        headingEn: '1. Architectural Motivation: Why UI-Level Validation Is Never Enough in Banking',
+        headingRo: '1. Cadrul Academic, Inventarul Inițial de Stack și Obiectivele Cercetării',
+        headingEn: '1. Academic Governance, Initial Stack Inventory & Research Objectives',
         paragraphsRo: [
-          'În proiectarea lucrării de licență la Facultatea de Economie și Administrarea Afacerilor (FEAA — Universitatea din Craiova), mi-am propus să depășesc nivelul unei aplicații CRUD clasice și să construiesc o arhitectură bancară completă, capabilă să garanteze integritatea financiară chiar și în condițiile unui perimetru compromis.',
-          'Sistemul este împărțit în patru componente izolate (reflectate atât în codul sursă, cât și în mașinile virtuale Proxmox VM 310–313): (1) Core-Banking Service cu registru contabil în partidă dublă, (2) Payment Gateway conform PCI-DSS v4.0, (3) Database Audit Monitor cu lanț criptografic SHA-256 și (4) Simulatorul automatizat de atac și apărare cibernetică.'
+          'Lucrarea de licență intitulată «Impactul tehnologiilor inteligente asupra securitatii digitale», coordonată de prof. univ. dr. Georgeta Soava în cadrul Facultății de Economie și Administrarea Afacerilor (FEAA — Universitatea din Craiova, promoția 2026/2027), investighează reziliența sistemelor informatice critice în fața amenințărilor contemporane.',
+          'Inventarul inițial de stack tehnologic cuprinde: Windows Server, Linux, rețelistică TCP/IP, Wireshark, tcpdump, sisteme SIEM precum Splunk, Elastic, Wazuh sau Microsoft Sentinel, soluții EDR, IDS/IPS (Suricata, Snort), instrumente de evaluare a vulnerabilităților (Nmap, Nessus, OpenVAS, Burp Suite, PowerShell, Python, Git), telemetrie avansată prin Sysmon, reguli Sigma și YARA, platforme de threat intelligence MISP, analiză forensic și de memorie (Malware Autopsy, Volatility), dezasambloare și reverse engineering (Ghidra, IDA Pro, x64dbg), conformitate cu Directiva NIS2 și cartografiere pe matricea MITRE ATT&CK.',
+          'Orchestrarea este asigurată prin Ansible, Python și Terraform pentru IaC, permițând izolarea automată a mașinilor virtuale compromise direct în urma alertelor generate de SIEM, pe clustere Kubernetes și AWS. Practicile și simulările experimentale includ: (1) Red-teaming etic și bruteforce controlat pe VM personală, (2) Honeypot pe OS legacy (Windows Server 2003/2008 / Win 7), (3) Simularea unui mediu bancar complet (sisteme Windows 10/11 + Active Directory), (4) Analiză malware pe mediu Windows 10 dedicat, (5) Auditarea vulnerabilităților Wi-Fi (handshake WPA2/WPA3 cu ESP32 Bruce/Marauder) și detecție wireless în SOC, (6) Analiza riscului la sniffing Wi-Fi, (7) Simularea comportamentului grupurilor APT și (8) Reverse engineering pe software.',
+          'Mențiune obligatorie de conformitate: Între mașinile mele virtuale, niciun atac nu va părăsi mediul virtualizat; lucrarea de licență este efectuată într-un cadru strict legal și etic.'
         ],
         paragraphsEn: [
-          'When designing my Bachelor’s Thesis at the Faculty of Economics and Business Administration (FEAA — University of Craiova), my goal was to go far beyond a standard CRUD web app and engineer a defense-in-depth banking architecture capable of guaranteeing financial integrity under active adversarial pressure.',
-          'The platform is structured into four decoupled subsystems (mirrored across Proxmox VMs 310–313): (1) Double-Entry Core-Banking Service, (2) PCI-DSS v4.0 Payment Gateway, (3) SHA-256 Hash-Chained Database Audit Monitor, and (4) Automated MITRE ATT&CK Cyber Simulator.'
+          'The Bachelor’s Thesis entitled «Impact of Intelligent Technologies on Digital Security», supervised by Prof. univ. dr. Georgeta Soavă at the Faculty of Economics and Business Administration (FEAA — University of Craiova, 2026/2027 class), investigates the resilience of critical information systems against modern adversarial threats.',
+          'The initial technology stack inventory encompasses: Windows Server, Linux, TCP/IP networking, Wireshark, tcpdump, SIEM platforms such as Splunk, Elastic, Wazuh, or Microsoft Sentinel, EDR, IDS/IPS (Suricata, Snort), vulnerability assessment suites (Nmap, Nessus, OpenVAS, Burp Suite, PowerShell, Python, Git), telemetry via Sysmon, Sigma and YARA rules, MISP threat intelligence, digital forensics & memory analysis (Malware Autopsy, Volatility), reverse engineering tooling (Ghidra, IDA Pro, x64dbg), NIS2 Directive compliance, and MITRE ATT&CK matrix mapping.',
+          'Infrastructure is codified using Ansible, Python, and Terraform for IaC, automating the quarantine and dynamic isolation of compromised VMs upon SIEM alerts across Kubernetes and AWS. Empirical drills and simulations include: (1) Ethical red-teaming and bruteforce on a dedicated personal VM, (2) Legacy honeypots (Windows Server 2003/2008 / Windows 7), (3) Enterprise banking environment simulation (Windows 10/11 + Active Directory), (4) Controlled malware forensics on dedicated Windows 10, (5) Wi-Fi vulnerability auditing (WPA2/WPA3 handshakes with ESP32 Bruce/Marauder) and wireless SOC monitoring, (6) Risk analysis against Wi-Fi sniffing, (7) Real-world APT group threat emulation, and (8) Binary reverse engineering.',
+          'Legal compliance statement: All attack traffic is strictly isolated between virtual machines with zero traffic leaving the testbed; the thesis is conducted within a fully legal and ethical framework.'
         ]
       },
       {

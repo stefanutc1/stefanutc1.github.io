@@ -81,7 +81,7 @@ export default function InteractiveTerminal({ lang }: InteractiveTerminalProps) 
                 'Name:       Moană Ștefănuț-Cornel (@stefanutc1)',
                 'Experience: Over a decade of enterprise software & systems engineering (2015 – Present · stefanutc1/old)',
                 'Education:  University of Craiova — FEAA, B.Sc. Business Informatics (2024 – 2027)',
-                'Thesis:     Enterprise Core-Banking Engine, ACID Double-Entry Ledger, PCI-DSS v4.0 & 5 MITRE ATT&CK Scenarios',
+                'Thesis:     Impactul tehnologiilor inteligente asupra securitatii digitale (Prof. univ. dr. Georgeta Soavă)',
                 'Role:       Enterprise Systems Architect, Hybrid Cloud Engineer & Threat Intelligence Lead',
               ].join('\n');
         break;

@@ -778,7 +778,7 @@ export default function HomePage() {
                         { id: 'all', label: 'All (7)' },
                         { id: 'dfir', label: 'DFIR & Threat Intel' },
                         { id: 'ctf', label: 'CTF & OffSec' },
-                        { id: 'fintech', label: 'Core-Banking Thesis' },
+                        { id: 'fintech', label: 'Bachelor Thesis' },
                         { id: 'infra', label: 'Homelab & 2015+ Archive' },
                       ].map((cat) => {
                         const active = blogCategory === cat.id && !selectedTag;
@@ -1029,9 +1029,9 @@ export default function HomePage() {
                   titleRo: 'Platformă FinTech & 43+ Soluții (stefanutc1/university)',
                   titleEn: 'FinTech Platform & 43+ Solutions (stefanutc1/university)',
                   descRo:
-                    'Monorepo universitar pentru Informatică Economică (FEAA Craiova, 2024 – 2027): teza Core-Banking FinTech cu registru ACID, dosare criminalistice DFIR, algoritmică avansată în C++, Java, C# .NET și topologii Cisco IOS.',
+                    'Monorepo universitar pentru Informatică Economică (FEAA Craiova, 2024 – 2027): teza de licență «Impactul tehnologiilor inteligente asupra securitatii digitale» (Coordonator: prof. univ. dr. Georgeta Soava), mediu bancar cu registru ACID, dosare criminalistice DFIR, algoritmică în C++, Java, C# .NET și topologii Cisco IOS.',
                   descEn:
-                    'Academic monorepo for Business Informatics (FEAA Craiova, 2024 – 2027): Core-Banking FinTech thesis with ACID ledger, DFIR dossiers, advanced algorithms in C++, Java, C# .NET, and Cisco IOS topologies.',
+                    'Academic monorepo for Business Informatics (FEAA Craiova, 2024 – 2027): Bachelor’s Thesis «Impact of Intelligent Technologies on Digital Security» (Advisor: Prof. univ. dr. Georgeta Soavă), banking simulation with ACID ledger, DFIR dossiers, algorithms in C++, Java, C# .NET, and Cisco IOS topologies.',
                   url: 'https://github.com/stefanutc1/university',
                   ctaRo: 'Vezi stefanutc1/university',
                   ctaEn: 'View stefanutc1/university',

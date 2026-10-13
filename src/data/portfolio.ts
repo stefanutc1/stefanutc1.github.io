@@ -168,24 +168,24 @@ export const PORTFOLIO_ITEMS: ProjectItem[] = [
     id: 'sys-licenta',
     code: 'LucrareLicenta',
     category: 'flagship',
-    badge: 'CORE-BANKING FINTECH · MISSION-CRITICAL · FEAA UCV',
-    titleRo: 'Arhitectura și Securitatea Sistemelor Informatice Bancare Enterprise',
-    titleEn: 'Architecture & Security of Enterprise Core-Banking Systems',
+    badge: 'BACHELOR THESIS · DIGITAL SECURITY & INTELLIGENT TECH · FEAA UCV',
+    titleRo: 'Impactul tehnologiilor inteligente asupra securității digitale',
+    titleEn: 'Impact of Intelligent Technologies on Digital Security',
     descRo:
-      'Platformă de licență (Informatică Economică, FEAA UCV): nucleu distribuit Core-Banking în Java 17 (Spring Boot 3.2) și Python 3.11 bazat pe registru contabil în partidă dublă (ACID), gateway de procesare tranzacții aliniat PCI-DSS v4.0, audit criptografic SHA-256 hash-chained, modul de simulare pentru 5 vectori MITRE ATT&CK și consolă de gestiune Web Kiosk.',
+      'Lucrare de licență (Informatică Economică, FEAA Craiova · Coordonator: prof. univ. dr. Georgeta Soava): cercetare aplicată și poligon experimental centrat pe impactul tehnologiilor inteligente asupra securității cibernetice. Cuprinde inventarul inițial de stack tehnologic complet (Windows Server, Linux, SIEM Splunk/Elastic/Wazuh/Sentinel, EDR, IDS/IPS, Ghidra/IDA/x64dbg, directiva NIS2, cartografiere MITRE ATT&CK, Ansible/Python/Terraform IaC pentru izolarea automată a VM-urilor compromise în urma alertelor SIEM, Kubernetes, AWS), simularea unui mediu bancar rezilient (Active Directory, Windows 10/11, registru ACID), honeypots legacy, analiză malware, auditare rețele Wi-Fi în SOC și simulări APT — toate desfășurate strict în mașini virtuale izolate, într-un cadru legal.',
     descEn:
-      'Undergraduate thesis platform (Business Informatics, FEAA UCV): distributed Core-Banking engine in Java 17 (Spring Boot 3.2) and Python 3.11 featuring an ACID double-entry accounting ledger, PCI-DSS v4.0 payment transaction gateway, SHA-256 hash-chained tamper-evident audit monitor, 5-vector MITRE ATT&CK attack & defense simulation engine, and Web Kiosk executive terminal.',
+      'Bachelor’s Thesis (Business Informatics, FEAA Craiova · Academic Advisor: Prof. univ. dr. Georgeta Soavă): applied research and experimental proving ground analyzing the impact of intelligent technologies on digital security. Features a comprehensive initial stack inventory (Windows Server, Linux, Splunk/Elastic/Wazuh/Sentinel SIEM, EDR, IDS/IPS, Ghidra/IDA/x64dbg, NIS2 Directive, MITRE ATT&CK, Ansible/Python/Terraform IaC automating compromised VM isolation via SIEM alerts, Kubernetes, AWS), enterprise banking environment simulation (Active Directory, Windows 10/11, ACID double-entry ledger), legacy honeypots, malware analysis, SOC Wi-Fi auditing, and APT simulations — completely confined within isolated virtual machines in strict legal compliance.',
     highlightsRo: [
-      'Registru tranzacțional în partidă dublă cu consistență ACID strictă, validare matematică IBAN conform ISO 13616 (MOD-97) și verificare carduri Luhn conform ISO/IEC 7812.',
-      '5 scenarii de atac cibernetic și contramăsuri defensive validate automat în CI: Brute-Force, injecție SQL (SQLi), Race Condition Double-Spend, Fraud Anomaly Detection și DDoS.',
-      'Infrastructură de virtualizare Proxmox VE dedicată (VM 310–313), containerizare Docker și conductă CI/CD de compilare automată a tezei academice în format LaTeX PDF.'
+      'Inventar inițial de tehnologii inteligente: Windows Server, Linux, TCP/IP, Wireshark, tcpdump, SIEM (Splunk, Elastic, Wazuh, Sentinel), EDR, IDS/IPS (Suricata/Snort), Sysmon, Sigma, YARA, MISP, Volatility, Ghidra, IDA Pro, x64dbg, NIS2, MITRE ATT&CK, Kubernetes, AWS.',
+      'Practici și simulări validate: Red-teaming etic, honeypots pe OS legacy (Win Server 2003/2008 / Win 7), simulare mediu bancar complet (Win 10/11 + Active Directory), analiză malware dedicată, securitate rețele Wi-Fi (ESP32) & monitorizare SOC, simulări APT și reverse engineering software.',
+      'Automatizare DevSecOps & IaC: Ansible, Python și Terraform pentru orchestrare infrastructură și izolare dinamică a activelor compromise semnalate de SIEM. Mențiune legală: atacurile nu părăsesc mașinile virtuale locale.'
     ],
     highlightsEn: [
-      'Strict ACID double-entry transactional accounting ledger, ISO 13616 MOD-97 mathematical IBAN verification, and ISO/IEC 7812 Luhn card integrity auditing.',
-      '5 enterprise attack & defense scenarios automatically validated in CI: Brute-Force mitigation, SQL Injection defense, Double-Spend race condition lockouts, AI Fraud Anomaly Detection, and DDoS resilience.',
-      'Dedicated Proxmox VE virtualization cluster (VMs 310–313), Docker containerization, and automated LaTeX academic thesis compilation pipeline.'
+      'Comprehensive intelligent tech stack inventory: Windows Server, Linux, TCP/IP, Wireshark, tcpdump, SIEM (Splunk, Elastic, Wazuh, Sentinel), EDR, IDS/IPS, Sysmon, Sigma, YARA, MISP, Volatility, Ghidra, IDA, x64dbg, NIS2 Directive, MITRE ATT&CK, Kubernetes, AWS.',
+      'Empirical drills & simulations: Ethical red-teaming, legacy OS honeypots (Win Server 2003/2008 / Win 7), multi-tier banking environment (Win 10/11 + Active Directory), dedicated malware forensics, Wi-Fi auditing (ESP32) & SOC monitoring, APT group emulation, and binary reverse engineering.',
+      'DevSecOps & IaC orchestration: Ansible, Python, and Terraform automating containment and compromised VM isolation driven by SIEM alerts. Legal guarantee: all simulations strictly air-gapped within virtual machines.'
     ],
-    tags: ['Java 17', 'Spring Boot 3.2', 'Python 3.11', 'PCI-DSS v4.0', 'MITRE ATT&CK', 'Docker', 'LaTeX Publishing'],
+    tags: ['Intelligent Tech', 'SIEM & EDR', 'Wazuh', 'Ansible & Terraform', 'MITRE ATT&CK', 'NIS2 Directive', 'Reverse Engineering', 'Malware Forensics', 'LaTeX'],
     repoUrl: 'https://github.com/stefanutc1/university/tree/main/LucrareLicenta'
   },
   {
